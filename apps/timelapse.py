@@ -368,14 +368,10 @@ def app():
                 # st.info(
                 #     "Steps to create a timelapse: Draw a rectangle on the map -> Export it as a GeoJSON -> Upload it back to the app -> Click Submit button"
                 # )
-                if (
-                    collection
-                    in [
-                        "Geostationary Operational Environmental Satellites (GOES)",
-                        "USDA National Agriculture Imagery Program (NAIP)",
-                    ]
-                    and (not keyword)
-                ):
+                if collection in [
+                    "Geostationary Operational Environmental Satellites (GOES)",
+                    "USDA National Agriculture Imagery Program (NAIP)",
+                ] and (not keyword):
                     m.set_center(-100, 40, 3)
                 # else:
                 #     m.set_center(4.20, 18.63, zoom=2)
