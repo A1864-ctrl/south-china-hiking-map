@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import leafmap.foliumap as leafmap
 import streamlit as st
 
-from app_utils import SUBDOMAINS, TILES, safe_run, sidebar_common
+from app_utils import SUBDOMAINS, TILES, safe_run, show_map, sidebar_common
 
 PAIRS = {
     "影像 vs 矢量（最常用）": ("高德影像", "高德矢量"),
@@ -55,7 +55,7 @@ def main():
         st.warning(f"分屏插件加载失败（{type(exc).__name__}），已退回单幅地图。")
         m.add_tile_layer(url=TILES[right], name=right, attribution=" ", subdomains="1234")
 
-    m.to_streamlit(height=660)
+    show_map(m, height=660)
 
     st.markdown("---")
     col1, col2 = st.columns([1, 1])

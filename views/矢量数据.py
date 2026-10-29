@@ -17,7 +17,7 @@ import geopandas as gpd
 import pandas as pd
 import streamlit as st
 
-from app_utils import BASEMAP_CHOICES, data_path, json_safe_gdf, new_map, safe_run, sidebar_common
+from app_utils import BASEMAP_CHOICES, data_path, json_safe_gdf, new_map, safe_run, show_map, sidebar_common
 
 def to_gdf(uploaded):
     suffix = os.path.splitext(uploaded.name)[1].lower()
@@ -90,7 +90,7 @@ def main():
         ).add_to(m)
     except Exception as exc:  # noqa: BLE001
         st.warning(f"地图渲染失败，已跳过绘制：{exc}")
-    m.to_streamlit(height=560)
+    show_map(m, height=560)
 
     if show_table:
         st.markdown("---")

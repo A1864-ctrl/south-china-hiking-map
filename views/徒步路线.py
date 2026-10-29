@@ -21,7 +21,9 @@ from app_utils import (
     data_path,
     fmt_km,
     parse_gpx,
+    read_csv_smart,
     safe_run,
+    show_map,
     sidebar_common,
     track_stats,
 )
@@ -57,7 +59,7 @@ def cumulative_km(pts):
 
 @st.cache_data(show_spinner=False)
 def load_routes():
-    df = pd.read_csv(data_path("hiking_routes.csv"))
+    df = read_csv_smart(data_path("hiking_routes.csv"))
     for c in ("distance_km", "ascent_m", "lon", "lat"):
         df[c] = pd.to_numeric(df[c], errors="coerce")
     return df
@@ -133,7 +135,7 @@ def tab_route_library(basemap):
                 ),
                 tooltip=r["name"],
             ).add_to(m)
-        m.to_streamlit(height=520)
+        show_map(m, height=520)
         legend = "".join(
             "<span style='display:inline-flex;align-items:center;margin:2px 14px 2px 0;font-size:12px'>"
             f"<span style='width:11px;height:11px;border-radius:50%;background:{c};margin-right:5px;"
@@ -263,7 +265,7 @@ def tab_gpx(basemap):
             [pts[-1][0], pts[-1][1]], popup=f"{name} 终点", icon=folium.Icon(color="red", icon="stop")
         ).add_to(m)
 
-    m.to_streamlit(height=520)
+    show_map(m, height=520)
 
     st.markdown("---")
     st.subheader("轨迹汇总")

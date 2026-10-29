@@ -14,7 +14,7 @@ import leafmap.foliumap as leafmap
 import pandas as pd
 import streamlit as st
 
-from app_utils import BASEMAP_CHOICES, add_base_map, data_path, safe_run, sidebar_common
+from app_utils import BASEMAP_CHOICES, add_base_map, data_path, read_csv_smart, safe_run, show_map, sidebar_common
 
 REGIONS = {
     "全国": {"center": (34.5, 108.0), "zoom": 4, "provinces": None},
@@ -34,7 +34,7 @@ def main():
     st.title("🔥 热力图")
     st.caption("颜色越亮红，代表该处的「权重 × 密度」越高。选区域可以直接看广东、湖南这类局部。")
 
-    df = pd.read_csv(data_path("china_city_price.csv"))
+    df = read_csv_smart(data_path("china_city_price.csv"))
 
     with st.sidebar:
         st.markdown("---")
@@ -49,7 +49,7 @@ def main():
     up = st.file_uploader("也可以上传自己的点位 CSV（需要 lon/lat 列）", type=["csv"])
     if up is not None:
         try:
-            df = pd.read_csv(up)
+            df = read_csv_smart(up)
             df.columns = [c.strip().lower() for c in df.columns]
             if not {"lon", "lat"}.issubset(df.columns):
                 st.error("CSV 至少需要 lon 和 lat 两列。")
@@ -116,7 +116,7 @@ def main():
                 ),
             ).add_to(m)
 
-    m.to_streamlit(height=620)
+    show_map(m, height=620)
 
     st.markdown("---")
     left, right = st.columns([1.4, 1])

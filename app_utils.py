@@ -100,6 +100,54 @@ def data_path(*parts) -> str:
     return os.path.join(DATA_DIR, *parts)
 
 
+# ---------------------------------------------------------------- 地图渲染
+def show_map(m, height: int = 560, scrolling: bool = False):
+    """在 Streamlit 页面上渲染 folium / leafmap 地图。
+
+    刻意不用 leafmap 的 m.to_streamlit()：它内部走 to_html()，而 to_html()
+    会先把地图 save 到临时文件，再用 `open(outfile)`（不指定编码）读回来。
+    中文 Windows 的默认编码是 GBK，读 UTF-8 内容必然抛
+    UnicodeDecodeError: 'gbk' codec can't decode byte ...
+
+    这里改成直接 render 成字符串，全程不落盘，与操作系统编码完全无关。
+    """
+    import streamlit.components.v1 as components
+
+    try:
+        # to_html() 原本会顺手补一个图层控件，这里等价补上
+        if getattr(m, "options", {}).get("layersControl", False):
+            m.add_layer_control()
+            m.options["layersControl"] = False
+    except Exception:  # noqa: BLE001  控件加不上不影响出图
+        pass
+
+    components.html(m.get_root().render(), height=height, scrolling=scrolling)
+
+
+# ---------------------------------------------------------------- 读表
+def read_csv_smart(src, **kwargs):
+    """读 CSV，自动适配 UTF-8 / 带 BOM 的 UTF-8 / GBK。
+
+    中文 Windows 上 Excel 另存的 CSV 通常是 GBK，网上下的通常是 UTF-8，
+    光靠默认编码一定会踩坑，所以按顺序试。
+    """
+    import pandas as pd
+
+    if "encoding" in kwargs:
+        return pd.read_csv(src, **kwargs)
+
+    last_err = None
+    for enc in ("utf-8-sig", "utf-8", "gb18030"):
+        try:
+            if hasattr(src, "seek"):
+                src.seek(0)
+            return pd.read_csv(src, encoding=enc, **kwargs)
+        except (UnicodeDecodeError, UnicodeError) as exc:
+            last_err = exc
+            continue
+    raise last_err
+
+
 def json_safe_gdf(gdf):
     """只保留能安全转成 JSON 的列（去掉列表/数组类型的属性列）。
 

@@ -17,7 +17,7 @@ import leafmap
 import leafmap.foliumap as leafmap_folium
 import streamlit as st
 
-from app_utils import BASEMAP_CHOICES, add_base_map, safe_run, sidebar_common
+from app_utils import BASEMAP_CHOICES, add_base_map, safe_run, show_map, sidebar_common
 
 WORLDCOVER_URL = "https://services.terrascope.be/wms/v2"
 WORLDCOVER_LAYER = "WORLDCOVER_2020_MAP"
@@ -98,7 +98,7 @@ def main():
             except Exception:  # noqa: BLE001
                 st.warning("图例格式不是合法 JSON，已忽略。")
 
-    m.to_streamlit(height=620)
+    show_map(m, height=620)
 
     st.markdown("---")
     st.markdown(

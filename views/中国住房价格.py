@@ -17,7 +17,7 @@ import pandas as pd
 import pydeck as pdk
 import streamlit as st
 
-from app_utils import DATA_DIR, data_path, new_map, safe_run, sidebar_common
+from app_utils import DATA_DIR, data_path, new_map, read_csv_smart, safe_run, show_map, sidebar_common
 
 PALETTES = {
     "暖色（低价→高价）": ["#fff5eb", "#fdd49e", "#fdbb84", "#fc8d59", "#e34a33", "#b30000"],
@@ -59,21 +59,21 @@ def load_provinces():
 
 @st.cache_data(show_spinner=False)
 def load_province_price():
-    df = pd.read_csv(data_path("china_province_price.csv"))
+    df = read_csv_smart(data_path("china_province_price.csv"))
     df["province"] = df["province"].astype(str)
     return df
 
 
 @st.cache_data(show_spinner=False)
 def load_city_price():
-    df = pd.read_csv(data_path("china_city_price.csv"))
+    df = read_csv_smart(data_path("china_city_price.csv"))
     df["city"] = df["city"].astype(str)
     return df
 
 
 def read_uploaded(file):
     """用户上传 CSV：需要 name + price 两列，可选 lat/lon。"""
-    df = pd.read_csv(file)
+    df = read_csv_smart(file)
     lower = {c.lower().strip(): c for c in df.columns}
     name_col = next((v for k, v in lower.items() if k in ("province", "city", "name", "省份", "城市", "名称")), None)
     price_col = next((v for k, v in lower.items() if k in ("price", "price_yuan_sqm", "均价", "房价", "价格")), None)
@@ -192,7 +192,7 @@ def main():
                         fill_opacity=0.55,
                         popup=f"{r['city']}：¥{float(r['price_yuan_sqm']):,.0f}/㎡",
                     ).add_to(m)
-            m.to_streamlit(height=560)
+            show_map(m, height=560)
 
         with tab_3d:
             if prov_price is None:

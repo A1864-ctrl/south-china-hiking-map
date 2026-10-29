@@ -21,7 +21,9 @@ from app_utils import (
     add_base_map,
     data_path,
     json_safe_gdf,
+    read_csv_smart,
     safe_run,
+    show_map,
     sidebar_common,
 )
 
@@ -69,7 +71,7 @@ def main():
     st.title("📍 点聚合标注")
     st.caption("点一多就会糊成一片；聚合后先看数量，放大自动展开成单个标注。")
 
-    df = pd.read_csv(data_path("china_city_price.csv"))
+    df = read_csv_smart(data_path("china_city_price.csv"))
 
     with st.sidebar:
         st.markdown("---")
@@ -145,7 +147,7 @@ def main():
             ).add_to(mc)
         mc.add_to(m)
 
-        m.to_streamlit(height=600)
+        show_map(m, height=600)
         if legend_items:
             swatch_legend(legend_items)
 

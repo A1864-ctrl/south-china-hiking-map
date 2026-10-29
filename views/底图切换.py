@@ -15,7 +15,9 @@ from app_utils import (
     add_base_map,
     data_path,
     json_safe_gdf,
+    read_csv_smart,
     safe_run,
+    show_map,
     sidebar_common,
 )
 
@@ -59,7 +61,7 @@ def main():
         import folium
         import pandas as pd
 
-        cities = pd.read_csv(data_path("china_city_price.csv")).dropna(subset=["lon", "lat"])
+        cities = read_csv_smart(data_path("china_city_price.csv")).dropna(subset=["lon", "lat"])
         for _, r in cities.iterrows():
             folium.CircleMarker(
                 location=[r["lat"], r["lon"]],
@@ -88,7 +90,7 @@ def main():
             except Exception:  # noqa: BLE001
                 st.warning(f"底图 {t} 加载失败，已跳过（境外服务可能被墙）。")
 
-    m.to_streamlit(height=640)
+    show_map(m, height=640)
 
     with st.expander("底图说明：为什么只有这几个可用"):
         st.markdown(
