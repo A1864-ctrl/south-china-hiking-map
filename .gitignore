@@ -133,3 +133,6 @@ dmypy.json
 
 # 轨迹构建中间产物（本地索引 30MB+，不进仓库）
 tools/.cache/
+
+# 个人推送脚本，不进仓库
+push_to_github.bat
