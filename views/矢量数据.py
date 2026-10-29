@@ -17,10 +17,7 @@ import geopandas as gpd
 import pandas as pd
 import streamlit as st
 
-from app_utils import data_path, json_safe_gdf, new_map, safe_run, sidebar_common
-
-st.set_page_config(page_title="矢量数据", layout="wide", page_icon="🔲")
-
+from app_utils import BASEMAP_CHOICES, data_path, json_safe_gdf, new_map, safe_run, sidebar_common
 
 def to_gdf(uploaded):
     suffix = os.path.splitext(uploaded.name)[1].lower()
@@ -42,6 +39,7 @@ def main():
         st.markdown("---")
         st.markdown("### 数据与样式")
         source = st.radio("数据来源", ["内置：中国省级边界", "上传文件"])
+        basemap = st.selectbox("底图", BASEMAP_CHOICES, index=0)
         fillcolor = st.color_picker("填充色", "#1f77b4")
         opacity = st.slider("填充透明度", 0.0, 1.0, 0.45)
         show_table = st.checkbox("显示属性表", value=True)
@@ -80,7 +78,7 @@ def main():
     # 去掉数组型属性列，避免 to_json 抛 ndarray 序列化错误
     safe = json_safe_gdf(gdf)
 
-    m = new_map(zoom=4, basemap="高德矢量")
+    m = new_map(zoom=4, basemap=basemap)
     label_field = next(
         (c for c in ("name", "NAME", "名称", "city", "省", "市") if c in gdf.columns), None
     )

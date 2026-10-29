@@ -17,9 +17,7 @@ import leafmap
 import leafmap.foliumap as leafmap_folium
 import streamlit as st
 
-from app_utils import add_base_map, safe_run, sidebar_common
-
-st.set_page_config(page_title="在线地图服务", layout="wide", page_icon="📦")
+from app_utils import BASEMAP_CHOICES, add_base_map, safe_run, sidebar_common
 
 WORLDCOVER_URL = "https://services.terrascope.be/wms/v2"
 WORLDCOVER_LAYER = "WORLDCOVER_2020_MAP"
@@ -31,10 +29,10 @@ def main():
     st.caption("不下载数据、不占磁盘，直接把远端的专题图层叠到地图上。")
 
     mode = st.sidebar.radio("图层来源", ["内置：全球地表覆盖", "自定义 WMS 服务"])
-    basemap = st.sidebar.selectbox("底图", ["高德矢量", "高德影像", "腾讯矢量"])
+    basemap = st.sidebar.selectbox("底图", BASEMAP_CHOICES, index=0)
     opacity = st.sidebar.slider("图层透明度", 0.0, 1.0, 0.7)
 
-    m = add_base_map(leafmap_folium.Map(center=[30, 105], zoom=3), basemap)
+    m = add_base_map(leafmap_folium.Map(center=[30, 105], zoom=3, tiles=None), basemap)
 
     if mode == "内置：全球地表覆盖":
         st.markdown(

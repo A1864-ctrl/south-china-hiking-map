@@ -17,24 +17,55 @@ DATA_DIR = os.path.join(ROOT, "data")
 
 # ---------------------------------------------------------------- 国内可用底图
 # 这些瓦片由访问者浏览器直接加载，国内网络可直接打开，无需 API Key。
+#
+# 注意 {s} 子域名：高德只接受 1/2/3/4，而 folium 默认会填 a/b/c，
+# 那样就会去请求 webrd0a.is.autonavi.com（不存在）→ 地图整片灰。
+# 所以下面每个底图都要显式带上 subdomains。
 TILES = {
     "高德矢量": "https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
     "高德影像": "https://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
-    "高德路网注记": "https://webst0{s}.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}",
-    "腾讯矢量": "https://rt0.map.gtimg.com/tile?z={z}&x={x}&y={-y}&type=vector&styleid=3",
-    "天地图影像": "https://t0.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=您的密钥",
-    "OpenStreetMap": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "高德注记": "https://webst0{s}.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}",
+    "Carto浅色": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
 }
+
+SUBDOMAINS = {"高德矢量": "1234", "高德影像": "1234", "高德注记": "1234"}
+
+ATTRS = {
+    "高德矢量": "© 高德地图",
+    "高德影像": "© 高德地图",
+    "高德注记": "© 高德地图",
+    "Carto浅色": "© OpenStreetMap contributors © CARTO",
+}
+
+# 界面上给用户选的底图（都是实测能出图的）
+BASEMAP_CHOICES = ["高德矢量", "高德影像", "高德影像 + 注记", "Carto浅色"]
 
 
 def tile_url(name: str) -> str:
-    return TILES[name]
+    return TILES.get(name, TILES["高德矢量"])
 
 
-def add_base_map(m, name: str = "高德矢量", attribution: str = "© 高德地图"):
-    """给 leafmap 地图对象加一层底图。"""
-    url = TILES.get(name, TILES["高德矢量"])
-    m.add_tile_layer(url=url, name=name, attribution=attribution, max_zoom=18)
+def tile_layer_kwargs(name: str) -> dict:
+    """把一个底图名转成 folium TileLayer 的参数。"""
+    key = "高德影像" if name not in TILES else name
+    kwargs = {
+        "url": TILES[key],
+        "name": name,
+        "attribution": ATTRS.get(key, " "),
+        "max_zoom": 18,
+    }
+    if key in SUBDOMAINS:
+        kwargs["subdomains"] = SUBDOMAINS[key]
+    return kwargs
+
+
+def add_base_map(m, name: str = "高德矢量"):
+    """给 leafmap 地图对象加底图。支持「高德影像 + 注记」两层叠加。"""
+    if name == "高德影像 + 注记":
+        m.add_tile_layer(**tile_layer_kwargs("高德影像"))
+        m.add_tile_layer(**tile_layer_kwargs("高德注记"))
+        return m
+    m.add_tile_layer(**tile_layer_kwargs(name))
     return m
 
 
@@ -42,7 +73,9 @@ def new_map(center=(35.0, 105.0), zoom=4, basemap="高德矢量"):
     """创建以中国为中心的 leafmap 地图。"""
     import leafmap.foliumap as leafmap
 
-    m = leafmap.Map(center=list(center), zoom=zoom, draw_control=False)
+    if basemap not in BASEMAP_CHOICES:
+        basemap = "高德矢量"
+    m = leafmap.Map(center=list(center), zoom=zoom, draw_control=False, tiles=None)
     add_base_map(m, basemap)
     return m
 

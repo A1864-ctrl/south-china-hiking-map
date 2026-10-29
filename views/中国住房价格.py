@@ -19,8 +19,6 @@ import streamlit as st
 
 from app_utils import DATA_DIR, data_path, new_map, safe_run, sidebar_common
 
-st.set_page_config(page_title="中国住房价格", layout="wide", page_icon="🏠")
-
 PALETTES = {
     "暖色（低价→高价）": ["#fff5eb", "#fdd49e", "#fdbb84", "#fc8d59", "#e34a33", "#b30000"],
     "蓝绿（低价→高价）": ["#f0f9e8", "#ccebc5", "#a8ddb5", "#7bccc4", "#43a2ca", "#0868ac"],
