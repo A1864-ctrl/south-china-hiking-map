@@ -1,4 +1,4 @@
-"""湘粤旅游与徒步地图 —— 应用入口。
+"""湘粤赣桂旅游与徒步地图 —— 应用入口。
 
 Streamlit 多页面：这里只做两件事——设置全局配置、注册导航。
 真正的页面内容都在 views/ 下，一个文件一页。
@@ -7,7 +7,7 @@ Streamlit 多页面：这里只做两件事——设置全局配置、注册导�
 import streamlit as st
 
 st.set_page_config(
-    page_title="湘粤旅游与徒步地图",
+    page_title="湘粤赣桂旅游与徒步地图",
     page_icon="🗺️",
     layout="wide",
     initial_sidebar_state="expanded",

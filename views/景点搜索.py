@@ -31,12 +31,18 @@ TYPE_COLORS = {
 }
 
 LEVEL_BADGE = {"5A": "🟥 5A", "4A": "🟧 4A", "3A": "🟨 3A"}
+QUERY_KEY = "attraction_query"
 
 
 def heat_bar(heat: int) -> str:
     """把热度画成一条小进度条。"""
     n = int(round(max(0, min(100, heat)) / 10))
     return "█" * n + "░" * (10 - n)
+
+
+def set_query(value: str) -> None:
+    """按钮回调：在控件实例化之前改值，Streamlit 才不会报 AlreadyInstantiated。"""
+    st.session_state[QUERY_KEY] = value
 
 
 def main():
@@ -55,27 +61,42 @@ def main():
         basemap = st.selectbox("底图", BASEMAP_CHOICES, index=0)
 
     # ---------------- 搜索 ----------------
-    if "search_q" not in st.session_state:
-        st.session_state["search_q"] = ""
+    if QUERY_KEY not in st.session_state:
+        st.session_state[QUERY_KEY] = ""
 
-    st.text_input(
-        "搜索地名或景点",
-        key="search_q",
-        placeholder="试试：潮州 / 张家界 / 海岛 / 丹霞山 / 南澳",
-        label_visibility="collapsed",
-    )
-    search = st.session_state["search_q"]
+    c1, c2 = st.columns([5, 1.1])
+    with c1:
+        st.text_input(
+            "搜索地名或景点",
+            key=QUERY_KEY,
+            placeholder="试试：潮州 / 张家界 / 海岛 / 丹霞山 / 南澳（清空即看全部）",
+            label_visibility="collapsed",
+        )
+    with c2:
+        st.button(
+            "看全部",
+            use_container_width=True,
+            on_click=set_query,
+            args=("",),
+            help="清空搜索词，回到全部景点",
+        )
+    search = st.session_state[QUERY_KEY].strip()
 
-    # 快捷城市
+    # 快捷城市：点一下就换城市，不锁死，可反复切换
     hot_cities = (
         df.groupby("city")["heat"].sum().sort_values(ascending=False).head(8).index.tolist()
     )
-    st.caption("热门城市快捷入口：")
-    cols = st.columns(len(hot_cities))
+    st.caption("热门城市快捷入口（可反复点击切换）：")
+    cols = st.columns(8)
     for i, city in enumerate(hot_cities):
-        if cols[i].button(city, key=f"city_{city}", use_container_width=True):
-            st.session_state["search_q"] = city
-            st.rerun()
+        cols[i].button(
+            city,
+            key=f"city_{city}",
+            use_container_width=True,
+            on_click=set_query,
+            args=(city,),
+            type="primary" if search == city else "secondary",
+        )
 
     # ---------------- 过滤 ----------------
     work = df.copy()
@@ -85,20 +106,25 @@ def main():
         work = work[work["type"].isin(types)]
     work = work[work["heat"] >= min_heat]
 
-    if search and search.strip():
-        q = search.strip()
+    if search:
         mask = (
-            work["name"].str.contains(q, na=False)
-            | work["city"].str.contains(q, na=False)
-            | work["district"].str.contains(q, na=False)
-            | work["type"].str.contains(q, na=False)
-            | work["best_season"].str.contains(q, na=False)
+            work["name"].str.contains(search, na=False)
+            | work["city"].str.contains(search, na=False)
+            | work["district"].str.contains(search, na=False)
+            | work["type"].str.contains(search, na=False)
+            | work["best_season"].str.contains(search, na=False)
         )
         work = work[mask]
 
     if work.empty:
-        st.warning("没有匹配的景点。换个更短的词试试，比如只输入城市名「郴州」。")
+        st.warning(
+            f"「{search}」没有匹配的景点。换个更短的词试试：只输入城市名（郴州）、"
+            "区县名（阳朔），或者点上面的「看全部」。"
+        )
         return
+
+    scope = f"「{search}」" if search else "全部"
+    st.markdown(f"#### {scope} 找到 **{len(work)}** 个景点")
 
     # ---------------- 地图 ----------------
     center = [float(work["lat"].mean()), float(work["lon"].mean())]
@@ -133,8 +159,6 @@ def main():
     )
 
     # ---------------- 结果 ----------------
-    st.markdown(f"#### 找到 **{len(work)}** 个景点")
-
     left, right = st.columns([1, 1.5], gap="large")
 
     with left:
@@ -173,9 +197,7 @@ def main():
         )
         if not same_city.empty:
             st.markdown(f"##### {row['city']}还有其他 {len(same_city)} 个")
-            chips = "　".join(
-                f"`{r['name']}`" for _, r in same_city.head(8).iterrows()
-            )
+            chips = "　".join(f"`{r['name']}`" for _, r in same_city.head(8).iterrows())
             st.markdown(chips)
 
     st.divider()

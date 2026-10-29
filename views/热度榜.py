@@ -85,7 +85,8 @@ def main():
 
     with st.sidebar:
         st.markdown("### 筛选")
-        prov = st.radio("省份", ["全部", "广东省", "湖南省"], index=0)
+        all_prov = sorted(set(load_attractions()["province"]) | set(load_routes()["province"]))
+        prov = st.radio("省份", ["全部"] + all_prov, index=0)
         basemap = st.selectbox("底图", BASEMAP_CHOICES, index=0)
         top_n = st.slider("榜单显示条数", 5, 30, 15)
 

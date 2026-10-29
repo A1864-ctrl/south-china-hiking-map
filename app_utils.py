@@ -161,6 +161,40 @@ def load_routes():
     return read_csv_smart(data_path("hiking_routes.csv"))
 
 
+# ---------------------------------------------------------------- 真实轨迹
+TRACK_DIR = os.path.join(DATA_DIR, "tracks")
+
+
+@st.cache_data(show_spinner=False)
+def load_track(track_id: str):
+    """读取构建好的真实轨迹（含途经点、海拔、速度剖面）。
+
+    轨迹由 tools/build_tracks.py 一次性生成：途经点 → OSRM 步行路网 →
+    SRTM 30m 海拔。运行时不访问任何外部接口，所以页面不会因为接口挂了而白屏。
+    """
+    import json
+
+    fn = os.path.join(TRACK_DIR, f"{track_id}.json")
+    if not os.path.exists(fn):
+        return None
+    with open(fn, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def track_points(track) -> list:
+    """把轨迹 JSON 转成 [(lat, lon, ele), ...]。"""
+    if not track:
+        return []
+    return [(p[0], p[1], p[2] if len(p) > 2 else None) for p in track["points"]]
+
+
+def track_km_at(track, index: int) -> float:
+    pts = track["points"]
+    index = max(0, min(index, len(pts) - 1))
+    return pts[index][3] if len(pts[index]) > 3 else 0.0
+
+
+
 def json_safe_gdf(gdf):
     """只保留能安全转成 JSON 的列（去掉列表/数组类型的属性列）。
 

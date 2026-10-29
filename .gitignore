@@ -130,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# 轨迹构建中间产物（本地索引 30MB+，不进仓库）
+tools/.cache/
