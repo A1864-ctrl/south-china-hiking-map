@@ -1,0 +1,26 @@
+# Streamlit 运行时配置。云端部署时会被自动读取，本地启动同样生效。
+# 改这个文件后需要重启服务（它不是热重载的）。
+
+[theme]
+base = "light"
+primaryColor = "#ff6d00"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f6f8"
+textColor = "#1f2328"
+font = "sans serif"
+
+[server]
+# 云端容器里没有显示器，必须 headless，否则启动会卡在"是否打开浏览器"
+headless = true
+# 上传 GPX 的上限（MB）。默认 200，手机记录的轨迹一般几 MB 就够
+maxUploadSize = 50
+# 关闭 WebSocket 压缩排查问题时可以临时改 true，正常保持默认
+enableXsrfProtection = true
+
+[browser]
+# 不向 Streamlit 上报使用统计
+gatherUsageStats = false
+
+[client]
+# 页面上不显示 Streamlit 自带的工具栏（Deploy 按钮等），对外更像一个成品站
+toolbarMode = "minimal"

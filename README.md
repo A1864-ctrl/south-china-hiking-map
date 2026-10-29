@@ -28,7 +28,7 @@
 3. **取海拔**：沿轨迹每 45 米查一次 SRTM 30 米高程，算出真实爬升、下降、剖面和坡度。
 
 所以轨迹能看出盘山公路的之字形、绕湖段、山脊线。生成的 JSON 里每个点都是
-`[lat, lon, ele, 累计公里]`，共 12000+ 个坐标点。
+`[lat, lon, ele, 累计公里]`，34 条路线共 **15,330** 个坐标点。
 
 ### 质量闸门
 
@@ -43,7 +43,7 @@
 > 注意：**登山线天然「直线短、实际长」**（盘山路、之字形上升），所以绕行倍数
 > 只用来粗筛明显不连通的情况，判断「有没有上山」靠的是登顶率。
 
-45 条候选路线里 32 条通过，其余 13 条被拦下。逐条原因见
+47 条候选路线里 34 条上架，其余 13 条被拦下。逐条原因见
 [`轨迹体检报告.md`](轨迹体检报告.md)，也可以用 `python tools/audit_tracks.py` 重新生成。
 
 ## 导入真实航迹（GPX）
@@ -117,6 +117,26 @@ streamlit run Home.py
 ```
 
 注意用虚拟环境里的解释器（`.\venv\Scripts\python.exe`），系统 Python 没装 streamlit。
+Windows 上也可以直接双击 `start_local.bat`。
+
+## 部署上线
+
+仓库已就绪：`requirements.txt`（Python 依赖）、`packages.txt`（系统依赖）、
+`.streamlit/config.toml`（主题 / 无头模式 / 上传上限）、`Dockerfile`（云服务器路线）。
+
+- **免费方案**：Streamlit Community Cloud —— `share.streamlit.io` → Create app →
+  选本仓库、分支 `master`、主文件 `Home.py`，Advanced settings 里 Python 版本选 `3.12`。
+- **自建方案**：`docker build -t hiking-map . && docker run -d -p 8501:8501 --restart unless-stopped hiking-map`
+
+完整步骤、验证清单、报错对照见 [`部署手册.md`](部署手册.md)。
+
+## 文档
+
+| 文件 | 内容 |
+|---|---|
+| [`部署手册.md`](部署手册.md) | 从本机到公网：Git 提交、GitHub 推送、云平台部署、别人打不开怎么办 |
+| [`轨迹体检报告.md`](轨迹体检报告.md) | 47 条候选路线逐条体检，13 条未通过的根因与解法 |
+| [`简历项目经验.md`](简历项目经验.md) | 功能梳理、技术栈、工程难点、简历写法、可投岗位分析 |
 
 ## 数据可信度
 
