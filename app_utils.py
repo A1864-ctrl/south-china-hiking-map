@@ -7,6 +7,7 @@
 
 import math
 import os
+import random
 import traceback
 import xml.etree.ElementTree as ET
 
@@ -148,6 +149,18 @@ def read_csv_smart(src, **kwargs):
     raise last_err
 
 
+@st.cache_data(show_spinner=False)
+def load_attractions():
+    """加载景点表。"""
+    return read_csv_smart(data_path("attractions.csv"))
+
+
+@st.cache_data(show_spinner=False)
+def load_routes():
+    """加载徒步路线表。"""
+    return read_csv_smart(data_path("hiking_routes.csv"))
+
+
 def json_safe_gdf(gdf):
     """只保留能安全转成 JSON 的列（去掉列表/数组类型的属性列）。
 
@@ -163,6 +176,104 @@ def json_safe_gdf(gdf):
         if vals.map(lambda v: isinstance(v, (str, int, float, bool)) or v is None).all():
             keep.append(col)
     return gdf[keep]
+
+
+# ---------------------------------------------------------------- 示意轨迹
+def _stable_seed(text: str) -> int:
+    """把字符串转成稳定整数（内置 hash() 每个进程随机，不能用）。"""
+    h = 2166136261
+    for ch in str(text):
+        h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
+    return h
+
+
+def gen_track(name, lat, lon, distance_km, ascent_m, n_points=None):
+    """按路线的「起点 + 标称里程 + 标称爬升」反推一条确定性示意轨迹。
+
+    注意：这不是实测 GPX。两步路那类真实轨迹需要下载或实地记录，
+    这里生成的折线走向自然、长度与爬升都贴合标称值，用于在没有 GPX 时
+    把路线画在地图上；要真实轨迹请用 GPX 上传替换。
+
+    返回 [(lat, lon, ele), ...]
+    """
+    total_m = max(800.0, float(distance_km) * 1000.0)
+    n = n_points or int(min(360, max(48, total_m / 110.0)))
+    n = max(int(n), 8)
+
+    rnd = random.Random(_stable_seed(name))
+    heading = rnd.uniform(0, 360.0)
+    drift = rnd.choice([-1, 1]) * rnd.uniform(0.1, 0.35)
+    swing_amp = rnd.uniform(12.0, 30.0)
+    swing_freq = rnd.uniform(2.5, 6.5)
+    phase = rnd.uniform(0, 2 * math.pi)
+    base = rnd.uniform(20.0, 120.0)  # 山脚基准海拔
+
+    # 海拔剖面：主趋势整体爬升，叠加两级起伏。
+    # 起伏幅度必须大于趋势单步升幅，否则曲线单调向上、累计下降会算成 0。
+    raw = []
+    for i in range(n):
+        t = i / (n - 1)
+        raw.append(
+            0.70 * t
+            + 0.080 * math.sin(t * math.pi * 6.0 + phase)
+            + 0.035 * math.sin(t * math.pi * 13.0 + phase * 1.7)
+        )
+
+    def build(step_len):
+        pts = []
+        cur_lat, cur_lon = float(lat), float(lon)
+        for i in range(n):
+            pts.append([cur_lat, cur_lon])
+            if i == n - 1:
+                break
+            t = i / (n - 1)
+            h = math.radians(
+                heading + drift * i + math.sin(t * math.pi * swing_freq + phase) * swing_amp
+            )
+            cur_lat += (step_len * math.cos(h)) / 111320.0
+            cur_lon += (step_len * math.sin(h)) / (111320.0 * math.cos(math.radians(cur_lat)))
+        return pts
+
+    # 先按均分步长生成，再按实际长度校正一次，让里程贴近标称值
+    step = total_m / (n - 1)
+    pts = build(step)
+    actual = sum(haversine_m(p, q) for p, q in zip(pts, pts[1:]))
+    if actual > 0:
+        pts = build(step * total_m / actual)
+
+    # 按「累计正向爬升」归一化，使总爬升贴近标称爬升值
+    pos = sum(max(0.0, b - a) for a, b in zip(raw, raw[1:]))
+    scale = (float(ascent_m) / pos) if (pos > 1e-9 and ascent_m) else 400.0
+    eles = [max(1.0, base + v * scale) for v in raw]
+
+    return [(p[0], p[1], e) for p, e in zip(pts, eles)]
+
+
+def track_profile(points):
+    """把轨迹转成剖面数据 [(累计距离 km, 海拔 m), ...]。"""
+    out, acc = [], 0.0
+    for i, p in enumerate(points):
+        if i:
+            acc += haversine_m(points[i - 1], p)
+        out.append((acc / 1000.0, p[2] if p[2] is not None else 0.0))
+    return out
+
+
+def track_to_gpx(points, name="track"):
+    """导出 GPX 文本，可直接导入两步路 / 户外助手等 App。"""
+    from xml.sax.saxutils import escape
+
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<gpx version="1.1" creator="xiangyue-map" '
+        'xmlns="http://www.topografix.com/GPX/1/1">',
+        f"  <trk><name>{escape(str(name))}</name><trkseg>",
+    ]
+    for p in points:
+        ele = "" if p[2] is None else f"<ele>{p[2]:.1f}</ele>"
+        parts.append(f'    <trkpt lat="{p[0]:.6f}" lon="{p[1]:.6f}">{ele}</trkpt>')
+    parts += ["  </trkseg></trk>", "</gpx>"]
+    return "\n".join(parts)
 
 
 # ---------------------------------------------------------------- GPX / 距离
@@ -240,9 +351,10 @@ def page_header(title: str, subtitle: str = ""):
 def sidebar_common():
     st.sidebar.markdown("### 使用提示")
     st.sidebar.markdown(
-        "1. 左侧菜单切换不同功能页面\n"
-        "2. 底图默认使用高德，国内可正常加载\n"
-        "3. 地图上按住左键拖动，滚轮缩放"
+        "1. 左侧菜单切换页面\n"
+        "2. 景点页左列点选，右列看「值得去的理由」\n"
+        "3. 徒步页选路线，地图点起点可看轨迹\n"
+        "4. 底图默认高德，国内可正常加载"
     )
     st.sidebar.markdown("---")
-    st.sidebar.caption("数据与底图均来自公开服务，仅供学习与演示使用。")
+    st.sidebar.caption("景点与路线信息整理自公开资料，出行前请以官方公告为准。")
