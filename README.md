@@ -9,7 +9,12 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Data](https://img.shields.io/badge/Data-OSM%20%2B%20SRTM-orange)](https://www.openstreetmap.org/)
 
-> 🚧 **在线体验**：（部署后把这里换成 `https://xxx.streamlit.app`，步骤见 [部署手册](部署手册.md)）
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://south-china-hiking-map.streamlit.app)
+
+> ### ▶ [**在线体验：south-china-hiking-map.streamlit.app**](https://south-china-hiking-map.streamlit.app)
+>
+> 不用装 Python、不用注册账号，点开就能用。
+> 免费实例在 12 小时无访问后会休眠，打开时若看到 `Yes, get this app back up!`，点一下唤醒即可（约 30 秒）。
 
 ---
 
