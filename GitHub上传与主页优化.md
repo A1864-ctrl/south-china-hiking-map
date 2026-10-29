@@ -6,6 +6,28 @@
 
 ---
 
+## 当前进度（2026-10-29 18:40 更新）
+
+| # | 事项 | 状态 |
+|---|---|---|
+| 1 | 本地代码检查（语法 / 页面 / 依赖 / 硬编码 / 敏感信息） | ✅ 通过，4 个问题已修 |
+| 2 | 代码推送到 GitHub（`a2eeea2`） | ✅ 已完成，远程与本地一致 |
+| 3 | 清掉模板残留文件（`index.html`、`FUNDING.yml`、`Procfile` 等） | ✅ 已完成 |
+| 4 | 改仓库 Description（现在是模板原文） | ⬜ **待你做，见 3.2** |
+| 5 | 清空 Homepage（现在指向别人的 HuggingFace 空间） | ⬜ **待你做，见 3.2** |
+| 6 | 加 Topics 标签 | ⬜ 待你做，见 3.2 |
+| 7 | 改仓库名（可选，但强烈建议） | ⬜ 待你做，见 3.1 |
+| 8 | 部署到 Streamlit Cloud，拿到公网链接 | ⬜ 待你做，见 `部署手册.md` 阶段 6 |
+| 9 | 把公网链接回填 README 和 GitHub 的 Website | ⬜ 部署后再做 |
+
+> 也就是说：**代码已经在 GitHub 上了**，你从第 4 条开始做。
+> 第 4、5 条尤其重要——我查出你仓库的 Description 还是模板作者写的
+> `A multi-page streamlit app for geospatial`，Homepage 还指向
+> `huggingface.co/spaces/giswqs/Streamlit`（**别人部署的空间**）。
+> 这两个字段位置很显眼，HR 打开仓库第一眼就看得到。
+
+---
+
 ## 先回答你最关心的：需要「删掉旧项目」吗？
 
 **不用删，也不建议删。** 原因：
@@ -147,12 +169,22 @@ git remote -v    # 确认已经是新地址
 
 ### 2. 填仓库描述（Description）和标签（Topics）
 
-在仓库首页右侧，**About** 那一栏点齿轮：
+在仓库首页右侧，**About** 那一栏点齿轮。
+
+> ⚠️ **你现在这两个字段是模板作者留下的，必须先清掉**：
+>
+> | 字段 | 当前值 | 问题 |
+> |---|---|---|
+> | Description | `A multi-page streamlit app for geospatial` | 模板原文，看不出是华南徒步项目 |
+> | Website | `https://huggingface.co/spaces/giswqs/Streamlit` | **指向别人的 HuggingFace 空间**，点进去是个陌生人的应用 |
+>
+> 这个齿轮弹窗一打开就能改，Website 那栏**直接清空**（先别填，等部署完再填自己的）。
+
+填成：
 
 - **Description**：`Interactive Streamlit map for attractions and hiking trails in South China (155 spots · 34 trails · 15,330 GPS points)`
-- **Website**：填你的在线地址（部署完再填，见部署手册）
-- **Topics**：`streamlit` `gis` `python` `openstreetmap` `hiking` `data-visualization`
-  `geospatial` `folium` `altair`
+- **Website**：部署完再填自己的在线地址（见部署手册）；现在先留空
+- **Topics**（要一个个加，回车确认）：`streamlit` `gis` `python` `openstreetmap` `hiking` `data-visualization` `geospatial` `folium` `altair`
 
 > 为什么重要：GitHub 搜索和 HR 第一眼都靠这两个字段判断"这是什么项目"。
 > Topics 会显示成彩色小标签，视觉上很专业。
