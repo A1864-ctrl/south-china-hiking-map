@@ -1,7 +1,13 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="徒步路线地图工具", layout="wide")
+
+st.sidebar.markdown("### 徒步路线使用指南")
+st.sidebar.markdown("1. 选择「底图」切换为 OpenStreetMap 查看徒步道路")
+st.sidebar.markdown("2. 可通过地图缩放定位目标徒步区域")
+st.sidebar.markdown("3. 支持测量路线距离、查看地形与卫星影像")
+st.sidebar.markdown("---")
 
 st.sidebar.title("About")
 st.sidebar.info("""
@@ -21,7 +27,9 @@ st.sidebar.info("""
     """)
 
 
-st.title("Streamlit for Geospatial Applications")
+st.title("徒步路线可视化与地图工具")
+st.markdown("基于开源地理空间项目二次开发，支持路线查看、图层切换、坐标定位，适用户外徒步路线规划与轨迹查看")
+
 
 st.markdown("""
     This multi-page web app demonstrates various interactive web apps created using [streamlit](https://streamlit.io) and open-source mapping libraries,
