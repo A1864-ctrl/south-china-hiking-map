@@ -1,21 +1,24 @@
-# streamlit-geospatial
+# 徒步路线可视化与地图工具
+> 本项目基于 [opengeos/streamlit-geospatial](https://github.com/opengeos/streamlit-geospatial)（⭐700+）二次开发，原项目开源协议：MIT
 
-A streamlit multipage app for geospatial applications. It can be deployed to [Streamlit Cloud](https://streamlit.io/cloud).
+## ✨ 改造内容
+1.  适配徒步业务场景，改造页面标题与侧边栏指引，新增徒步路线使用指南
+2.  优化国内访问体验，聚焦基础地图浏览、图层切换、坐标定位核心能力
+3.  完成本地 Windows 环境搭建与依赖调试，梳理多页面地图应用结构
 
-- Web app: <https://streamlit.gishub.org>
-- Source code: <https://github.com/opengeos/streamlit-geospatial>
+## 技术栈
+Python · Streamlit · Leaflet · OpenStreetMap · Folium · GeoPandas
 
-## Instructions
+## 本地运行
+```bash
+# 1. 创建虚拟环境
+python -m venv venv
 
-1. Fork the GitHub repository to your GitHub account.
-2. Customize the sidebar by changing the sidebar text and logo in each Python file.
-3. Find your favorite emoji from https://emojipedia.org.
-4. Add a new app to the `pages/` directory with an emoji in the file name, e.g., 1_🚀_Chart.py.
+# 2. 激活环境（Windows）
+venv\Scripts\activate
 
-## Demo
+# 3. 安装核心依赖
+pip install streamlit leafmap folium geopandas
 
-![](https://i.imgur.com/6lj0oAO.png)
-
-## Real Estate Data and Market Trends
-
-![](https://i.imgur.com/Z3dk6Tr.gif)
+# 4. 启动项目
+streamlit run Home.py
