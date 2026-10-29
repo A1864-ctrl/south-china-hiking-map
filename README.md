@@ -46,6 +46,39 @@
 45 条候选路线里 32 条通过，其余 13 条被拦下。逐条原因见
 [`轨迹体检报告.md`](轨迹体检报告.md)，也可以用 `python tools/audit_tracks.py` 重新生成。
 
+## 导入真实航迹（GPX）
+
+要说清楚一件事：**内置路线的线是「规划路径」，不是实测航迹。**
+OSM 在华南山区的步道覆盖很稀，规划器只能沿公路和村道走，画出来会偏直、会绕远，
+达不到两步路那种「一脚一脚」的精度。
+
+要真实走位，把实测 GPX 导进来。导入后轨迹来源标为「🛰 实测」，和内置路线并列显示。
+
+**方式一：页面导入**（单条）
+
+「徒步路线 → 上传 GPX 分析」→ 选文件 → 看统计确认没选错 → 填名称/省份/城市 →
+「保存到路线库」。
+
+**方式二：批量导入**（一次几十条）
+
+```bash
+# 先试跑，只解析看统计，不写文件
+python tools/import_gpx_dir.py D:\gpx\武功山 --dry-run
+
+# 确认没问题再入库
+python tools/import_gpx_dir.py D:\gpx\武功山 --province 江西省 --city 萍乡市 --heat 92
+```
+
+文件名当路线名，同名覆盖。数据落在 `data/tracks/gpx-*.json` + `data/custom_routes.csv`，
+不动内置的 `hiking_routes.csv`，所以重新构建轨迹也不会冲掉导入的数据。
+
+**GPX 从哪来**：两步路「我的 → 轨迹 → 导出 GPX」、高德「足迹 → 导出」、
+Garmin / Coros / Suunto 手表同步出来的原始文件都可以。
+
+导入时会做三件事：把 `wpt` 路点单独拎出来当途经点（不混进轨迹线）、
+对高程做 5 点滑动平均后再算爬升（压掉 GPS 抖动造成的假爬升）、
+按 4 米容差抽稀（上万点直接渲染会卡死浏览器）。
+
 ## 重新构建轨迹
 
 ```bash
@@ -66,12 +99,14 @@ python tools/audit_tracks.py --md 轨迹体检报告.md
 
 ```
 Home.py                 入口，只负责导航注册
-app_utils.py            底图、异常兜底、轨迹读取、GPX、距离计算
+app_utils.py            底图、异常兜底、轨迹读取、GPX 解析、距离计算
+gpx_store.py            GPX → 轨迹 JSON 入库（页面导入与批量脚本共用）
 views/                  4 个页面
 data/attractions.csv    155 个景点（粤 71 / 湘 55 / 赣 16 / 桂 13）
-data/hiking_routes.csv  32 条徒步路线（里程爬升取自实测轨迹）
+data/hiking_routes.csv  内置徒步路线（里程爬升取自轨迹实测）
+data/custom_routes.csv  导入的 GPX 路线（由 gpx_store 维护，可随时删）
 data/tracks/*.json      每条路线的轨迹：坐标点、途经点、速度剖面、统计
-tools/                  轨迹构建与体检工具（运行时不依赖，不进页面）
+tools/                  轨迹构建、体检与批量导入工具（运行时不依赖，不进页面）
 ```
 
 ## 本地运行

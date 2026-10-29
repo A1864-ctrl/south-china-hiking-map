@@ -1,7 +1,8 @@
-"""徒步轨迹：贴合真实路网的轨迹线 + 途经点 + 高程/速度剖面，也可上传自己的 GPX。
+"""徒步轨迹：真实航迹 + 途经点 + 高程/速度剖面，也可导入自己的 GPX 入库。
 
-轨迹数据来自 data/tracks/*.json，由 tools/build_tracks.py 一次性构建：
-途经点按 OSM 官方坐标定位 → OSRM 步行路网规划 → SRTM 30m 取真实海拔。
+两类轨迹共用一套 JSON 结构，靠 source 字段区分：
+    planned —— 由 tools/build_tracks.py 按 OSM 路网规划（偏直、会绕公路）
+    gpx     —— 用户导入的实测航迹（精度等于 GPS 采样）
 运行时不联网，所以页面不会因为外部接口挂掉而白屏。
 """
 
@@ -29,6 +30,7 @@ from app_utils import (
     track_stats,
     track_to_gpx,
 )
+import gpx_store
 
 DIFF_COLORS = {
     "入门": "#43a047",
@@ -152,12 +154,19 @@ def steepest_section(prof_pts):
 def stat_cards(stats, prof_pts):
     """指标卡。参数名别用 st，会把 streamlit 模块遮蔽掉。"""
     c1, c2, c3, c4, c5 = st.columns(5)
+    up = stats.get("ascent_m")
+    down = stats.get("descent_m")
     c1.metric("里程", f"{stats['distance_km']:.2f} km")
-    c2.metric("累计爬升", f"{stats['ascent_m']:.0f} m")
-    c3.metric("累计下降", f"{stats['descent_m']:.0f} m")
+    c2.metric("累计爬升", f"{up:.0f} m" if up is not None else "—")
+    c3.metric("累计下降", f"{down:.0f} m" if down is not None else "—")
     hi = f"{stats['ele_max']:.0f} m" if stats.get("ele_max") is not None else "—"
     c4.metric("最高海拔", hi)
-    c5.metric("预计耗时", f"{naismith_hours(stats['distance_km'], stats['ascent_m']):.1f} 小时")
+    hours = (
+        naismith_hours(stats["distance_km"], up)
+        if up is not None
+        else stats["distance_km"] / 4.5
+    )
+    c5.metric("预计耗时", f"{hours:.1f} 小时")
 
 
 def waypoint_table(track):
@@ -214,6 +223,11 @@ def tab_library():
 
     st.markdown(f"共 **{len(work)}** 条路线，按热度排序。")
 
+    work = work.copy()
+    work["来源"] = (
+        work["source"].map({"gpx": "🛰 实测", "planned": "🗺 规划"}).fillna("🗺 规划")
+    )
+
     left, right = st.columns([1, 1.6], gap="large")
 
     with left:
@@ -225,7 +239,9 @@ def tab_library():
 
         st.markdown("##### 路线列表")
         st.dataframe(
-            work[["name", "city_short", "difficulty", "distance_km", "ascent_m", "heat"]].rename(
+            work[
+                ["name", "来源", "city_short", "difficulty", "distance_km", "ascent_m", "heat"]
+            ].rename(
                 columns={
                     "name": "路线",
                     "city_short": "城市",
@@ -267,8 +283,7 @@ def tab_library():
     km_at, grade = steepest_section(prof)
     st.caption(
         f"最陡一段出现在 **{km_at:.1f} km** 处，坡度约 **{grade:.0f}%**"
-        f"（每走 100 米上升 {grade:.0f} 米）。轨迹共 {len(track['points'])} 个坐标点，"
-        f"每个点都落在实际道路上。"
+        f"（每走 100 米上升 {grade:.0f} 米）。轨迹共 {len(track['points'])} 个坐标点。"
     )
 
     col_a, col_b = st.columns([2.1, 1], gap="large")
@@ -292,49 +307,152 @@ def tab_library():
         mime="application/gpx+xml",
     )
 
-    st.info(
-        "**轨迹怎么来的：**途经点坐标取自 OpenStreetMap 官方数据，路径用 Valhalla 步行路网规划"
-        f"（{track.get('built', '')} 构建），海拔取 SRTM 30 米高程，每 45 米取一个高程点。"
-        "所以线是贴着真实道路和山径走的，不是两点直连。"
-        "但 OSM 在部分山区步道覆盖不全，走位仍可能与现场有偏差，**导航请以现场路标和官方轨迹为准**。",
-        icon="ℹ️",
+    if track.get("source") == "gpx":
+        st.success(
+            "**实测航迹：**这条线是导入的 GPX 记录，走位就是 GPS 当时打下的点，"
+            f"精度等于采样本身。里程与爬升按原文件逐点重算（{track.get('built', '')} 入库）。",
+            icon="🛰",
+        )
+    else:
+        st.warning(
+            "**这是规划路径，不是实测航迹。**途经点坐标取自 OpenStreetMap，路径由 Valhalla "
+            f"步行路网规划（{track.get('built', '')} 构建），海拔取 SRTM 30 米。\n\n"
+            "OSM 在华南山区步道覆盖很稀，规划器只能沿公路和村道走，所以线会偏直、会绕远，"
+            "**达不到两步路那种一脚一脚的精度**。要精确走位，请到「上传 GPX」导入实测轨迹。",
+            icon="⚠️",
+        )
+
+
+def imported_panel():
+    """已导入的实测航迹列表 + 删除入口。"""
+    rows = gpx_store.list_custom()
+    st.markdown(f"##### 已导入的实测航迹（{len(rows)} 条）")
+    if not rows:
+        st.caption("还没有导入过。导入后会出现在这里，也会进「路线库」。")
+        return
+    df = pd.DataFrame(rows)[["name", "province", "city", "distance_km", "ascent_m"]]
+    st.dataframe(
+        df.rename(
+            columns={
+                "name": "路线",
+                "province": "省份",
+                "city": "城市",
+                "distance_km": "里程",
+                "ascent_m": "爬升",
+            }
+        ),
+        hide_index=True,
     )
+    with st.expander("删除已导入的路线"):
+        pick = st.selectbox("选择路线", [r["name"] for r in rows], key="del_gpx_pick")
+        if st.button("删除这条", key="del_gpx_btn"):
+            tid = next(r["track_id"] for r in rows if r["name"] == pick)
+            if gpx_store.delete_custom(tid):
+                st.cache_data.clear()
+                st.success(f"已删除「{pick}」")
+                st.rerun()
+
+
+def save_panel(filename: str, pts: list, wpts: list | None = None):
+    """把刚上传的 GPX 正式存进路线库。"""
+    st.markdown("#### 存进路线库")
+    st.caption("存进去以后，它会和内置路线并列，来源标为「🛰 实测」。")
+    default_name = os.path.splitext(os.path.basename(filename))[0]
+
+    with st.form("save_gpx_form"):
+        c1, c2, c3 = st.columns(3)
+        name = c1.text_input("路线名", value=default_name)
+        province = c2.text_input("省份", value="江西省")
+        city = c3.text_input("城市", value="萍乡市")
+        c4, c5, c6 = st.columns(3)
+        rtype = c4.selectbox("类型", ["穿越", "往返", "环线", "登顶"], index=0)
+        diff = c5.selectbox("难度", ["入门", "较易", "中等", "较难", "难"], index=2)
+        days = c6.number_input("天数", min_value=1, max_value=15, value=1)
+        c7, c8 = st.columns([1, 2])
+        season = c7.text_input("最佳季节", value="春秋")
+        desc = c8.text_input("一句话简介", value="")
+        heat = st.slider("热度（决定列表排序）", 0, 100, 70)
+        submitted = st.form_submit_button("保存到路线库", type="primary")
+
+    if submitted:
+        if not name.strip():
+            st.error("路线名不能为空。")
+            return
+        meta = {
+            "id": gpx_store.make_id(name),
+            "name": name.strip(),
+            "province": province.strip(),
+            "city": city.strip(),
+            "type": rtype,
+            "difficulty": diff,
+            "days": int(days),
+            "best_season": season.strip(),
+            "desc": desc.strip() or "用户导入的实测航迹。",
+            "heat": int(heat),
+            "waypoints": wpts or [],
+        }
+        doc = gpx_store.build_doc(pts, meta)
+        gpx_store.save_doc(doc, meta)
+        st.cache_data.clear()
+        st.success(
+            f"已保存「{meta['name']}」，保留 {len(doc['points'])} 个坐标点。"
+            "切到「路线库」标签就能看到。"
+        )
 
 
 def tab_gpx():
-    st.markdown("上传你自己记录或下载的 GPX，用**真实轨迹点**重算里程、爬升和剖面。")
-    up = st.file_uploader("选择 GPX 文件", type=["gpx", "xml"], accept_multiple_files=False)
+    st.markdown(
+        "上传 GPX 实测航迹，**存进路线库**——之后能像内置路线一样看轨迹、海拔剖面和速度曲线，"
+        "而且走位是 GPS 真正打过的点。"
+    )
+    st.caption(
+        "GPX 从哪来：两步路「我的 → 轨迹 → 导出 GPX」、高德「足迹 → 导出」、"
+        "Garmin / Coros / Suunto 手表同步的原始文件都可以。"
+    )
 
+    up = st.file_uploader("选择 GPX 文件", type=["gpx", "xml"], accept_multiple_files=False)
     if up is None:
-        st.info(
-            "没有 GPX？两步路、户外助手、Garmin、Strava 都能导出。"
-            "也可以先在「路线库」下载一份，看看格式。"
-        )
+        imported_panel()
         return
 
     try:
-        pts = parse_gpx(up.read(), up.name)
+        pts, wpts = parse_gpx(up.read(), up.name, with_waypoints=True)
     except Exception as exc:  # noqa: BLE001
         st.error(f"这个文件解析不出来：{exc}")
         return
 
-    st.success(f"解析成功：{len(pts)} 个轨迹点，来自 {up.name}")
+    st.success(
+        f"解析成功：{len(pts)} 个轨迹点"
+        + (f"、{len(wpts)} 个命名路点" if wpts else "")
+        + f"，来自 {up.name}"
+    )
 
     basemap = st.selectbox("底图", BASEMAP_CHOICES, index=2, key="gpx_bm")
     stats = track_stats(pts)
-    prof = track_profile(pts)
-    stat_cards(stats, prof)
+    has_ele = stats.get("ele_max") is not None
+    stat_cards(stats, [])
 
     left, right = st.columns([1.2, 1], gap="large")
     with left:
-        fake = {"name": up.name, "points": [[p[0], p[1], p[2] or 0, 0] for p in pts], "waypoints": []}
+        fake = {
+            "name": up.name,
+            "points": [[p[0], p[1], p[2] if p[2] is not None else 0, 0] for p in pts],
+            "waypoints": [],
+        }
         track_map(fake, basemap, color="#1e88e5", height=460, show_wp=False)
-    with right:
-        st.markdown("#### 高程剖面")
-        st.altair_chart(profile_chart(prof, height=430), use_container_width=True)
 
-    km_at, grade = steepest_section(prof)
-    st.caption(f"最陡一段在 **{km_at:.1f} km** 处，坡度约 **{grade:.0f}%**。")
+    with right:
+        if has_ele:
+            prof = track_profile(pts)
+            st.markdown("#### 高程剖面")
+            st.altair_chart(profile_chart(prof, height=430), use_container_width=True)
+            km_at, grade = steepest_section(prof)
+            st.caption(f"最陡一段在 **{km_at:.1f} km** 处，坡度约 **{grade:.0f}%**。")
+        else:
+            st.warning(
+                "这个 GPX 没有 `<ele>` 高程标签，只能算里程，爬升和剖面画不出来。"
+                "两步路导出的一般带高程，可以换一份再试。"
+            )
 
     st.download_button(
         "导出为 GPX",
@@ -342,6 +460,9 @@ def tab_gpx():
         file_name=f"{up.name.rsplit('.', 1)[0]}_标准化.gpx",
         mime="application/gpx+xml",
     )
+
+    st.divider()
+    save_panel(up.name, pts, wpts)
 
 
 def main():

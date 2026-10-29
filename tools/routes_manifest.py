@@ -437,18 +437,45 @@ ROUTES = [
     ),
     # ============================================================ 江西
     dict(
-        id="jx-pingxiang-wugongshan",
-        name="武功山·金顶穿越",
+        id="jx-pingxiang-wugongshan-longshan",
+        name="武功山·龙山村反穿金顶",
         province="江西省", city="萍乡市", type="高山草甸",
         difficulty="难", days="2天", best_season="5-10月", heat=93,
-        desc="十万亩高山草甸铺在 1600 米以上，是国内外都少见的景观。"
-             "经典走法：沈子村上山，金顶看日出，再沿山脊到发云界。"
+        desc="武功山最经典的穿越线：北侧龙山村起登，经发云界、千丈岩、赤脚坳，"
+             "沿山脊一路向南走到金顶。十万亩高山草甸在 1600 米以上，"
              "全程无遮蔽，大风大雨时体感极低，必须带硬壳。",
         waypoints=[
-            P("沈子村", 27.4652, 114.1054),
-            P("中庵", 27.4600, 114.1580),
-            PEAK("金顶", 27.4650, 114.1730),
-            P("发云界", 27.4850, 114.2050),
+            P("龙山村", 27.53466, 114.15988),
+            P("发云界", 27.52704, 114.19116),
+            P("千丈岩", 27.50965, 114.19362),
+            P("赤脚坳", 27.48873, 114.19400),
+            PEAK("金顶", 27.45520, 114.17330),
+        ],
+    ),
+    dict(
+        id="jx-pingxiang-wugongshan-shenzi",
+        name="武功山·沈子村上金顶",
+        province="江西省", city="萍乡市", type="高山草甸",
+        difficulty="较难", days="1-2天", best_season="5-10月", heat=90,
+        desc="西侧沈子村起登，是登金顶最直接的野线，约 9 公里拔高 1400 米，"
+             "陡且累但路况成熟。下山可原路撤回沈子村，也可沿山脊北去发云界。",
+        waypoints=[
+            P("沈子村", 27.46522, 114.10542),
+            PEAK("金顶", 27.45520, 114.17330),
+        ],
+    ),
+    dict(
+        id="jx-pingxiang-wugongshan-mingyue",
+        name="武功山—明月山穿越",
+        province="江西省", city="萍乡市", type="高山草甸",
+        difficulty="难", days="2-3天", best_season="5-10月", heat=85,
+        desc="从金顶继续往东北，经发云界、羊狮慕走到宜春明月山，是武功山最长的穿越。"
+             "山脊起伏大、补给点少，需要重装并预留两天以上。",
+        waypoints=[
+            PEAK("金顶", 27.45520, 114.17330),
+            P("发云界", 27.52704, 114.19116),
+            PEAK("羊狮慕", 27.56162, 114.23530),
+            PEAK("明月山", 27.58260, 114.29234),
         ],
     ),
     dict(
@@ -664,7 +691,9 @@ PEAK_M = {
     "gd-huizhou-lianhuashan": 1336,
     "gd-jiangmen-guifengshan": 400,
     "gd-chaozhou-fenghuangshan": 1497,
-    "jx-pingxiang-wugongshan": 1918,
+    "jx-pingxiang-wugongshan-longshan": 1918,
+    "jx-pingxiang-wugongshan-shenzi": 1918,
+    "jx-pingxiang-wugongshan-mingyue": 1736,
     "jx-jiujiang-lushan": 1436,
     "jx-shangrao-sanqingshan": 1819,
     "jx-jian-jinggangshan": 1343,

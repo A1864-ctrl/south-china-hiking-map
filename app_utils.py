@@ -157,8 +157,25 @@ def load_attractions():
 
 @st.cache_data(show_spinner=False)
 def load_routes():
-    """加载徒步路线表。"""
-    return read_csv_smart(data_path("hiking_routes.csv"))
+    """加载徒步路线表：内置规划轨迹 + 用户导入的 GPX 实测航迹。"""
+    import pandas as pd
+
+    base = read_csv_smart(data_path("hiking_routes.csv"))
+    base["source"] = "planned"
+
+    custom_fn = data_path("custom_routes.csv")
+    if os.path.exists(custom_fn):
+        try:
+            extra = read_csv_smart(custom_fn)
+            if len(extra):
+                extra["source"] = "gpx"
+                # 只取两边都有的列，避免导入表结构升级后把老数据带崩
+                cols = [c for c in base.columns if c in extra.columns]
+                merged = pd.concat([base[cols], extra[cols]], ignore_index=True)
+                return merged
+        except Exception:  # noqa: BLE001  导入表坏了也不该拖垮整页
+            pass
+    return base
 
 
 # ---------------------------------------------------------------- 真实轨迹
@@ -315,28 +332,48 @@ def _localname(tag: str) -> str:
     return tag.split("}")[-1]
 
 
-def parse_gpx(raw: bytes, source_name: str = "track") -> list:
-    """解析 GPX，返回 [(lat, lon, ele_or_None), ...]。支持 trkpt / rtept / wpt。"""
+def parse_gpx(raw: bytes, source_name: str = "track", with_waypoints: bool = False):
+    """解析 GPX，返回 [(lat, lon, ele_or_None), ...]。
+
+    只取 trkpt / rtept 作为轨迹点；wpt 是独立路点（补给点、垭口），
+    混进轨迹会让线头尾乱跳，所以单独拿出来。
+    文件里没有轨迹段时才退回用 wpt 当轨迹。
+
+    with_waypoints=True 时返回 (points, waypoints)，waypoints 为
+    [{'name','lat','lon','ele'}]。
+    """
     root = ET.fromstring(raw)
-    points = []
+    trk, wpts = [], []
     for elem in root.iter():
-        if _localname(elem.tag) in ("trkpt", "rtept", "wpt"):
-            try:
-                lat = float(elem.attrib["lat"])
-                lon = float(elem.attrib["lon"])
-            except (KeyError, ValueError):
-                continue
-            ele = None
-            for child in elem:
-                if _localname(child.tag) == "ele" and child.text:
-                    try:
-                        ele = float(child.text)
-                    except ValueError:
-                        ele = None
-                    break
-            points.append((lat, lon, ele))
+        tag = _localname(elem.tag)
+        if tag not in ("trkpt", "rtept", "wpt"):
+            continue
+        try:
+            lat = float(elem.attrib["lat"])
+            lon = float(elem.attrib["lon"])
+        except (KeyError, ValueError):
+            continue
+        ele = None
+        name = None
+        for child in elem:
+            ctag = _localname(child.tag)
+            if ctag == "ele" and child.text:
+                try:
+                    ele = float(child.text)
+                except ValueError:
+                    pass
+            elif ctag == "name" and child.text:
+                name = child.text.strip()
+        if tag == "wpt":
+            wpts.append({"name": name or "路点", "lat": lat, "lon": lon, "ele": ele})
+        else:
+            trk.append((lat, lon, ele))
+
+    points = trk or [(w["lat"], w["lon"], w["ele"]) for w in wpts]
     if not points:
         raise ValueError(f"{source_name} 里没有找到轨迹点（trkpt/rtept/wpt）")
+    if with_waypoints:
+        return points, wpts
     return points
 
 
