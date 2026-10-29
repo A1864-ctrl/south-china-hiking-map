@@ -434,22 +434,27 @@ def build_one(cfg, write=True):
     stats = track_stats(prof)
 
     # 质量闸门
+    # 注意：登山线天然「直线短、实际长」（盘山路、之字形上升），所以绕行倍数
+    # 只用来粗筛明显不连通的情况，真正判断「轨迹有没有上山」靠登顶率。
     straight = sum(haversine_m((a[1], a[2]), (b[1], b[2])) for a, b in zip(wps, wps[1:]))
     ratio = stats["distance_km"] * 1000.0 / max(1.0, straight)
     problems = []
-    if ratio > 3.0:
+    if ratio > 4.5:
         problems.append(f"绕行 {ratio:.1f}×直线")
-    # 单段绕行：某两个途经点之间走了 4 倍以上直线距离，基本是坐标写偏
+    # 单段暴走：只在「荒谬级别」时才否决，用来挡坐标写偏的离群点
     for length, straight, nm in legs:
-        if straight > 0.3 and length / straight > 5.0 and length > 4.0:
+        if straight > 0.3 and length / straight > 8.0 and length > 6.0:
             problems.append(f"{nm} 一段绕 {length / straight:.1f}×")
             break
     if stats["distance_km"] < 0.6:
         problems.append("轨迹过短")
-    if target and target >= 600 and stats["ele_max"] < target * 0.80:
-        problems.append(f"最高点 {stats['ele_max']:.0f}m 远低于主峰 {target}m")
-    if target and target > 600 and stats["distance_km"] < 3.0:
-        problems.append("爬升路线不足 3km")
+    # 主峰校验：登顶率是最可靠的一条。走不到 85% 说明轨迹根本没上山。
+    if target and target >= 600:
+        reach = stats["ele_max"] / target
+        if reach < 0.85:
+            problems.append(f"最高点 {stats['ele_max']:.0f}m 远低于主峰 {target}m（仅 {reach:.0%}）")
+        elif reach < 0.95 and stats["distance_km"] < 3.0:
+            problems.append(f"未及顶峰（{reach:.0%}）且爬升路线不足 3km")
     reliable = not problems
 
     # 标注点：投影到轨迹，离得太远的丢弃（说明是另一个同名地点）
@@ -470,7 +475,7 @@ def build_one(cfg, write=True):
     doc = {
         "id": cfg["id"],
         "name": name,
-        "provider": "OSRM foot (OpenStreetMap paths) + SRTM 30m elevation",
+        "provider": "Valhalla pedestrian (OpenStreetMap paths) + SRTM 30m elevation",
         "built": time.strftime("%Y-%m-%d"),
         "points": simplify(prof),
         "waypoints": out_wps,
@@ -489,6 +494,15 @@ def build_one(cfg, write=True):
     )
 
     if not reliable:
+        # 落一份体检记录，方便 audit_tracks.py 离线复现原因
+        os.makedirs(CACHE, exist_ok=True)
+        with open(os.path.join(CACHE, f"reject-{cfg['id']}.json"), "w", encoding="utf-8") as f:
+            json.dump(
+                {"id": cfg["id"], "name": name, "stats": stats,
+                 "problems": problems, "ratio": round(ratio, 2),
+                 "peak_m": target, "built": time.strftime("%Y-%m-%d")},
+                f, ensure_ascii=False,
+            )
         return doc, [("unreliable", 0)]
 
     if write:

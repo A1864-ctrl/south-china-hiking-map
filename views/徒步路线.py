@@ -167,7 +167,7 @@ def waypoint_table(track):
     df = pd.DataFrame(
         [
             {
-                "序号": "起" if i == 0 else ("终" if i == len(wps) - 1 else i),
+                "序号": "起" if i == 0 else ("终" if i == len(wps) - 1 else str(i + 1)),
                 "途经点": w["name"],
                 "里程 (km)": round(w["km"], 2),
                 "海拔 (m)": round(w["ele"]),
