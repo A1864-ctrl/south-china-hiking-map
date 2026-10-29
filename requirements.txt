@@ -1,4 +1,10 @@
-streamlit
-leafmap
-folium
-geopandas
+streamlit>=1.40,<2
+leafmap>=0.60
+folium>=0.15
+geopandas>=1.0
+pyogrio>=0.9
+pandas>=2.0
+pydeck>=0.9
+requests>=2.31
+numpy>=1.26
+xyzservices>=2023.7.1
