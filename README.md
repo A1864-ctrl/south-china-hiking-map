@@ -18,6 +18,50 @@
 
 ---
 
+## 🆕 新版前端（Vue 3）— 2026-11 重构
+
+Streamlit 版在反代环境下会出现静态资源加载失败（图表、下拉框显示为红块），因此把前端重做成 **Vue 3 + Vite 单页应用**，不依赖 Streamlit 运行时，直接托管在 GitHub Pages。
+
+> ### ▶ [**新版在线体验：a1864-ctrl.github.io/south-china-hiking-map**](https://a1864-ctrl.github.io/south-china-hiking-map/)
+>
+> 纯静态、秒开，手机浏览器也能用。源码在 [`web/`](web/)，部署产物在 [`docs/`](docs/)。
+
+**和旧版比，改了什么**
+
+| 项目 | 旧版（Streamlit） | 新版（Vue 3） |
+|---|---|---|
+| 布局 | 左侧 Sidebar 切页 | 顶部导航切换，内容区更宽 |
+| 地图缩放 | 整页刷新、需点按钮 | **滚轮直接缩放**，双击放大，可切标准/卫星 |
+| 徒步路线 | 34 条（含广西、江西） | **51 条**：湖南 23 + 广东 22 + 全国热门 6 |
+| 路线详情 | 途经点 + 高程图 | 途经点**间距** + **分段路书** + 交通接驳 + 补给撤离 + 装备清单 + 风险提示 |
+| 景点详情 | 门票 / 时长 / 推荐理由 | 增加**路书弹层**：打卡机位、推荐走法、怎么去、当地美食 |
+| 数据一致性 | 轨迹为示意线 | 轨迹按真实关键点拟合，长度与标注里程对齐，可导出 GPX |
+
+**页面截图**
+
+| 首页 | 景点搜索 |
+|---|---|
+| ![首页](docs/screenshots/home.png) | ![景点搜索](docs/screenshots/spots.png) |
+
+| 徒步轨迹 + 路书 | 交通接驳 / 补给 / 装备 |
+|---|---|
+| ![徒步轨迹](docs/screenshots/routes.png) | ![路书](docs/screenshots/roadbook.png) |
+
+![城市热度](docs/screenshots/heat.png)
+
+**本地运行新前端**
+
+```bash
+cd web
+npm install
+npm run dev        # http://127.0.0.1:5178
+npm run build      # 产物复制到 ../docs 即可发布
+```
+
+细节见 [`web/README.md`](web/README.md)。
+
+---
+
 ## 这个项目解决什么问题
 
 计划一次华南旅行时，真正难的不是"知道有什么景点"，而是这三个问题：
