@@ -830,7 +830,7 @@ onMounted(() => {
 
 @media (max-width: 1180px) {
   .split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .map-col {
@@ -845,7 +845,7 @@ onMounted(() => {
 
 @media (max-width: 760px) {
   .spot-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .head-stats {

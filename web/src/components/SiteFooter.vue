@@ -98,7 +98,7 @@ import { overview } from '../data/cities.js'
 
 @media (max-width: 800px) {
   .footer-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 0 18px;
   }
 }

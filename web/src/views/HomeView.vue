@@ -723,7 +723,7 @@ const steps = [
   .module-grid,
   .preview-grid,
   .steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-stats {

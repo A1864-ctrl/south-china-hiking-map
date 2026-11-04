@@ -465,6 +465,7 @@ onMounted(() => {
 .split {
   display: grid;
   grid-template-columns: 340px minmax(0, 1fr);
+  min-width: 0;
   gap: 18px;
   align-items: start;
 }
@@ -576,6 +577,7 @@ onMounted(() => {
 /* 详情 */
 .detail {
   padding: 24px 26px 20px;
+  min-width: 0;
 }
 
 .d-title-row {
@@ -870,6 +872,15 @@ onMounted(() => {
 
 .rb-table-wrap {
   overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail,
+.d-grid,
+.rb,
+.rb-block {
+  min-width: 0;
 }
 
 .rb-table {
@@ -1084,7 +1095,7 @@ onMounted(() => {
 
 @media (max-width: 1180px) {
   .split {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .list-col {
@@ -1093,7 +1104,7 @@ onMounted(() => {
   }
 
   .d-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .d-side {
@@ -1132,7 +1143,7 @@ onMounted(() => {
   }
 
   .rb-cols {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .rb-table .note {
