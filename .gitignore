@@ -11,6 +11,9 @@ scripts/_*
 # 历史快照（另行桌面打包保存）
 archive-1021/
 
+# 部署工作副本（deploy_pages.py 运行时生成）
+.gh-pages-tmp/
+
 # 平台标记文件
 *.genie
 

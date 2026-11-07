@@ -73,6 +73,8 @@ def main():
     print('GitHub Pages 将在 1-2 分钟内自动发布：')
     print(' ', PAGES_URL)
     print('提示：如果刷新后还是旧内容，等一分钟再刷新（首次构建稍慢）。')
+    shutil.rmtree(WORK, ignore_errors=True)  # 清理工作副本
+    shutil.rmtree(WORK, ignore_errors=True)  # 清理工作副本
 
 
 if __name__ == '__main__':
