@@ -1,0 +1,26 @@
+[
+ {
+  "file": "gal-s35.jpg",
+  "kind": "spot",
+  "name": "湖南博物院",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s76.jpg",
+  "kind": "spot",
+  "name": "便江",
+  "city": "郴州"
+ },
+ {
+  "file": "gal-r06.jpg",
+  "kind": "route",
+  "name": "万时山",
+  "city": ""
+ },
+ {
+  "file": "gal-r18.jpg",
+  "kind": "route",
+  "name": "八大公山",
+  "city": ""
+ }
+]

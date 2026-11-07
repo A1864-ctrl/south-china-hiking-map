@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>野径 · 数据库设计（MySQL）</title>
+<style>
+  :root {
+    --forest: #2d5a3d;
+    --forest-dark: #1e3f2a;
+    --forest-soft: #eef4ee;
+    --sand: #c4a35a;
+    --paper: #f6f2e9;
+    --ink: #22302a;
+    --ink-soft: #4a5a52;
+    --gray: #7b8a83;
+    --line: #dfdcd2;
+    --card: #fffdf9;
+    --mono: "SF Mono", "JetBrains Mono", Consolas, "Courier New", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    background: linear-gradient(160deg, #1e3f2a 0%, #2d5a3d 60%, #35644a 100%);
+    color: #fff;
+    padding: 54px 0 46px;
+  }
+  header .kicker {
+    font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(255,255,255,.62); margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 600; letter-spacing: -.01em; line-height: 1.25;
+  }
+  header p.lead {
+    margin-top: 14px; max-width: 680px;
+    color: rgba(255,255,255,.8); font-size: .95rem;
+  }
+  .nums {
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 10px; margin-top: 32px;
+  }
+  .nums div {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .nums b { display: block; font-size: 1.4rem; font-weight: 600; line-height: 1.2; }
+  .nums span { font-size: .7rem; color: rgba(255,255,255,.64); }
+
+  section { padding: 52px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 1.35rem; font-weight: 600;
+    margin-bottom: 6px; letter-spacing: -.01em;
+  }
+  h2 em {
+    font-style: normal; font-size: .7rem; letter-spacing: .16em;
+    color: var(--sand); font-family: var(--mono); margin-left: 8px;
+  }
+  .sub { color: var(--gray); font-size: .86rem; margin-bottom: 26px; }
+
+  .domains { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .domain {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 18px 16px;
+  }
+  .domain.full { grid-column: 1 / -1; }
+  .domain-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 11px;
+  }
+  .domain-head strong { font-size: .95rem; font-weight: 600; }
+  .domain-head span { font-size: .72rem; color: var(--gray); font-family: var(--mono); }
+  .tbls { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tbls code {
+    font-family: var(--mono); font-size: .72rem;
+    background: var(--forest-soft); color: var(--forest-dark);
+    padding: 3px 8px; border-radius: 5px;
+  }
+  .tbls code.dim { background: #f2f0e9; color: var(--ink-soft); }
+  .domain p { font-size: .76rem; color: var(--gray); margin-top: 11px; line-height: 1.6; }
+
+  .flow { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; overflow-x: auto; }
+  .flow svg { display: block; min-width: 640px; }
+
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .pit {
+    background: var(--card); border: 1px solid var(--line);
+    border-left: 3px solid var(--sand); border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .pit h3 { font-size: .92rem; font-weight: 600; margin-bottom: 8px; }
+  .pit p { font-size: .82rem; color: var(--ink-soft); margin-bottom: 10px; }
+  .pit p:last-child { margin-bottom: 0; }
+  .pit code.inline {
+    font-family: var(--mono); font-size: .78rem;
+    background: #f2f0e9; padding: 1px 5px; border-radius: 3px;
+  }
+  pre {
+    background: #1e2b24; color: #d8e4dc;
+    border-radius: 8px; padding: 13px 15px;
+    font-family: var(--mono); font-size: .74rem; line-height: 1.65;
+    overflow-x: auto; margin: 10px 0;
+  }
+  pre .bad { color: #f09595; }
+  pre .good { color: #97c459; }
+  pre .c { color: #7b8a83; }
+
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; font-size: .74rem; color: var(--gray); letter-spacing: .04em; background: #faf8f2; }
+  td code { font-family: var(--mono); font-size: .76rem; color: var(--forest-dark); }
+  .ok { color: #3b6d11; font-weight: 600; }
+
+  .stat-line {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: .78rem;
+    padding: 7px 0; border-bottom: 1px dashed var(--line);
+  }
+  .stat-line:last-child { border-bottom: none; }
+  .stat-line b { color: var(--forest-dark); min-width: 68px; }
+  .stat-line span { color: var(--ink-soft); }
+
+  footer { padding: 40px 0 56px; color: var(--gray); font-size: .78rem; border-top: 1px solid var(--line); }
+  footer code { font-family: var(--mono); color: var(--ink-soft); }
+
+  @media (max-width: 900px) {
+    .nums { grid-template-columns: repeat(3, 1fr); }
+    .domains, .grid2 { grid-template-columns: 1fr; }
+    header { padding: 40px 0 34px; }
+  }
+  @media (max-width: 560px) {
+    .nums { grid-template-columns: repeat(2, 1fr); }
+    .wrap { padding: 0 16px; }
+    section { padding: 38px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">YEJING · DATABASE</p>
+    <h1>野径 · 旅行社交平台<br />MySQL 数据库设计</h1>
+    <p class="lead">
+      在静态内容站（76 景点 / 53 路线 / 74 装备）之上补后端底座：账号、收藏、发帖、找搭子、附近的人。
+      下列结构已在 MySQL 8.0.46 实跑通过，不是纸面设计。
+    </p>
+    <div class="nums">
+      <div><b>23</b><span>表</span></div>
+      <div><b>2</b><span>视图</span></div>
+      <div><b>3</b><span>触发器</span></div>
+      <div><b>6</b><span>空间索引</span></div>
+      <div><b>22</b><span>外键</span></div>
+      <div><b>198</b><span>字段</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>五个数据域<em>SCHEMA</em></h2>
+    <p class="sub">按业务边界切分，同名模块对应 <code style="font-family:var(--mono);font-size:.8rem">app/modules/</code> 下的目录，后续拆服务不用改调用方。</p>
+
+    <div class="domains">
+      <div class="domain">
+        <div class="domain-head"><strong>账号与安全</strong><span>5 张</span></div>
+        <div class="tbls">
+          <code>app_user</code><code>user_session</code>
+          <code class="dim">user_oauth</code><code class="dim">user_device</code><code class="dim">audit_log</code>
+        </div>
+        <p>会话在 MySQL 留冷备（user_session），Redis 掉电可回源重建，登录态不丢。</p>
+      </div>
+
+      <div class="domain">
+        <div class="domain-head"><strong>内容</strong><span>7 张</span></div>
+        <div class="tbls">
+          <code>poi</code><code>trail</code>
+          <code class="dim">poi_photo</code><code class="dim">trail_waypoint</code>
+          <code class="dim">trail_track_point</code><code class="dim">gear_item</code><code class="dim">trail_gear</code>
+        </div>
+        <p>承接现有 76 / 53 / 74 的全部数据；轨迹只存抽稀线，全量 geobuf 进对象存储。</p>
+      </div>
+
+      <div class="domain">
+        <div class="domain-head"><strong>社交</strong><span>6 张</span></div>
+        <div class="tbls">
+          <code>favorite</code><code>post</code>
+          <code class="dim">post_image</code><code class="dim">post_like</code>
+          <code class="dim">comment</code><code class="dim">follow</code>
+        </div>
+        <p>收藏是多态表，景点（type=1）与路线（type=2）共用一套，联合主键保证幂等。</p>
+      </div>
+
+      <div class="domain">
+        <div class="domain-head"><strong>组队与私信</strong><span>4 张</span></div>
+        <div class="tbls">
+          <code>buddy_post</code><code>buddy_apply</code>
+          <code class="dim">conversation</code><code class="dim">message</code>
+        </div>
+        <p>申请与同意分表，双向同意才建会话；conversation 用 user_a &lt; user_b 去重。</p>
+      </div>
+
+      <div class="domain full">
+        <div class="domain-head"><strong>位置</strong><span>1 张</span></div>
+        <div class="tbls"><code>presence</code></div>
+        <p>geohash6 网格（约 1.2km × 0.6km）+ 模糊点 + 30 分钟过期，是「附近的人」的唯一数据源。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>登录后为什么不用反复登录<em>SESSION</em></h2>
+    <p class="sub">双 Token + Redis 滑动过期，MySQL 只做冷备与审计。</p>
+
+    <div class="flow">
+      <svg viewBox="0 0 900 330" width="100%" role="img" aria-label="会话保持时序">
+        <defs>
+          <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <g font-family="Georgia, serif" font-size="13" fill="#2d5a3d" font-weight="600">
+          <text x="80" y="34" text-anchor="middle">浏览器</text>
+          <text x="380" y="34" text-anchor="middle">API 服务</text>
+          <text x="660" y="34" text-anchor="middle">Redis</text>
+          <text x="830" y="34" text-anchor="middle">MySQL</text>
+        </g>
+        <g stroke="#c9c4b6" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="80" y1="46" x2="80" y2="310"/>
+          <line x1="380" y1="46" x2="380" y2="310"/>
+          <line x1="660" y1="46" x2="660" y2="310"/>
+          <line x1="830" y1="46" x2="830" y2="310"/>
+        </g>
+
+        <g font-size="12" fill="#22302a" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+          <line x1="80" y1="78" x2="372" y2="78" stroke="#2d5a3d" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="90" y="72">① 提交手机号 + 密码</text>
+
+          <line x1="380" y1="108" x2="828" y2="108" stroke="#c4a35a" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="390" y="102" fill="#8a6d2f">② INSERT user_session（jti / 设备 / 过期时间）</text>
+
+          <line x1="380" y1="138" x2="668" y2="138" stroke="#2d5a3d" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="390" y="132">③ SETEX sess:{uid}:{jti} 1800</text>
+
+          <line x1="380" y1="168" x2="88" y2="168" stroke="#2d5a3d" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="120" y="162">④ access(JWT 15min) + refresh(HttpOnly Cookie)</text>
+
+          <line x1="80" y1="205" x2="372" y2="205" stroke="#7b8a83" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="90" y="199" fill="#4a5a52">⑤ 带 access 请求（20 分钟后）</text>
+
+          <line x1="380" y1="235" x2="668" y2="235" stroke="#2d5a3d" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="390" y="229">⑥ 命中则 EXPIRE 1800 —— 滑动续期</text>
+
+          <line x1="380" y1="265" x2="88" y2="265" stroke="#2d5a3d" stroke-width="1.4" marker-end="url(#a)"/>
+          <text x="150" y="259">⑦ 30 分钟内有访问 → 一直在线，无需重登</text>
+
+          <line x1="380" y1="295" x2="828" y2="295" stroke="#b4b2a9" stroke-width="1.2" marker-end="url(#a)" stroke-dasharray="3 3"/>
+          <text x="390" y="289" fill="#7b8a83">Redis 挂了：回源 user_session 重建 key，登录态不丢</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>附近的人怎么算得准又不泄露位置<em>GEO</em></h2>
+    <p class="sub">精度的关键不是「算得更准」，而是「在保护隐私的前提下算得准」。</p>
+
+    <div class="flow">
+      <svg viewBox="0 0 900 200" width="100%" role="img" aria-label="附近的人四步流水线">
+        <defs>
+          <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <g font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#22302a">
+          <rect x="20" y="50" width="190" height="88" rx="10" fill="#eef4ee" stroke="#2d5a3d" stroke-width="1"/>
+          <text x="115" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1e3f2a">① 脱敏上报</text>
+          <text x="115" y="100" text-anchor="middle" fill="#4a5a52">吸附 geohash6 网格中心</text>
+          <text x="115" y="118" text-anchor="middle" fill="#4a5a52">再叠 ±150m 抖动</text>
+
+          <rect x="245" y="50" width="190" height="88" rx="10" fill="#eef4ee" stroke="#2d5a3d" stroke-width="1"/>
+          <text x="340" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1e3f2a">② Redis 粗筛</text>
+          <text x="340" y="100" text-anchor="middle" fill="#4a5a52">GEOSEARCH BYRADIUS</text>
+          <text x="340" y="118" text-anchor="middle" fill="#4a5a52">5km / COUNT 200</text>
+
+          <rect x="470" y="50" width="190" height="88" rx="10" fill="#eef4ee" stroke="#2d5a3d" stroke-width="1"/>
+          <text x="565" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1e3f2a">③ MySQL 精算</text>
+          <text x="565" y="100" text-anchor="middle" fill="#4a5a52">ST_Distance_Sphere</text>
+          <text x="565" y="118" text-anchor="middle" fill="#4a5a52">按米返回</text>
+
+          <rect x="695" y="50" width="190" height="88" rx="10" fill="#faf5e8" stroke="#c4a35a" stroke-width="1"/>
+          <text x="790" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#8a6d2f">④ 加权重排</text>
+          <text x="790" y="100" text-anchor="middle" fill="#6b5a34">距离 40 · 兴趣 30</text>
+          <text x="790" y="118" text-anchor="middle" fill="#6b5a34">活跃 20 · 信誉 10</text>
+
+          <g stroke="#7b8a83" stroke-width="1.3" marker-end="url(#b)">
+            <line x1="212" y1="94" x2="242" y2="94"/>
+            <line x1="437" y1="94" x2="467" y2="94"/>
+            <line x1="662" y1="94" x2="692" y2="94"/>
+          </g>
+
+          <text x="450" y="170" text-anchor="middle" font-size="11.5" fill="#7b8a83">
+            距离只显示 500m 内 / 1km / 3km / 5km 分档，不给精确米数 —— 防止三角定位反推住址
+          </text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>落地时真踩到的三个坑<em>PITFALLS</em></h2>
+    <p class="sub">这些不是推测，是导入时逐条报错、逐条修出来的。</p>
+
+    <div class="grid2">
+      <div class="pit">
+        <h3>① SRID 4326 的轴序是「纬度在前」</h3>
+        <p>按 GIS 圈习惯写 <code class="inline">POINT(lng lat)</code> 会直接崩：</p>
+        <pre><span class="bad">ERROR 3617 (22S03): Latitude 113.324500
+is out of range in function st_geomfromtext</span>
+
+<span class="c">-- 错：113.32 被读成纬度</span>
+ST_GeomFromText(<span class="bad">'POINT(113.3245 23.1066)'</span>, 4326)
+
+<span class="c">-- 对：纬度在前</span>
+ST_GeomFromText(<span class="good">'POINT(23.1066 113.3245)'</span>, 4326)
+
+<span class="c">-- 或显式声明轴序，保留书写直觉</span>
+ST_GeomFromText('POINT(113.3245 23.1066)', 4326,
+                <span class="good">'axis-order=long-lat'</span>)</pre>
+        <p>危险点：<strong>只有空间函数会报错，普通 DECIMAL 的 lat/lng 列不会</strong>。两种顺序混用时最容易埋雷。</p>
+      </div>
+
+      <div class="pit">
+        <h3>② 空间索引的列必须 NOT NULL</h3>
+        <p><code class="inline">buddy_post.geom</code> 原本带 <code class="inline">DEFAULT NULL</code> 又建了空间索引，建表直接失败：</p>
+        <pre><span class="bad">ERROR 1252 (42000): All parts of a
+SPATIAL index must be NOT NULL</span>
+
+<span class="c">-- 改成 NOT NULL 后通过</span>
+geom POINT SRID 4326 <span class="good">NOT NULL</span>
+     COMMENT '目的地坐标，发起招募必须选点'</pre>
+        <p>产品上也更合理：没有目的地的招募帖，本来也没法做距离匹配。</p>
+      </div>
+
+      <div class="pit">
+        <h3>③ 这个实例上 <code class="inline">yejing_app</code> 认证不上</h3>
+        <p>账号建好后 hash、host、属性、<code class="inline">SHOW CREATE USER</code> 与能登录的 <code class="inline">yj_app</code> <strong>逐字相同</strong>，但无论 <code class="inline">FLUSH PRIVILEGES</code> / <code class="inline">RENAME USER</code> / 换 <code class="inline">caching_sha2_password</code> 都返回 1045。</p>
+        <p>查过 <code class="inline">HEX(user)</code> 无隐藏字符、<code class="inline">User_attributes</code> 为 NULL、无 role、未锁定、密码未过期。判断为该实例的 ACL 残留（无管理员权限，没能重启服务复验）。</p>
+        <p>最终账号名取 <code class="inline">yj_app</code> / <code class="inline">yj_ro</code>。换机器部署若没这问题，改回 <code class="inline">yejing_app</code> 即可。</p>
+      </div>
+
+      <div class="pit">
+        <h3>顺带修的幂等性问题</h3>
+        <p>核心查询集里的会话签发语句重复执行会撞主键：</p>
+        <pre><span class="bad">Duplicate entry 'a1b2c3d4...' for key
+'user_session.PRIMARY'</span>
+
+<span class="c">-- 脚本要能反复跑，加幂等处理</span>
+INSERT INTO user_session (...) VALUES (...)
+<span class="good">ON DUPLICATE KEY UPDATE
+  last_expires_at = NOW(),
+  revoked_at = NULL;</span></pre>
+        <p>答辩现场演示两次不会翻车。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>实测结果<em>VERIFIED</em></h2>
+    <p class="sub">MySQL 8.0.46 / Windows / 端口 3306，库名 <code style="font-family:var(--mono);font-size:.8rem">yejing</code>。</p>
+
+    <div class="grid2">
+      <div class="flow" style="padding:20px 22px">
+        <div class="stat-line"><b>结构</b><span>23 表 · 2 视图 · 3 触发器 · 6 空间索引 · 3 全文索引 · 22 外键</span></div>
+        <div class="stat-line"><b>数据</b><span>4 用户 · 6 景点 · 3 路线 · 10 途经点 · 14 装备 · 4 帖 · 3 搭子帖</span></div>
+        <div class="stat-line"><b>体积</b><span>0.94 MB（仅演示数据）</span></div>
+        <div class="stat-line"><b>触发器</b><span>点赞 2 → 插入 3 → 取消 2（IF 兜底，不减到负数）</span></div>
+        <div class="stat-line"><b>全文索引</b><span>MATCH('岳麓山') 命中 1 条，相关度 0.725</span></div>
+        <div class="stat-line"><b>权限</b><span>yj_ro 执行 INSERT 被拒（ERROR 1142）</span></div>
+      </div>
+
+      <div class="flow" style="padding:20px 22px">
+        <p style="font-size:.74rem;color:var(--gray);margin-bottom:10px;font-family:var(--mono)">-- 附近的人：广州塔为原点 500m 内</p>
+        <table>
+          <tr><th>昵称</th><th>距离</th><th>网格</th></tr>
+          <tr><td>山野阿野</td><td class="ok">39 m</td><td><code>ws0gzw</code></td></tr>
+          <tr><td>小满</td><td class="ok">263 m</td><td><code>ws0gzx</code></td></tr>
+        </table>
+        <p style="font-size:.74rem;color:var(--gray);margin:14px 0 10px;font-family:var(--mono)">-- 找搭子：11/12–11/16 时间窗有交集</p>
+        <table>
+          <tr><th>目的地</th><th>出发</th><th>还差</th></tr>
+          <tr><td>桂林</td><td>11-12</td><td>1 人</td></tr>
+          <tr><td>萍乡</td><td>11-14</td><td>2 人</td></tr>
+          <tr><td>长沙</td><td>11-15</td><td>3 人</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>怎么跑起来<em>RUN</em></h2>
+    <p class="sub">建库脚本在项目 <code style="font-family:var(--mono);font-size:.8rem">db/</code> 目录，也可用桌面的完整备份直接恢复。</p>
+
+    <pre><span class="c"># 一键建库 + 结构验收 + 功能验证</span>
+MYSQL_PWD='你的root密码' python db/setup.py
+
+<span class="c"># 或者手动按顺序导入</span>
+mysql -uroot -p &lt; db/01_schema.sql      <span class="c"># 23 表 + 视图 + 触发器</span>
+mysql -uroot -p &lt; db/02_seed.sql        <span class="c"># 演示数据</span>
+mysql -uroot -p &lt; db/04_user.sql        <span class="c"># 应用账号（最小权限）</span>
+mysql -uroot -p yejing &lt; db/03_queries.sql   <span class="c"># 26 条核心查询</span>
+
+<span class="c"># 应用连接串</span>
+mysql+pymysql://yj_app:YeJing2026_App@127.0.0.1:3306/yejing?charset=utf8mb4</pre>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    野径 · 华南徒步图鉴　数据库设计文档　·　2026-11-06 20:05
+    <br />
+    前端站点：<code>south-china-hiking.app.workbuddy.host</code>　·　数据库：MySQL 8.0.46 / <code>yejing</code>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+ "gal-s62.jpg": {
+  "name": "罗浮山",
+  "names": [
+   "罗浮山"
+  ],
+  "word": "罗浮山 飞云顶 惠州",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s62_0.jpg",
+    "w": 1620,
+    "h": 1050,
+    "title": "惠州罗浮山飞云顶徒步攻略:挑战与美景并存",
+    "score": 67.3,
+    "src": "https://gips1.baidu.com/it/u=951980881,2411710535&fm=3074&app=3074&f=JPEG?w=1620&h=1050&type=normal&func="
+   },
+   {
+    "path": "scripts/_hd/gal-s62_1.jpg",
+    "w": 1728,
+    "h": 1080,
+    "title": "惠州罗浮山飞云顶 海拔1296米 全程来回14KM",
+    "score": 67.3,
+    "src": "http://p0.qhimg.com/t11edbaaa6fd46110eca8e91d4b.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s62_2.jpg",
+    "w": 1705,
+    "h": 929,
+    "title": "惠州罗浮山飞云顶徒步攻略:挑战与美景并存",
+    "score": 62.3,
+    "src": "https://gips0.baidu.com/it/u=611486111,1946833263&fm=3074&app=3074&f=JPEG?w=1705&h=929&type=normal&func="
+   }
+  ]
+ },
+ "gal-s68.jpg": {
+  "name": "象头山",
+  "names": [
+   "象头山"
+  ],
+  "word": "象头山 自然保护区 惠州",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s68_0.jpg",
+    "w": 5184,
+    "h": 3456,
+    "title": "徒步探索森林秘境!广东森林文化周象头山分会场启动",
+    "score": 92.0,
+    "src": "https://pic.nfapp.southcn.com/nfplus/ossfs/pic/xy/202011/22/c0c948011bf2494aa8e89c51dde96262_batchwm.jpg"
+   }
+  ]
+ }
+}

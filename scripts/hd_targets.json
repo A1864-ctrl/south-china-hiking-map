@@ -1,0 +1,236 @@
+[
+ {
+  "file": "gal-s02.jpg",
+  "kind": "spot",
+  "name": "龙脊梯田",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s12.jpg",
+  "kind": "spot",
+  "name": "白云山",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s18.jpg",
+  "kind": "spot",
+  "name": "越秀公园",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s24.jpg",
+  "kind": "spot",
+  "name": "七娘山",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s29.jpg",
+  "kind": "spot",
+  "name": "西冲海滩",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s31.jpg",
+  "kind": "spot",
+  "name": "马峦山",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s32.jpg",
+  "kind": "spot",
+  "name": "大梅沙",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s33.jpg",
+  "kind": "spot",
+  "name": "观澜湖",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s40.jpg",
+  "kind": "spot",
+  "name": "石燕湖",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s42.jpg",
+  "kind": "spot",
+  "name": "黑麋峰",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s43.jpg",
+  "kind": "spot",
+  "name": "凤凰古城",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s49.jpg",
+  "kind": "spot",
+  "name": "猛洞河漂流",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s50.jpg",
+  "kind": "spot",
+  "name": "坐龙峡",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s51.jpg",
+  "kind": "spot",
+  "name": "老司城",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s64.jpg",
+  "kind": "spot",
+  "name": "巽寮湾",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s65.jpg",
+  "kind": "spot",
+  "name": "南昆山",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-r01.jpg",
+  "kind": "route",
+  "name": "船底顶·罗新线",
+  "city": ""
+ },
+ {
+  "file": "gal-r01.jpg",
+  "kind": "route",
+  "name": "船底顶·联山B线",
+  "city": ""
+ },
+ {
+  "file": "gal-r02.jpg",
+  "kind": "route",
+  "name": "丹霞山·长老峰",
+  "city": ""
+ },
+ {
+  "file": "gal-r03.jpg",
+  "kind": "route",
+  "name": "广东大峡谷",
+  "city": ""
+ },
+ {
+  "file": "gal-r04.jpg",
+  "kind": "route",
+  "name": "云髻山",
+  "city": ""
+ },
+ {
+  "file": "gal-r07.jpg",
+  "kind": "route",
+  "name": "大南山",
+  "city": ""
+ },
+ {
+  "file": "gal-r09.jpg",
+  "kind": "route",
+  "name": "东西冲海岸线",
+  "city": ""
+ },
+ {
+  "file": "gal-r11.jpg",
+  "kind": "route",
+  "name": "排牙山",
+  "city": ""
+ },
+ {
+  "file": "gal-r13.jpg",
+  "kind": "route",
+  "name": "八排山",
+  "city": ""
+ },
+ {
+  "file": "gal-r17.jpg",
+  "kind": "route",
+  "name": "衡山·经典登顶线",
+  "city": ""
+ },
+ {
+  "file": "gal-r17.jpg",
+  "kind": "route",
+  "name": "衡山·曾国藩古道",
+  "city": ""
+ },
+ {
+  "file": "gal-r17.jpg",
+  "kind": "route",
+  "name": "衡山·水帘洞—祝融峰",
+  "city": ""
+ },
+ {
+  "file": "gal-r18.jpg",
+  "kind": "route",
+  "name": "八大公山",
+  "city": ""
+ },
+ {
+  "file": "gal-r20.jpg",
+  "kind": "route",
+  "name": "阳明山·万寿寺",
+  "city": ""
+ },
+ {
+  "file": "gal-r22.jpg",
+  "kind": "route",
+  "name": "酃峰·神农谷",
+  "city": ""
+ },
+ {
+  "file": "gal-r23.jpg",
+  "kind": "route",
+  "name": "壶瓶山",
+  "city": ""
+ },
+ {
+  "file": "gal-r26.jpg",
+  "kind": "route",
+  "name": "幕阜山",
+  "city": ""
+ },
+ {
+  "file": "gal-r29.jpg",
+  "kind": "route",
+  "name": "武功山·金顶穿越",
+  "city": ""
+ },
+ {
+  "file": "gal-r29.jpg",
+  "kind": "route",
+  "name": "武功山·龙山村反穿",
+  "city": ""
+ },
+ {
+  "file": "gal-r29.jpg",
+  "kind": "route",
+  "name": "武功山·金顶景区环线",
+  "city": ""
+ },
+ {
+  "file": "gal-r30.jpg",
+  "kind": "route",
+  "name": "黄山·天都峰环线",
+  "city": ""
+ },
+ {
+  "file": "gal-r31.jpg",
+  "kind": "route",
+  "name": "华山·五峰连穿",
+  "city": ""
+ },
+ {
+  "file": "gal-r33.jpg",
+  "kind": "route",
+  "name": "虎跳峡·高路",
+  "city": ""
+ }
+]

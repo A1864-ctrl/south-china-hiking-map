@@ -1,0 +1,405 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "回到首页" [ref=e5] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]:
+          - strong [ref=e11]: 华南徒步地图
+          - emphasis [ref=e12]: SOUTH CHINA TRAILS
+      - navigation [ref=e13]:
+        - link "项目说明 为什么做这个站" [ref=e14] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e16]:
+            - generic [ref=e17]: 项目说明
+            - emphasis [ref=e18]: 为什么做这个站
+        - link "景点路书 四季 · 机位 · 吃什么" [ref=e19] [cursor=pointer]:
+          - /url: "#/spots"
+          - generic [ref=e21]:
+            - generic [ref=e22]: 景点路书
+            - emphasis [ref=e23]: 四季 · 机位 · 吃什么
+        - link "徒步轨迹 分段路书 · 交通接驳" [ref=e24] [cursor=pointer]:
+          - /url: "#/routes"
+          - generic [ref=e26]:
+            - generic [ref=e27]: 徒步轨迹
+            - emphasis [ref=e28]: 分段路书 · 交通接驳
+        - link "城市热度 该去哪座城" [ref=e29] [cursor=pointer]:
+          - /url: "#/heat"
+          - generic [ref=e31]:
+            - generic [ref=e32]: 城市热度
+            - emphasis [ref=e33]: 该去哪座城
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: "76"
+          - text: 点位
+          - generic [ref=e38]: "53"
+          - text: 路线
+        - link "找路线" [ref=e39] [cursor=pointer]:
+          - /url: "#/routes"
+  - main [ref=e40]:
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - paragraph [ref=e45]: SPOT GUIDE
+          - heading "去哪儿，什么时候去，去了拍什么" [level=1] [ref=e46]
+          - paragraph [ref=e47]: 76 个点位，每个都写了四季表现、日落和夜景的时间位置、机位怎么找、饿了吃什么。 选城市 → 选类型 → 点开卡片看路书。
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: "76"
+            - generic [ref=e51]: 点位
+          - generic [ref=e52]:
+            - generic [ref=e53]: "8"
+            - generic [ref=e54]: 城市
+          - generic [ref=e55]:
+            - generic [ref=e56]: "11"
+            - generic [ref=e57]: 美食清单
+      - generic [ref=e58]:
+        - textbox "搜城市、区县、点位名或类型，例：大梅沙 / 丹霞 / 日落" [ref=e63]
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: 城市
+            - generic [ref=e67]:
+              - button [ref=e68] [cursor=pointer]:
+                - text: 全部
+                - emphasis [ref=e69]: "76"
+              - button [ref=e70] [cursor=pointer]:
+                - text: 桂林
+                - emphasis [ref=e72]: "11"
+              - button [ref=e73] [cursor=pointer]:
+                - text: 广州
+                - emphasis [ref=e75]: "11"
+              - button [ref=e76] [cursor=pointer]:
+                - text: 深圳
+                - emphasis [ref=e78]: "11"
+              - button [ref=e79] [cursor=pointer]:
+                - text: 长沙
+                - emphasis [ref=e81]: "9"
+              - button [ref=e82] [cursor=pointer]:
+                - text: 湘西
+                - emphasis [ref=e84]: "9"
+              - button [ref=e85] [cursor=pointer]:
+                - text: 张家界
+                - emphasis [ref=e87]: "9"
+              - button [ref=e88] [cursor=pointer]:
+                - text: 惠州
+                - emphasis [ref=e90]: "8"
+              - button [ref=e91] [cursor=pointer]:
+                - text: 郴州
+                - emphasis [ref=e93]: "8"
+          - generic [ref=e94]:
+            - generic [ref=e95]: 类型
+            - generic [ref=e96]:
+              - button "全部类型" [ref=e97] [cursor=pointer]
+              - button [ref=e98] [cursor=pointer]:
+                - text: 山峰
+                - emphasis [ref=e99]: "2"
+              - button [ref=e100] [cursor=pointer]:
+                - text: 海滩
+                - emphasis [ref=e101]: "2"
+              - button [ref=e102] [cursor=pointer]:
+                - text: 古城
+                - emphasis [ref=e103]: "1"
+              - button [ref=e104] [cursor=pointer]:
+                - text: 海岸
+                - emphasis [ref=e105]: "1"
+              - button [ref=e106] [cursor=pointer]:
+                - text: 湿地
+                - emphasis [ref=e107]: "1"
+              - button [ref=e108] [cursor=pointer]:
+                - text: 公园
+                - emphasis [ref=e109]: "1"
+              - button [ref=e110] [cursor=pointer]:
+                - text: 植物园
+                - emphasis [ref=e111]: "1"
+              - button [ref=e112] [cursor=pointer]:
+                - text: 瀑布
+                - emphasis [ref=e113]: "1"
+              - button [ref=e114] [cursor=pointer]:
+                - text: 度假
+                - emphasis [ref=e115]: "1"
+      - generic [ref=e116]:
+        - heading "深圳 11 个" [level=2] [ref=e117]:
+          - text: 深圳
+          - generic [ref=e118]: 11 个
+        - generic [ref=e119]:
+          - button "热度" [ref=e120] [cursor=pointer]
+          - button "名称" [ref=e121] [cursor=pointer]
+      - generic [ref=e122]:
+        - generic [ref=e124]:
+          - article [ref=e125] [cursor=pointer]:
+            - generic [ref=e126]:
+              - img "梧桐山" [ref=e127]
+              - generic [ref=e128]: 深圳
+              - generic [ref=e129]: 山峰
+              - generic [ref=e130]: "93"
+            - generic [ref=e131]:
+              - heading [level=3] [ref=e132]:
+                - text: 梧桐山
+                - emphasis [ref=e133]: 罗湖区
+              - paragraph [ref=e134]: 深圳最高峰944米，泰山涧上凌云道下，山顶能同时看深圳和香港。
+              - generic [ref=e135]:
+                - generic [ref=e136]: 免费
+                - generic [ref=e138]: 半天
+              - generic [ref=e139]:
+                - generic [ref=e140]:
+                  - generic [ref=e141]: 登顶
+                  - generic [ref=e142]: 城市山
+                  - generic [ref=e143]: 免费
+                - button "看路书" [ref=e144]
+          - article [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]:
+              - img "七娘山" [ref=e147]
+              - generic [ref=e148]: 深圳
+              - generic [ref=e149]: 山峰
+              - generic [ref=e150]: "88"
+            - generic [ref=e151]:
+              - heading [level=3] [ref=e152]:
+                - text: 七娘山
+                - emphasis [ref=e153]: 大鹏新区
+              - paragraph [ref=e154]: 深圳第二高峰，全程野线爬升近千米，需结伴并带足水。
+              - generic [ref=e155]:
+                - generic [ref=e156]: 免费
+                - generic [ref=e158]: 1天
+              - generic [ref=e159]:
+                - generic [ref=e160]:
+                  - generic [ref=e161]: 野线
+                  - generic [ref=e162]: 登顶
+                  - generic [ref=e163]: 进阶
+                - button "看路书" [ref=e164]
+          - article [ref=e165] [cursor=pointer]:
+            - generic [ref=e166]:
+              - img "杨梅坑" [ref=e167]
+              - generic [ref=e168]: 深圳
+              - generic [ref=e169]: 海岸
+              - generic [ref=e170]: "86"
+            - generic [ref=e171]:
+              - heading [level=3] [ref=e172]:
+                - text: 杨梅坑
+                - emphasis [ref=e173]: 大鹏新区
+              - paragraph [ref=e174]: 深圳最美海岸线之一，骑行到鹿嘴山庄看日出。
+              - generic [ref=e175]:
+                - generic [ref=e176]: 免费
+                - generic [ref=e178]: 半天
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e181]: 海岸
+                  - generic [ref=e182]: 骑行
+                  - generic [ref=e183]: 日出
+                - button "看路书" [ref=e184]
+          - article [ref=e185] [cursor=pointer]:
+            - generic [ref=e186]:
+              - img "深圳湾公园" [ref=e187]
+              - generic [ref=e188]: 深圳
+              - generic [ref=e189]: 湿地
+              - generic [ref=e190]: "85"
+            - generic [ref=e191]:
+              - heading [level=3] [ref=e192]:
+                - text: 深圳湾公园
+                - emphasis [ref=e193]: 南山区
+              - paragraph [ref=e194]: 15公里滨海绿道，对岸就是香港元朗，日落骑行热门。
+              - generic [ref=e195]:
+                - generic [ref=e196]: 免费
+                - generic [ref=e198]: 2小时
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - generic [ref=e201]: 骑行
+                  - generic [ref=e202]: 海岸
+                  - generic [ref=e203]: 免费
+                - button "看路书" [ref=e204]
+          - article [ref=e205] [cursor=pointer]:
+            - generic [ref=e206]:
+              - generic [ref=e207]: 古城
+              - generic [ref=e209]: 深圳
+              - generic [ref=e210]: 古城
+              - generic [ref=e211]: "84"
+            - generic [ref=e212]:
+              - heading [level=3] [ref=e213]:
+                - text: 大鹏所城
+                - emphasis [ref=e214]: 大鹏新区
+              - paragraph [ref=e215]: 600年海防古城，青砖巷子里藏了不少小馆子。
+              - generic [ref=e216]:
+                - generic [ref=e217]: 免费
+                - generic [ref=e219]: 2小时
+              - generic [ref=e220]:
+                - generic [ref=e221]:
+                  - generic [ref=e222]: 古城
+                  - generic [ref=e223]: 免费
+                  - generic [ref=e224]: 人文
+                - button "看路书" [ref=e225]
+          - article [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]:
+              - img "人才公园" [ref=e228]
+              - generic [ref=e229]: 深圳
+              - generic [ref=e230]: 公园
+              - generic [ref=e231]: "83"
+            - generic [ref=e232]:
+              - heading [level=3] [ref=e233]:
+                - text: 人才公园
+                - emphasis [ref=e234]: 南山区
+              - paragraph [ref=e235]: 深圳湾畔的环湖公园，人才星光桥和湖面倒影是拍后海天际线的正位。
+              - generic [ref=e236]:
+                - generic [ref=e237]: 免费
+                - generic [ref=e239]: 1.5小时
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]: 城市景
+                  - generic [ref=e243]: 夜景
+                  - generic [ref=e244]: 免费
+                - button "看路书" [ref=e245]
+          - article [ref=e246] [cursor=pointer]:
+            - generic [ref=e247]:
+              - img "西冲海滩" [ref=e248]
+              - generic [ref=e249]: 深圳
+              - generic [ref=e250]: 海滩
+              - generic [ref=e251]: "82"
+            - generic [ref=e252]:
+              - heading [level=3] [ref=e253]:
+                - text: 西冲海滩
+                - emphasis [ref=e254]: 大鹏新区
+              - paragraph [ref=e255]: 4公里长沙滩，夏季限流需提前预约，配套齐全。
+              - generic [ref=e256]:
+                - generic [ref=e257]: ¥30
+                - generic [ref=e259]: 半天
+              - generic [ref=e260]:
+                - generic [ref=e261]:
+                  - generic [ref=e262]: 海滩
+                  - generic [ref=e263]: 玩水
+                  - generic [ref=e264]: 亲子
+                - button "看路书" [ref=e265]
+          - article [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]:
+              - img "仙湖植物园" [ref=e268]
+              - generic [ref=e269]: 深圳
+              - generic [ref=e270]: 植物园
+              - generic [ref=e271]: "81"
+            - generic [ref=e272]:
+              - heading [level=3] [ref=e273]:
+                - text: 仙湖植物园
+                - emphasis [ref=e274]: 罗湖区
+              - paragraph [ref=e275]: 梧桐山脚的植物园，弘法寺和化石森林可以连逛。
+              - generic [ref=e276]:
+                - generic [ref=e277]: ¥15
+                - generic [ref=e279]: 半天
+              - generic [ref=e280]:
+                - generic [ref=e281]:
+                  - generic [ref=e282]: 植物园
+                  - generic [ref=e283]: 寺庙
+                  - generic [ref=e284]: 亲子
+                - button "看路书" [ref=e285]
+          - article [ref=e286] [cursor=pointer]:
+            - generic [ref=e287]:
+              - generic [ref=e288]: 瀑布
+              - generic [ref=e290]: 深圳
+              - generic [ref=e291]: 瀑布
+              - generic [ref=e292]: "79"
+            - generic [ref=e293]:
+              - heading [level=3] [ref=e294]:
+                - text: 马峦山
+                - emphasis [ref=e295]: 坪山区
+              - paragraph [ref=e296]: 深圳少见的瀑布群，梅花季山脊开满白梅。
+              - generic [ref=e297]:
+                - generic [ref=e298]: 免费
+                - generic [ref=e300]: 半天
+              - generic [ref=e301]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]: 瀑布
+                  - generic [ref=e304]: 赏花
+                  - generic [ref=e305]: 野线
+                - button "看路书" [ref=e306]
+          - article [ref=e307] [cursor=pointer]:
+            - generic [ref=e308]:
+              - img "大梅沙" [ref=e309]
+              - generic [ref=e310]: 深圳
+              - generic [ref=e311]: 海滩
+              - generic [ref=e312]: "77"
+            - generic [ref=e313]:
+              - heading [level=3] [ref=e314]:
+                - text: 大梅沙
+                - emphasis [ref=e315]: 盐田区
+              - paragraph [ref=e316]: 免费海滩，木栈道沿海可一路走到小梅沙。
+              - generic [ref=e317]:
+                - generic [ref=e318]: 免费
+                - generic [ref=e320]: 半天
+              - generic [ref=e321]:
+                - generic [ref=e322]:
+                  - generic [ref=e323]: 海滩
+                  - generic [ref=e324]: 免费
+                  - generic [ref=e325]: 栈道
+                - button "看路书" [ref=e326]
+          - article [ref=e327] [cursor=pointer]:
+            - generic [ref=e328]:
+              - generic [ref=e329]: 度假
+              - generic [ref=e331]: 深圳
+              - generic [ref=e332]: 度假
+              - generic [ref=e333]: "70"
+            - generic [ref=e334]:
+              - heading [level=3] [ref=e335]:
+                - text: 观澜湖
+                - emphasis [ref=e336]: 龙华区
+              - paragraph [ref=e337]: 高尔夫和生态运动公园，适合带娃放电。
+              - generic [ref=e338]:
+                - generic [ref=e339]: 免费
+                - generic [ref=e341]: 半天
+              - generic [ref=e342]:
+                - generic [ref=e343]:
+                  - generic [ref=e344]: 度假
+                  - generic [ref=e345]: 亲子
+                  - generic [ref=e346]: 运动
+                - button "看路书" [ref=e347]
+        - complementary [ref=e348]:
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - generic [ref=e351]:
+                - strong [ref=e352]: 点位分布
+                - text: 11 个 · 深圳
+              - generic [ref=e353]: 高德底图
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - generic:
+                  - generic:
+                    - button "梧桐山" [ref=e356] [cursor=pointer]
+                    - button "七娘山" [ref=e358] [cursor=pointer]
+                    - button "杨梅坑" [ref=e360] [cursor=pointer]
+                    - button "深圳湾公园" [ref=e362] [cursor=pointer]
+                    - button "大鹏所城" [ref=e364] [cursor=pointer]
+                    - button "人才公园" [ref=e366] [cursor=pointer]
+                    - button "西冲海滩" [ref=e368] [cursor=pointer]
+                    - button "仙湖植物园" [ref=e370] [cursor=pointer]
+                    - button "马峦山" [ref=e372] [cursor=pointer]
+                    - button "大梅沙" [ref=e374] [cursor=pointer]
+                    - button "观澜湖" [ref=e376] [cursor=pointer]
+                - generic:
+                  - generic [ref=e378]:
+                    - button "Zoom in" [ref=e379] [cursor=pointer]: +
+                    - button "Zoom out" [ref=e380] [cursor=pointer]: −
+                  - generic: 100 km
+                  - generic [ref=e383]:
+                    - link "Leaflet" [ref=e384] [cursor=pointer]:
+                      - /url: https://leafletjs.com
+                    - text: "| © 高德地图"
+              - generic [ref=e389]:
+                - button "标准" [ref=e390] [cursor=pointer]
+                - button "卫星" [ref=e391] [cursor=pointer]
+              - generic: 滚轮直接缩放 · 双击放大
+            - generic [ref=e392]:
+              - generic [ref=e393]: 桂林
+              - generic [ref=e395]: 广州
+              - generic [ref=e397]: 深圳
+              - generic [ref=e399]: 长沙
+              - generic [ref=e401]: 湘西
+              - generic [ref=e403]: 张家界
+              - generic [ref=e405]: 惠州
+              - generic [ref=e407]: 郴州
+  - contentinfo [ref=e409]:
+    - generic [ref=e410]:
+      - generic [ref=e411]:
+        - generic [ref=e412]: ⛰ 华南徒步地图
+        - paragraph [ref=e413]: 广东 · 湖南 · 江西 · 广西桂林 —— 找景点、看徒步轨迹、查城市热度
+      - generic [ref=e414]:
+        - link "景点搜索" [ref=e415] [cursor=pointer]:
+          - /url: "#/spots"
+        - link "徒步轨迹" [ref=e416] [cursor=pointer]:
+          - /url: "#/routes"
+        - link "城市热度" [ref=e417] [cursor=pointer]:
+          - /url: "#/heat"
+      - generic [ref=e418]: 76 个景点 · 53 条路线 · 850 公里轨迹
+      - generic [ref=e419]: 免责声明：本页面为个人学习项目，数据为示例数据，仅供参考。徒步有风险，出行需谨慎。请根据自身体能选择合适路线， 出发前查询当地天气与景区公告，走成熟线路并结伴同行。

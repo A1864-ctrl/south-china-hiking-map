@@ -1,0 +1,3740 @@
+{
+ "000|night": {
+  "idx": 0,
+  "name": "漓江·杨堤至兴坪",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/000_night_0.jpg",
+    "w": 1798,
+    "h": 1200,
+    "title": "",
+    "l": 80.4,
+    "wx": -7.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/000_night_1.jpg",
+    "w": 1200,
+    "h": 621,
+    "title": "",
+    "l": 48.9,
+    "wx": -108.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/000_night_2.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 85.0,
+    "wx": -74.0,
+    "src": ""
+   }
+  ]
+ },
+ "000|sunset": {
+  "idx": 0,
+  "name": "漓江·杨堤至兴坪",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/000_sunset_0.jpg",
+    "w": 1280,
+    "h": 848,
+    "title": "",
+    "l": 108.4,
+    "wx": 81.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/000_sunset_1.jpg",
+    "w": 1706,
+    "h": 1250,
+    "title": "",
+    "l": 113.6,
+    "wx": 25.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/000_sunset_2.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 79.1,
+    "wx": 36.8,
+    "src": ""
+   }
+  ]
+ },
+ "001|night": {
+  "idx": 1,
+  "name": "遇龙河竹筏",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/001_night_0.jpg",
+    "w": 2000,
+    "h": 1125,
+    "title": "",
+    "l": 49.1,
+    "wx": -12.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/001_night_1.jpg",
+    "w": 1280,
+    "h": 720,
+    "title": "",
+    "l": 38.7,
+    "wx": 6.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/001_night_2.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 49.3,
+    "wx": 50.6,
+    "src": ""
+   }
+  ]
+ },
+ "001|sunset": {
+  "idx": 1,
+  "name": "遇龙河竹筏",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/001_sunset_0.jpg",
+    "w": 1992,
+    "h": 1328,
+    "title": "",
+    "l": 112.2,
+    "wx": 14.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/001_sunset_1.jpg",
+    "w": 1992,
+    "h": 1328,
+    "title": "",
+    "l": 107.5,
+    "wx": 10.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/001_sunset_2.jpg",
+    "w": 1080,
+    "h": 675,
+    "title": "",
+    "l": 120.4,
+    "wx": -13.2,
+    "src": ""
+   }
+  ]
+ },
+ "002|night": {
+  "idx": 2,
+  "name": "龙脊梯田",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/002_night_0.jpg",
+    "w": 1200,
+    "h": 799,
+    "title": "",
+    "l": 47.0,
+    "wx": -11.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/002_night_1.jpg",
+    "w": 3648,
+    "h": 2736,
+    "title": "",
+    "l": 82.8,
+    "wx": -16.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/002_night_2.jpg",
+    "w": 1140,
+    "h": 760,
+    "title": "",
+    "l": 65.7,
+    "wx": 23.3,
+    "src": ""
+   }
+  ]
+ },
+ "002|sunset": {
+  "idx": 2,
+  "name": "龙脊梯田",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/002_sunset_0.jpg",
+    "w": 1200,
+    "h": 795,
+    "title": "",
+    "l": 108.2,
+    "wx": 31.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/002_sunset_1.jpg",
+    "w": 1200,
+    "h": 902,
+    "title": "",
+    "l": 120.3,
+    "wx": 64.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/002_sunset_2.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 78.8,
+    "wx": 42.6,
+    "src": ""
+   }
+  ]
+ },
+ "003|night": {
+  "idx": 3,
+  "name": "相公山观景台",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/003_night_0.jpg",
+    "w": 1024,
+    "h": 682,
+    "title": "",
+    "l": 30.0,
+    "wx": 15.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/003_night_1.jpg",
+    "w": 1200,
+    "h": 768,
+    "title": "",
+    "l": 75.1,
+    "wx": -6.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/003_night_2.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 30.2,
+    "wx": -11.6,
+    "src": ""
+   }
+  ]
+ },
+ "003|sunset": {
+  "idx": 3,
+  "name": "相公山观景台",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/003_sunset_0.jpg",
+    "w": 2048,
+    "h": 1536,
+    "title": "",
+    "l": 89.4,
+    "wx": 31.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/003_sunset_1.jpg",
+    "w": 1200,
+    "h": 797,
+    "title": "",
+    "l": 80.9,
+    "wx": 25.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/003_sunset_2.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 62.7,
+    "wx": 21.0,
+    "src": ""
+   }
+  ]
+ },
+ "004|night": {
+  "idx": 4,
+  "name": "猫儿山",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/004_night_0.jpg",
+    "w": 1920,
+    "h": 1440,
+    "title": "",
+    "l": 75.1,
+    "wx": -66.9,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/004_night_1.jpg",
+    "w": 3456,
+    "h": 2160,
+    "title": "",
+    "l": 65.9,
+    "wx": -1.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/004_night_2.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 117.9,
+    "wx": -39.0,
+    "src": ""
+   }
+  ]
+ },
+ "004|sunset": {
+  "idx": 4,
+  "name": "猫儿山",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/004_sunset_0.jpg",
+    "w": 1080,
+    "h": 721,
+    "title": "",
+    "l": 96.3,
+    "wx": 29.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/004_sunset_1.jpg",
+    "w": 1280,
+    "h": 855,
+    "title": "",
+    "l": 118.1,
+    "wx": 19.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/004_sunset_2.jpg",
+    "w": 2048,
+    "h": 1536,
+    "title": "",
+    "l": 99.7,
+    "wx": 30.3,
+    "src": ""
+   }
+  ]
+ },
+ "005|night": {
+  "idx": 5,
+  "name": "银子岩",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/005_night_0.jpg",
+    "w": 1500,
+    "h": 1000,
+    "title": "",
+    "l": 53.5,
+    "wx": -9.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/005_night_1.jpg",
+    "w": 7360,
+    "h": 4208,
+    "title": "",
+    "l": 85.4,
+    "wx": -20.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/005_night_2.jpg",
+    "w": 1242,
+    "h": 825,
+    "title": "",
+    "l": 66.9,
+    "wx": -21.0,
+    "src": ""
+   }
+  ]
+ },
+ "005|sunset": {
+  "idx": 5,
+  "name": "银子岩",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/005_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 103.7,
+    "wx": 66.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/005_sunset_1.jpg",
+    "w": 1386,
+    "h": 1039,
+    "title": "",
+    "l": 84.0,
+    "wx": -17.8,
+    "src": ""
+   }
+  ]
+ },
+ "006|night": {
+  "idx": 6,
+  "name": "十里画廊骑行",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/006_night_0.jpg",
+    "w": 1242,
+    "h": 798,
+    "title": "",
+    "l": 134.3,
+    "wx": -32.7,
+    "src": ""
+   }
+  ]
+ },
+ "006|sunset": {
+  "idx": 6,
+  "name": "十里画廊骑行",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/006_sunset_0.jpg",
+    "w": 1600,
+    "h": 1170,
+    "title": "",
+    "l": 145.0,
+    "wx": 10.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/006_sunset_1.jpg",
+    "w": 1015,
+    "h": 760,
+    "title": "",
+    "l": 134.7,
+    "wx": 35.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/006_sunset_2.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 117.0,
+    "wx": -10.2,
+    "src": ""
+   }
+  ]
+ },
+ "007|night": {
+  "idx": 7,
+  "name": "兴坪古镇",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/007_night_0.jpg",
+    "w": 1024,
+    "h": 768,
+    "title": "",
+    "l": 111.3,
+    "wx": 15.1,
+    "src": ""
+   }
+  ]
+ },
+ "007|sunset": {
+  "idx": 7,
+  "name": "兴坪古镇",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/007_sunset_0.jpg",
+    "w": 3456,
+    "h": 2160,
+    "title": "",
+    "l": 89.8,
+    "wx": 39.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/007_sunset_1.jpg",
+    "w": 1200,
+    "h": 768,
+    "title": "",
+    "l": 87.7,
+    "wx": -31.7,
+    "src": ""
+   }
+  ]
+ },
+ "008|night": {
+  "idx": 8,
+  "name": "八角寨",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/008_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 96.8,
+    "wx": -75.7,
+    "src": ""
+   }
+  ]
+ },
+ "008|sunset": {
+  "idx": 8,
+  "name": "八角寨",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/008_sunset_0.jpg",
+    "w": 1500,
+    "h": 1122,
+    "title": "",
+    "l": 92.7,
+    "wx": 26.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/008_sunset_1.jpg",
+    "w": 1807,
+    "h": 926,
+    "title": "",
+    "l": 140.1,
+    "wx": 30.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/008_sunset_2.jpg",
+    "w": 1500,
+    "h": 1001,
+    "title": "",
+    "l": 149.5,
+    "wx": -36.5,
+    "src": ""
+   }
+  ]
+ },
+ "009|night": {
+  "idx": 9,
+  "name": "古东瀑布",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/009_night_0.jpg",
+    "w": 1500,
+    "h": 998,
+    "title": "",
+    "l": 42.2,
+    "wx": -12.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/009_night_1.jpg",
+    "w": 1920,
+    "h": 1050,
+    "title": "",
+    "l": 107.9,
+    "wx": -0.6,
+    "src": ""
+   }
+  ]
+ },
+ "009|sunset": {
+  "idx": 9,
+  "name": "古东瀑布",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/009_sunset_0.jpg",
+    "w": 1920,
+    "h": 1050,
+    "title": "",
+    "l": 107.9,
+    "wx": -0.6,
+    "src": ""
+   }
+  ]
+ },
+ "010|night": {
+  "idx": 10,
+  "name": "全州天湖",
+  "city": "桂林",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/010_night_0.jpg",
+    "w": 2048,
+    "h": 1366,
+    "title": "",
+    "l": 155.0,
+    "wx": -30.6,
+    "src": ""
+   }
+  ]
+ },
+ "010|sunset": {
+  "idx": 10,
+  "name": "全州天湖",
+  "city": "桂林",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/010_sunset_0.jpg",
+    "w": 1851,
+    "h": 1280,
+    "title": "",
+    "l": 112.0,
+    "wx": -12.9,
+    "src": ""
+   }
+  ]
+ },
+ "011|night": {
+  "idx": 11,
+  "name": "白云山",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/011_night_0.jpg",
+    "w": 4608,
+    "h": 3456,
+    "title": "",
+    "l": 54.9,
+    "wx": 2.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/011_night_1.jpg",
+    "w": 1500,
+    "h": 797,
+    "title": "",
+    "l": 61.5,
+    "wx": -15.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/011_night_2.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 48.0,
+    "wx": -15.1,
+    "src": ""
+   }
+  ]
+ },
+ "011|sunset": {
+  "idx": 11,
+  "name": "白云山",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/011_sunset_0.jpg",
+    "w": 1000,
+    "h": 667,
+    "title": "",
+    "l": 95.8,
+    "wx": -13.9,
+    "src": ""
+   }
+  ]
+ },
+ "012|night": {
+  "idx": 12,
+  "name": "沙面岛",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/012_night_0.jpg",
+    "w": 2000,
+    "h": 1500,
+    "title": "",
+    "l": 91.2,
+    "wx": -33.7,
+    "src": ""
+   }
+  ]
+ },
+ "012|sunset": {
+  "idx": 12,
+  "name": "沙面岛",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/012_sunset_0.jpg",
+    "w": 2000,
+    "h": 1500,
+    "title": "",
+    "l": 91.2,
+    "wx": -33.7,
+    "src": ""
+   }
+  ]
+ },
+ "013|night": {
+  "idx": 13,
+  "name": "永庆坊",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/013_night_0.jpg",
+    "w": 4000,
+    "h": 2668,
+    "title": "",
+    "l": 44.4,
+    "wx": 29.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/013_night_1.jpg",
+    "w": 4000,
+    "h": 2668,
+    "title": "",
+    "l": 36.6,
+    "wx": 26.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/013_night_2.jpg",
+    "w": 1080,
+    "h": 810,
+    "title": "",
+    "l": 84.3,
+    "wx": 70.2,
+    "src": ""
+   }
+  ]
+ },
+ "013|sunset": {
+  "idx": 13,
+  "name": "永庆坊",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/013_sunset_0.jpg",
+    "w": 3134,
+    "h": 1960,
+    "title": "",
+    "l": 74.5,
+    "wx": 18.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/013_sunset_1.jpg",
+    "w": 4096,
+    "h": 3072,
+    "title": "",
+    "l": 47.8,
+    "wx": 24.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/013_sunset_2.jpg",
+    "w": 1400,
+    "h": 1050,
+    "title": "",
+    "l": 113.3,
+    "wx": 3.0,
+    "src": ""
+   }
+  ]
+ },
+ "014|night": {
+  "idx": 14,
+  "name": "陈家祠",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/014_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 41.5,
+    "wx": 3.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/014_night_1.jpg",
+    "w": 1000,
+    "h": 533,
+    "title": "",
+    "l": 149.3,
+    "wx": -33.2,
+    "src": ""
+   }
+  ]
+ },
+ "014|sunset": {
+  "idx": 14,
+  "name": "陈家祠",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/014_sunset_0.jpg",
+    "w": 1080,
+    "h": 800,
+    "title": "",
+    "l": 103.0,
+    "wx": -15.8,
+    "src": ""
+   }
+  ]
+ },
+ "015|night": {
+  "idx": 15,
+  "name": "越秀公园",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/015_night_0.jpg",
+    "w": 1000,
+    "h": 667,
+    "title": "",
+    "l": 47.8,
+    "wx": 12.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/015_night_1.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 77.4,
+    "wx": 39.9,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/015_night_2.jpg",
+    "w": 1200,
+    "h": 797,
+    "title": "",
+    "l": 71.6,
+    "wx": 122.5,
+    "src": ""
+   }
+  ]
+ },
+ "015|sunset": {
+  "idx": 15,
+  "name": "越秀公园",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/015_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 66.8,
+    "wx": 35.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/015_sunset_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 101.0,
+    "wx": 7.6,
+    "src": ""
+   }
+  ]
+ },
+ "016|night": {
+  "idx": 16,
+  "name": "华南植物园",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/016_night_0.jpg",
+    "w": 4096,
+    "h": 2730,
+    "title": "",
+    "l": 33.0,
+    "wx": 22.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/016_night_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 135.4,
+    "wx": 26.3,
+    "src": ""
+   }
+  ]
+ },
+ "016|sunset": {
+  "idx": 16,
+  "name": "华南植物园",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/016_sunset_0.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 110.7,
+    "wx": 1.1,
+    "src": ""
+   }
+  ]
+ },
+ "017|night": {
+  "idx": 17,
+  "name": "从化溪头村",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/017_night_0.jpg",
+    "w": 1067,
+    "h": 800,
+    "title": "",
+    "l": 143.3,
+    "wx": 13.0,
+    "src": ""
+   }
+  ]
+ },
+ "017|sunset": {
+  "idx": 17,
+  "name": "从化溪头村",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/017_sunset_0.jpg",
+    "w": 1200,
+    "h": 798,
+    "title": "",
+    "l": 97.6,
+    "wx": 31.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/017_sunset_1.jpg",
+    "w": 1200,
+    "h": 798,
+    "title": "",
+    "l": 97.6,
+    "wx": 31.5,
+    "src": ""
+   }
+  ]
+ },
+ "018|night": {
+  "idx": 18,
+  "name": "石门国家森林公园",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/018_night_0.jpg",
+    "w": 2278,
+    "h": 1280,
+    "title": "",
+    "l": 163.8,
+    "wx": -24.0,
+    "src": ""
+   }
+  ]
+ },
+ "018|sunset": {
+  "idx": 18,
+  "name": "石门国家森林公园",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/018_sunset_0.jpg",
+    "w": 2278,
+    "h": 1280,
+    "title": "",
+    "l": 163.8,
+    "wx": -24.0,
+    "src": ""
+   }
+  ]
+ },
+ "019|night": {
+  "idx": 19,
+  "name": "莲花山",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/019_night_0.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 76.0,
+    "wx": 4.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/019_night_1.jpg",
+    "w": 2730,
+    "h": 2048,
+    "title": "",
+    "l": 113.2,
+    "wx": 15.6,
+    "src": ""
+   }
+  ]
+ },
+ "019|sunset": {
+  "idx": 19,
+  "name": "莲花山",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/019_sunset_0.jpg",
+    "w": 2159,
+    "h": 1619,
+    "title": "",
+    "l": 153.0,
+    "wx": 31.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/019_sunset_1.jpg",
+    "w": 1896,
+    "h": 1280,
+    "title": "",
+    "l": 114.4,
+    "wx": 24.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/019_sunset_2.jpg",
+    "w": 1728,
+    "h": 1080,
+    "title": "",
+    "l": 110.9,
+    "wx": -12.2,
+    "src": ""
+   }
+  ]
+ },
+ "020|night": {
+  "idx": 20,
+  "name": "广州塔",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/020_night_0.jpg",
+    "w": 1200,
+    "h": 820,
+    "title": "",
+    "l": 91.0,
+    "wx": -28.6,
+    "src": ""
+   }
+  ]
+ },
+ "020|sunset": {
+  "idx": 20,
+  "name": "广州塔",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/020_sunset_0.jpg",
+    "w": 1728,
+    "h": 1080,
+    "title": "",
+    "l": 139.6,
+    "wx": -44.8,
+    "src": ""
+   }
+  ]
+ },
+ "021|night": {
+  "idx": 21,
+  "name": "海珠湖",
+  "city": "广州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/021_night_0.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 137.3,
+    "wx": -76.6,
+    "src": ""
+   }
+  ]
+ },
+ "021|sunset": {
+  "idx": 21,
+  "name": "海珠湖",
+  "city": "广州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/021_sunset_0.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 135.8,
+    "wx": -6.0,
+    "src": ""
+   }
+  ]
+ },
+ "022|night": {
+  "idx": 22,
+  "name": "梧桐山",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/022_night_0.jpg",
+    "w": 4320,
+    "h": 2880,
+    "title": "",
+    "l": 77.6,
+    "wx": -8.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/022_night_1.jpg",
+    "w": 1920,
+    "h": 1154,
+    "title": "",
+    "l": 40.3,
+    "wx": 1.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/022_night_2.jpg",
+    "w": 1024,
+    "h": 653,
+    "title": "",
+    "l": 55.5,
+    "wx": -12.6,
+    "src": ""
+   }
+  ]
+ },
+ "022|sunset": {
+  "idx": 22,
+  "name": "梧桐山",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/022_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 114.3,
+    "wx": 15.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/022_sunset_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 100.6,
+    "wx": 26.9,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/022_sunset_2.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 110.4,
+    "wx": 28.8,
+    "src": ""
+   }
+  ]
+ },
+ "023|night": {
+  "idx": 23,
+  "name": "七娘山",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/023_night_0.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 125.0,
+    "wx": -0.8,
+    "src": ""
+   }
+  ]
+ },
+ "023|sunset": {
+  "idx": 23,
+  "name": "七娘山",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/023_sunset_0.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 125.0,
+    "wx": -0.8,
+    "src": ""
+   }
+  ]
+ },
+ "024|night": {
+  "idx": 24,
+  "name": "大鹏所城",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/024_night_0.jpg",
+    "w": 1280,
+    "h": 720,
+    "title": "",
+    "l": 57.0,
+    "wx": -28.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/024_night_1.jpg",
+    "w": 1200,
+    "h": 654,
+    "title": "",
+    "l": 50.9,
+    "wx": -19.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/024_night_2.jpg",
+    "w": 1000,
+    "h": 750,
+    "title": "",
+    "l": 103.5,
+    "wx": -19.4,
+    "src": ""
+   }
+  ]
+ },
+ "024|sunset": {
+  "idx": 24,
+  "name": "大鹏所城",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/024_sunset_0.jpg",
+    "w": 1280,
+    "h": 720,
+    "title": "",
+    "l": 57.0,
+    "wx": -28.2,
+    "src": ""
+   }
+  ]
+ },
+ "025|night": {
+  "idx": 25,
+  "name": "杨梅坑",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/025_night_0.jpg",
+    "w": 3995,
+    "h": 2574,
+    "title": "",
+    "l": 123.9,
+    "wx": 63.0,
+    "src": ""
+   }
+  ]
+ },
+ "025|sunset": {
+  "idx": 25,
+  "name": "杨梅坑",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/025_sunset_0.jpg",
+    "w": 3995,
+    "h": 2574,
+    "title": "",
+    "l": 123.9,
+    "wx": 63.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/025_sunset_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 120.4,
+    "wx": -95.3,
+    "src": ""
+   }
+  ]
+ },
+ "026|night": {
+  "idx": 26,
+  "name": "西冲海滩",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/026_night_0.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 133.0,
+    "wx": -50.0,
+    "src": ""
+   }
+  ]
+ },
+ "026|sunset": {
+  "idx": 26,
+  "name": "西冲海滩",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/026_sunset_0.jpg",
+    "w": 1200,
+    "h": 647,
+    "title": "",
+    "l": 102.8,
+    "wx": -18.1,
+    "src": ""
+   }
+  ]
+ },
+ "027|night": {
+  "idx": 27,
+  "name": "深圳湾公园",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/027_night_0.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 61.2,
+    "wx": -10.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/027_night_1.jpg",
+    "w": 1920,
+    "h": 1440,
+    "title": "",
+    "l": 80.2,
+    "wx": -27.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/027_night_2.jpg",
+    "w": 3456,
+    "h": 2160,
+    "title": "",
+    "l": 106.1,
+    "wx": 19.5,
+    "src": ""
+   }
+  ]
+ },
+ "027|sunset": {
+  "idx": 27,
+  "name": "深圳湾公园",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/027_sunset_0.jpg",
+    "w": 1440,
+    "h": 1080,
+    "title": "",
+    "l": 103.9,
+    "wx": 67.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/027_sunset_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 73.8,
+    "wx": 31.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/027_sunset_2.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 111.6,
+    "wx": -0.8,
+    "src": ""
+   }
+  ]
+ },
+ "028|night": {
+  "idx": 28,
+  "name": "人才公园",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/028_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 38.0,
+    "wx": -27.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/028_night_1.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 61.2,
+    "wx": -10.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/028_night_2.jpg",
+    "w": 1200,
+    "h": 797,
+    "title": "",
+    "l": 110.8,
+    "wx": -57.9,
+    "src": ""
+   }
+  ]
+ },
+ "028|sunset": {
+  "idx": 28,
+  "name": "人才公园",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/028_sunset_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 115.4,
+    "wx": 85.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/028_sunset_1.jpg",
+    "w": 1421,
+    "h": 800,
+    "title": "",
+    "l": 95.5,
+    "wx": -15.2,
+    "src": ""
+   }
+  ]
+ },
+ "029|night": {
+  "idx": 29,
+  "name": "仙湖植物园",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/029_night_0.jpg",
+    "w": 2304,
+    "h": 1639,
+    "title": "",
+    "l": 138.4,
+    "wx": 2.7,
+    "src": ""
+   }
+  ]
+ },
+ "029|sunset": {
+  "idx": 29,
+  "name": "仙湖植物园",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/029_sunset_0.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 144.2,
+    "wx": 31.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/029_sunset_1.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 136.9,
+    "wx": 39.9,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/029_sunset_2.jpg",
+    "w": 1606,
+    "h": 1172,
+    "title": "",
+    "l": 128.4,
+    "wx": 11.3,
+    "src": ""
+   }
+  ]
+ },
+ "030|night": {
+  "idx": 30,
+  "name": "大梅沙",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/030_night_0.jpg",
+    "w": 1920,
+    "h": 1280,
+    "title": "",
+    "l": 78.6,
+    "wx": -1.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/030_night_1.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 56.3,
+    "wx": -30.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/030_night_2.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 45.6,
+    "wx": 14.1,
+    "src": ""
+   }
+  ]
+ },
+ "030|sunset": {
+  "idx": 30,
+  "name": "大梅沙",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/030_sunset_0.jpg",
+    "w": 1024,
+    "h": 576,
+    "title": "",
+    "l": 140.4,
+    "wx": 49.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/030_sunset_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 123.2,
+    "wx": -193.8,
+    "src": ""
+   }
+  ]
+ },
+ "031|night": {
+  "idx": 31,
+  "name": "马峦山",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/031_night_0.jpg",
+    "w": 2731,
+    "h": 2048,
+    "title": "",
+    "l": 72.6,
+    "wx": 27.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/031_night_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 131.6,
+    "wx": -49.0,
+    "src": ""
+   }
+  ]
+ },
+ "031|sunset": {
+  "idx": 31,
+  "name": "马峦山",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/031_sunset_0.jpg",
+    "w": 1200,
+    "h": 600,
+    "title": "",
+    "l": 143.1,
+    "wx": -39.6,
+    "src": ""
+   }
+  ]
+ },
+ "032|night": {
+  "idx": 32,
+  "name": "观澜湖",
+  "city": "深圳",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/032_night_0.jpg",
+    "w": 1200,
+    "h": 858,
+    "title": "",
+    "l": 117.4,
+    "wx": 2.7,
+    "src": ""
+   }
+  ]
+ },
+ "032|sunset": {
+  "idx": 32,
+  "name": "观澜湖",
+  "city": "深圳",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/032_sunset_0.jpg",
+    "w": 2000,
+    "h": 1127,
+    "title": "",
+    "l": 111.3,
+    "wx": 14.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/032_sunset_1.jpg",
+    "w": 1500,
+    "h": 1127,
+    "title": "",
+    "l": 100.3,
+    "wx": -31.2,
+    "src": ""
+   }
+  ]
+ },
+ "033|night": {
+  "idx": 33,
+  "name": "岳麓山",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/033_night_0.jpg",
+    "w": 1440,
+    "h": 1080,
+    "title": "",
+    "l": 77.6,
+    "wx": 17.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/033_night_1.jpg",
+    "w": 3640,
+    "h": 2048,
+    "title": "",
+    "l": 35.3,
+    "wx": -14.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/033_night_2.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 21.9,
+    "wx": 2.9,
+    "src": ""
+   }
+  ]
+ },
+ "033|sunset": {
+  "idx": 33,
+  "name": "岳麓山",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/033_sunset_0.jpg",
+    "w": 2560,
+    "h": 1439,
+    "title": "",
+    "l": 155.4,
+    "wx": -19.1,
+    "src": ""
+   }
+  ]
+ },
+ "034|night": {
+  "idx": 34,
+  "name": "橘子洲",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/034_night_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 61.0,
+    "wx": -3.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/034_night_1.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 78.4,
+    "wx": 4.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/034_night_2.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 78.5,
+    "wx": -0.1,
+    "src": ""
+   }
+  ]
+ },
+ "034|sunset": {
+  "idx": 34,
+  "name": "橘子洲",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/034_sunset_0.jpg",
+    "w": 1200,
+    "h": 675,
+    "title": "",
+    "l": 121.7,
+    "wx": 74.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/034_sunset_1.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 59.4,
+    "wx": 21.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/034_sunset_2.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 165.9,
+    "wx": 20.2,
+    "src": ""
+   }
+  ]
+ },
+ "035|night": {
+  "idx": 35,
+  "name": "太平老街",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/035_night_0.jpg",
+    "w": 1280,
+    "h": 960,
+    "title": "",
+    "l": 65.7,
+    "wx": 1.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/035_night_1.jpg",
+    "w": 1441,
+    "h": 1081,
+    "title": "",
+    "l": 59.6,
+    "wx": 35.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/035_night_2.jpg",
+    "w": 1152,
+    "h": 864,
+    "title": "",
+    "l": 96.0,
+    "wx": 23.2,
+    "src": ""
+   }
+  ]
+ },
+ "035|sunset": {
+  "idx": 35,
+  "name": "太平老街",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/035_sunset_0.jpg",
+    "w": 1920,
+    "h": 1410,
+    "title": "",
+    "l": 127.5,
+    "wx": 11.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/035_sunset_1.jpg",
+    "w": 1200,
+    "h": 675,
+    "title": "",
+    "l": 82.8,
+    "wx": 36.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/035_sunset_2.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 129.3,
+    "wx": 4.6,
+    "src": ""
+   }
+  ]
+ },
+ "036|night": {
+  "idx": 36,
+  "name": "湖南博物院",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/036_night_0.jpg",
+    "w": 5184,
+    "h": 3456,
+    "title": "",
+    "l": 103.3,
+    "wx": 40.1,
+    "src": ""
+   }
+  ]
+ },
+ "036|sunset": {
+  "idx": 36,
+  "name": "湖南博物院",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/036_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 101.4,
+    "wx": 98.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/036_sunset_1.jpg",
+    "w": 4032,
+    "h": 3024,
+    "title": "",
+    "l": 125.8,
+    "wx": -29.2,
+    "src": ""
+   }
+  ]
+ },
+ "037|night": {
+  "idx": 37,
+  "name": "大围山",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/037_night_0.jpg",
+    "w": 2048,
+    "h": 1536,
+    "title": "",
+    "l": 144.8,
+    "wx": -12.7,
+    "src": ""
+   }
+  ]
+ },
+ "037|sunset": {
+  "idx": 37,
+  "name": "大围山",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/037_sunset_0.jpg",
+    "w": 1080,
+    "h": 718,
+    "title": "",
+    "l": 150.1,
+    "wx": 34.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/037_sunset_1.jpg",
+    "w": 1024,
+    "h": 571,
+    "title": "",
+    "l": 136.5,
+    "wx": -6.6,
+    "src": ""
+   }
+  ]
+ },
+ "038|night": {
+  "idx": 38,
+  "name": "石燕湖",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/038_night_0.jpg",
+    "w": 1920,
+    "h": 1440,
+    "title": "",
+    "l": 129.0,
+    "wx": -16.8,
+    "src": ""
+   }
+  ]
+ },
+ "038|sunset": {
+  "idx": 38,
+  "name": "石燕湖",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/038_sunset_0.jpg",
+    "w": 1920,
+    "h": 1440,
+    "title": "",
+    "l": 129.0,
+    "wx": -16.8,
+    "src": ""
+   }
+  ]
+ },
+ "039|night": {
+  "idx": 39,
+  "name": "铜官窑古镇",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/039_night_0.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 84.2,
+    "wx": -37.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/039_night_1.jpg",
+    "w": 1007,
+    "h": 567,
+    "title": "",
+    "l": 46.6,
+    "wx": 34.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/039_night_2.jpg",
+    "w": 1080,
+    "h": 719,
+    "title": "",
+    "l": 126.9,
+    "wx": -23.8,
+    "src": ""
+   }
+  ]
+ },
+ "039|sunset": {
+  "idx": 39,
+  "name": "铜官窑古镇",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/039_sunset_0.jpg",
+    "w": 1201,
+    "h": 800,
+    "title": "",
+    "l": 131.4,
+    "wx": -61.7,
+    "src": ""
+   }
+  ]
+ },
+ "040|sunset": {
+  "idx": 40,
+  "name": "洋湖湿地",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/040_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 111.8,
+    "wx": 23.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/040_sunset_1.jpg",
+    "w": 1280,
+    "h": 852,
+    "title": "",
+    "l": 80.1,
+    "wx": -16.8,
+    "src": ""
+   }
+  ]
+ },
+ "041|night": {
+  "idx": 41,
+  "name": "黑麋峰",
+  "city": "长沙",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/041_night_0.jpg",
+    "w": 2000,
+    "h": 1125,
+    "title": "",
+    "l": 70.4,
+    "wx": -95.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/041_night_1.jpg",
+    "w": 1200,
+    "h": 799,
+    "title": "",
+    "l": 120.4,
+    "wx": -30.5,
+    "src": ""
+   }
+  ]
+ },
+ "041|sunset": {
+  "idx": 41,
+  "name": "黑麋峰",
+  "city": "长沙",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/041_sunset_0.jpg",
+    "w": 1080,
+    "h": 608,
+    "title": "",
+    "l": 112.8,
+    "wx": 58.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/041_sunset_1.jpg",
+    "w": 1157,
+    "h": 800,
+    "title": "",
+    "l": 121.8,
+    "wx": 11.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/041_sunset_2.jpg",
+    "w": 1080,
+    "h": 778,
+    "title": "",
+    "l": 122.2,
+    "wx": -12.2,
+    "src": ""
+   }
+  ]
+ },
+ "042|night": {
+  "idx": 42,
+  "name": "凤凰古城",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/042_night_0.jpg",
+    "w": 1200,
+    "h": 733,
+    "title": "",
+    "l": 74.9,
+    "wx": 33.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/042_night_1.jpg",
+    "w": 2048,
+    "h": 1536,
+    "title": "",
+    "l": 66.8,
+    "wx": -4.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/042_night_2.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 36.2,
+    "wx": 6.7,
+    "src": ""
+   }
+  ]
+ },
+ "042|sunset": {
+  "idx": 42,
+  "name": "凤凰古城",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/042_sunset_0.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 88.9,
+    "wx": -45.7,
+    "src": ""
+   }
+  ]
+ },
+ "043|night": {
+  "idx": 43,
+  "name": "芙蓉镇",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/043_night_0.jpg",
+    "w": 1080,
+    "h": 578,
+    "title": "",
+    "l": 72.4,
+    "wx": 20.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/043_night_1.jpg",
+    "w": 1439,
+    "h": 1050,
+    "title": "",
+    "l": 22.2,
+    "wx": 14.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/043_night_2.jpg",
+    "w": 1108,
+    "h": 692,
+    "title": "",
+    "l": 55.7,
+    "wx": 14.4,
+    "src": ""
+   }
+  ]
+ },
+ "043|sunset": {
+  "idx": 43,
+  "name": "芙蓉镇",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/043_sunset_0.jpg",
+    "w": 1921,
+    "h": 1280,
+    "title": "",
+    "l": 133.8,
+    "wx": 34.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/043_sunset_1.jpg",
+    "w": 2500,
+    "h": 1667,
+    "title": "",
+    "l": 63.1,
+    "wx": 29.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/043_sunset_2.jpg",
+    "w": 2440,
+    "h": 1280,
+    "title": "",
+    "l": 124.8,
+    "wx": 40.4,
+    "src": ""
+   }
+  ]
+ },
+ "044|night": {
+  "idx": 44,
+  "name": "德夯大峡谷",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/044_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 68.8,
+    "wx": -15.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/044_night_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 72.8,
+    "wx": -22.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/044_night_2.jpg",
+    "w": 2802,
+    "h": 1751,
+    "title": "",
+    "l": 113.0,
+    "wx": 10.2,
+    "src": ""
+   }
+  ]
+ },
+ "044|sunset": {
+  "idx": 44,
+  "name": "德夯大峡谷",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/044_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 68.8,
+    "wx": -15.5,
+    "src": ""
+   }
+  ]
+ },
+ "045|night": {
+  "idx": 45,
+  "name": "矮寨大桥",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/045_night_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 42.8,
+    "wx": -18.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/045_night_1.jpg",
+    "w": 6696,
+    "h": 4469,
+    "title": "",
+    "l": 94.9,
+    "wx": 10.8,
+    "src": ""
+   }
+  ]
+ },
+ "045|sunset": {
+  "idx": 45,
+  "name": "矮寨大桥",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/045_sunset_0.jpg",
+    "w": 1151,
+    "h": 767,
+    "title": "",
+    "l": 65.7,
+    "wx": -2.1,
+    "src": ""
+   }
+  ]
+ },
+ "046|night": {
+  "idx": 46,
+  "name": "红石林",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/046_night_0.jpg",
+    "w": 1080,
+    "h": 608,
+    "title": "",
+    "l": 103.8,
+    "wx": 57.9,
+    "src": ""
+   }
+  ]
+ },
+ "046|sunset": {
+  "idx": 46,
+  "name": "红石林",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/046_sunset_0.jpg",
+    "w": 1200,
+    "h": 960,
+    "title": "",
+    "l": 86.7,
+    "wx": 22.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/046_sunset_1.jpg",
+    "w": 1200,
+    "h": 600,
+    "title": "",
+    "l": 109.0,
+    "wx": 6.3,
+    "src": ""
+   }
+  ]
+ },
+ "047|night": {
+  "idx": 47,
+  "name": "边城茶峒",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/047_night_0.jpg",
+    "w": 1200,
+    "h": 798,
+    "title": "",
+    "l": 137.6,
+    "wx": -4.3,
+    "src": ""
+   }
+  ]
+ },
+ "047|sunset": {
+  "idx": 47,
+  "name": "边城茶峒",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/047_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 77.0,
+    "wx": -10.4,
+    "src": ""
+   }
+  ]
+ },
+ "048|night": {
+  "idx": 48,
+  "name": "坐龙峡",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/048_night_0.jpg",
+    "w": 1000,
+    "h": 666,
+    "title": "",
+    "l": 64.5,
+    "wx": 13.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/048_night_1.jpg",
+    "w": 1080,
+    "h": 607,
+    "title": "",
+    "l": 74.8,
+    "wx": -24.5,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/048_night_2.jpg",
+    "w": 1000,
+    "h": 666,
+    "title": "",
+    "l": 64.5,
+    "wx": 13.7,
+    "src": ""
+   }
+  ]
+ },
+ "048|sunset": {
+  "idx": 48,
+  "name": "坐龙峡",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/048_sunset_0.jpg",
+    "w": 1000,
+    "h": 666,
+    "title": "",
+    "l": 64.5,
+    "wx": 13.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/048_sunset_1.jpg",
+    "w": 1080,
+    "h": 607,
+    "title": "",
+    "l": 74.8,
+    "wx": -24.5,
+    "src": ""
+   }
+  ]
+ },
+ "049|night": {
+  "idx": 49,
+  "name": "猛洞河漂流",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/049_night_0.jpg",
+    "w": 1024,
+    "h": 680,
+    "title": "",
+    "l": 70.5,
+    "wx": 6.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/049_night_1.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 80.5,
+    "wx": 6.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/049_night_2.jpg",
+    "w": 1024,
+    "h": 734,
+    "title": "",
+    "l": 72.0,
+    "wx": -9.8,
+    "src": ""
+   }
+  ]
+ },
+ "049|sunset": {
+  "idx": 49,
+  "name": "猛洞河漂流",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/049_sunset_0.jpg",
+    "w": 1024,
+    "h": 680,
+    "title": "",
+    "l": 70.5,
+    "wx": 6.4,
+    "src": ""
+   }
+  ]
+ },
+ "050|night": {
+  "idx": 50,
+  "name": "老司城",
+  "city": "湘西",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/050_night_0.jpg",
+    "w": 1080,
+    "h": 675,
+    "title": "",
+    "l": 124.5,
+    "wx": 5.3,
+    "src": ""
+   }
+  ]
+ },
+ "050|sunset": {
+  "idx": 50,
+  "name": "老司城",
+  "city": "湘西",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/050_sunset_0.jpg",
+    "w": 2000,
+    "h": 1335,
+    "title": "",
+    "l": 93.6,
+    "wx": 13.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/050_sunset_1.jpg",
+    "w": 1440,
+    "h": 1050,
+    "title": "",
+    "l": 149.0,
+    "wx": 15.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/050_sunset_2.jpg",
+    "w": 1728,
+    "h": 1080,
+    "title": "",
+    "l": 131.7,
+    "wx": 22.3,
+    "src": ""
+   }
+  ]
+ },
+ "051|night": {
+  "idx": 51,
+  "name": "张家界国家森林公园",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/051_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 40.9,
+    "wx": 4.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/051_night_1.jpg",
+    "w": 1080,
+    "h": 745,
+    "title": "",
+    "l": 74.7,
+    "wx": 73.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/051_night_2.jpg",
+    "w": 1000,
+    "h": 667,
+    "title": "",
+    "l": 124.3,
+    "wx": 10.3,
+    "src": ""
+   }
+  ]
+ },
+ "051|sunset": {
+  "idx": 51,
+  "name": "张家界国家森林公园",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/051_sunset_0.jpg",
+    "w": 1947,
+    "h": 1200,
+    "title": "",
+    "l": 99.3,
+    "wx": -24.3,
+    "src": ""
+   }
+  ]
+ },
+ "052|night": {
+  "idx": 52,
+  "name": "天门山",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/052_night_0.jpg",
+    "w": 1280,
+    "h": 930,
+    "title": "",
+    "l": 70.7,
+    "wx": -10.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/052_night_1.jpg",
+    "w": 1863,
+    "h": 1165,
+    "title": "",
+    "l": 103.9,
+    "wx": -17.0,
+    "src": ""
+   }
+  ]
+ },
+ "052|sunset": {
+  "idx": 52,
+  "name": "天门山",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/052_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 69.2,
+    "wx": 61.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/052_sunset_1.jpg",
+    "w": 1024,
+    "h": 576,
+    "title": "",
+    "l": 105.8,
+    "wx": 44.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/052_sunset_2.jpg",
+    "w": 1200,
+    "h": 801,
+    "title": "",
+    "l": 61.9,
+    "wx": 3.8,
+    "src": ""
+   }
+  ]
+ },
+ "053|night": {
+  "idx": 53,
+  "name": "天子山",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/053_night_0.jpg",
+    "w": 1080,
+    "h": 745,
+    "title": "",
+    "l": 74.7,
+    "wx": 73.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/053_night_1.jpg",
+    "w": 1067,
+    "h": 800,
+    "title": "",
+    "l": 106.9,
+    "wx": -12.8,
+    "src": ""
+   }
+  ]
+ },
+ "053|sunset": {
+  "idx": 53,
+  "name": "天子山",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/053_sunset_0.jpg",
+    "w": 4608,
+    "h": 3456,
+    "title": "",
+    "l": 112.5,
+    "wx": 21.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/053_sunset_1.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 101.4,
+    "wx": 50.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/053_sunset_2.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 118.3,
+    "wx": 9.0,
+    "src": ""
+   }
+  ]
+ },
+ "054|night": {
+  "idx": 54,
+  "name": "张家界大峡谷",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/054_night_0.jpg",
+    "w": 1080,
+    "h": 810,
+    "title": "",
+    "l": 41.0,
+    "wx": 13.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/054_night_1.jpg",
+    "w": 1000,
+    "h": 793,
+    "title": "",
+    "l": 153.6,
+    "wx": -55.9,
+    "src": ""
+   }
+  ]
+ },
+ "054|sunset": {
+  "idx": 54,
+  "name": "张家界大峡谷",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/054_sunset_0.jpg",
+    "w": 1193,
+    "h": 797,
+    "title": "",
+    "l": 88.1,
+    "wx": 12.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/054_sunset_1.jpg",
+    "w": 1000,
+    "h": 562,
+    "title": "",
+    "l": 67.5,
+    "wx": 20.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/054_sunset_2.jpg",
+    "w": 2731,
+    "h": 2048,
+    "title": "",
+    "l": 132.5,
+    "wx": -5.5,
+    "src": ""
+   }
+  ]
+ },
+ "055|night": {
+  "idx": 55,
+  "name": "黄龙洞",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/055_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 40.9,
+    "wx": 4.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/055_night_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 81.4,
+    "wx": 47.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/055_night_2.jpg",
+    "w": 3648,
+    "h": 2736,
+    "title": "",
+    "l": 65.7,
+    "wx": 44.7,
+    "src": ""
+   }
+  ]
+ },
+ "055|sunset": {
+  "idx": 55,
+  "name": "黄龙洞",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/055_sunset_0.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "",
+    "l": 89.7,
+    "wx": 97.8,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/055_sunset_1.jpg",
+    "w": 1260,
+    "h": 709,
+    "title": "",
+    "l": 67.9,
+    "wx": 66.0,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/055_sunset_2.jpg",
+    "w": 1200,
+    "h": 675,
+    "title": "",
+    "l": 72.6,
+    "wx": 56.3,
+    "src": ""
+   }
+  ]
+ },
+ "056|night": {
+  "idx": 56,
+  "name": "宝峰湖",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/056_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 40.9,
+    "wx": 4.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/056_night_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 89.8,
+    "wx": -35.6,
+    "src": ""
+   }
+  ]
+ },
+ "056|sunset": {
+  "idx": 56,
+  "name": "宝峰湖",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/056_sunset_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 89.8,
+    "wx": -35.6,
+    "src": ""
+   }
+  ]
+ },
+ "057|night": {
+  "idx": 57,
+  "name": "金鞭溪",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/057_night_0.jpg",
+    "w": 1080,
+    "h": 745,
+    "title": "",
+    "l": 74.7,
+    "wx": 73.2,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/057_night_1.jpg",
+    "w": 1200,
+    "h": 675,
+    "title": "",
+    "l": 103.3,
+    "wx": 14.1,
+    "src": ""
+   }
+  ]
+ },
+ "057|sunset": {
+  "idx": 57,
+  "name": "金鞭溪",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/057_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 83.4,
+    "wx": 15.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/057_sunset_1.jpg",
+    "w": 1080,
+    "h": 810,
+    "title": "",
+    "l": 100.4,
+    "wx": 41.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/057_sunset_2.jpg",
+    "w": 1922,
+    "h": 1280,
+    "title": "",
+    "l": 83.6,
+    "wx": 25.9,
+    "src": ""
+   }
+  ]
+ },
+ "058|night": {
+  "idx": 58,
+  "name": "杨家界",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/058_night_0.jpg",
+    "w": 2000,
+    "h": 1325,
+    "title": "",
+    "l": 127.1,
+    "wx": 10.4,
+    "src": ""
+   }
+  ]
+ },
+ "058|sunset": {
+  "idx": 58,
+  "name": "杨家界",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/058_sunset_0.jpg",
+    "w": 2000,
+    "h": 1225,
+    "title": "",
+    "l": 119.6,
+    "wx": -38.8,
+    "src": ""
+   }
+  ]
+ },
+ "059|night": {
+  "idx": 59,
+  "name": "七星山",
+  "city": "张家界",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/059_night_0.jpg",
+    "w": 2560,
+    "h": 1890,
+    "title": "",
+    "l": 116.1,
+    "wx": -6.2,
+    "src": ""
+   }
+  ]
+ },
+ "059|sunset": {
+  "idx": 59,
+  "name": "七星山",
+  "city": "张家界",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/059_sunset_0.jpg",
+    "w": 1080,
+    "h": 780,
+    "title": "",
+    "l": 128.7,
+    "wx": 16.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/059_sunset_1.jpg",
+    "w": 1921,
+    "h": 1280,
+    "title": "",
+    "l": 83.3,
+    "wx": -52.0,
+    "src": ""
+   }
+  ]
+ },
+ "060|night": {
+  "idx": 60,
+  "name": "罗浮山",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/060_night_0.jpg",
+    "w": 1080,
+    "h": 810,
+    "title": "",
+    "l": 36.1,
+    "wx": -2.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/060_night_1.jpg",
+    "w": 1080,
+    "h": 762,
+    "title": "",
+    "l": 138.9,
+    "wx": -15.1,
+    "src": ""
+   }
+  ]
+ },
+ "060|sunset": {
+  "idx": 60,
+  "name": "罗浮山",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/060_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 95.5,
+    "wx": 39.7,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/060_sunset_1.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 119.6,
+    "wx": -1.6,
+    "src": ""
+   }
+  ]
+ },
+ "061|night": {
+  "idx": 61,
+  "name": "双月湾",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/061_night_0.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 113.6,
+    "wx": -111.7,
+    "src": ""
+   }
+  ]
+ },
+ "061|sunset": {
+  "idx": 61,
+  "name": "双月湾",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/061_sunset_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 170.9,
+    "wx": -65.0,
+    "src": ""
+   }
+  ]
+ },
+ "062|night": {
+  "idx": 62,
+  "name": "巽寮湾",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/062_night_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 100.0,
+    "wx": 0.8,
+    "src": ""
+   }
+  ]
+ },
+ "062|sunset": {
+  "idx": 62,
+  "name": "巽寮湾",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/062_sunset_0.jpg",
+    "w": 1728,
+    "h": 1080,
+    "title": "",
+    "l": 156.4,
+    "wx": 30.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/062_sunset_1.jpg",
+    "w": 1280,
+    "h": 853,
+    "title": "",
+    "l": 173.4,
+    "wx": -0.3,
+    "src": ""
+   }
+  ]
+ },
+ "063|night": {
+  "idx": 63,
+  "name": "南昆山",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/063_night_0.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 51.7,
+    "wx": -51.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/063_night_1.jpg",
+    "w": 2000,
+    "h": 1125,
+    "title": "",
+    "l": 61.2,
+    "wx": 18.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/063_night_2.jpg",
+    "w": 4032,
+    "h": 3024,
+    "title": "",
+    "l": 55.1,
+    "wx": 4.3,
+    "src": ""
+   }
+  ]
+ },
+ "063|sunset": {
+  "idx": 63,
+  "name": "南昆山",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/063_sunset_0.jpg",
+    "w": 2731,
+    "h": 2048,
+    "title": "",
+    "l": 148.9,
+    "wx": -28.6,
+    "src": ""
+   }
+  ]
+ },
+ "064|night": {
+  "idx": 64,
+  "name": "惠州西湖",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/064_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 95.9,
+    "wx": -52.9,
+    "src": ""
+   }
+  ]
+ },
+ "064|sunset": {
+  "idx": 64,
+  "name": "惠州西湖",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/064_sunset_0.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 162.0,
+    "wx": 21.1,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/064_sunset_1.jpg",
+    "w": 1200,
+    "h": 903,
+    "title": "",
+    "l": 119.7,
+    "wx": 19.6,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/064_sunset_2.jpg",
+    "w": 1024,
+    "h": 683,
+    "title": "",
+    "l": 173.1,
+    "wx": 59.4,
+    "src": ""
+   }
+  ]
+ },
+ "065|night": {
+  "idx": 65,
+  "name": "象头山",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/065_night_0.jpg",
+    "w": 1280,
+    "h": 822,
+    "title": "",
+    "l": 33.9,
+    "wx": 5.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/065_night_1.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "",
+    "l": 196.1,
+    "wx": -0.5,
+    "src": ""
+   }
+  ]
+ },
+ "066|night": {
+  "idx": 66,
+  "name": "黑排角",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/066_night_0.jpg",
+    "w": 1024,
+    "h": 661,
+    "title": "",
+    "l": 117.3,
+    "wx": -108.8,
+    "src": ""
+   }
+  ]
+ },
+ "066|sunset": {
+  "idx": 66,
+  "name": "黑排角",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/066_sunset_0.jpg",
+    "w": 1200,
+    "h": 750,
+    "title": "",
+    "l": 94.9,
+    "wx": -20.4,
+    "src": ""
+   }
+  ]
+ },
+ "067|night": {
+  "idx": 67,
+  "name": "大亚湾",
+  "city": "惠州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/067_night_0.jpg",
+    "w": 1080,
+    "h": 671,
+    "title": "",
+    "l": 126.4,
+    "wx": -46.1,
+    "src": ""
+   }
+  ]
+ },
+ "067|sunset": {
+  "idx": 67,
+  "name": "大亚湾",
+  "city": "惠州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/067_sunset_0.jpg",
+    "w": 1080,
+    "h": 720,
+    "title": "",
+    "l": 152.9,
+    "wx": 7.2,
+    "src": ""
+   }
+  ]
+ },
+ "068|night": {
+  "idx": 68,
+  "name": "东江湖·小东江",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/068_night_0.jpg",
+    "w": 1024,
+    "h": 681,
+    "title": "",
+    "l": 113.0,
+    "wx": -24.1,
+    "src": ""
+   }
+  ]
+ },
+ "068|sunset": {
+  "idx": 68,
+  "name": "东江湖·小东江",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/068_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 131.4,
+    "wx": -20.0,
+    "src": ""
+   }
+  ]
+ },
+ "069|night": {
+  "idx": 69,
+  "name": "高椅岭",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/069_night_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 86.5,
+    "wx": -35.9,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/069_night_1.jpg",
+    "w": 2730,
+    "h": 2048,
+    "title": "",
+    "l": 149.2,
+    "wx": -18.9,
+    "src": ""
+   }
+  ]
+ },
+ "069|sunset": {
+  "idx": 69,
+  "name": "高椅岭",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/069_sunset_0.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 102.2,
+    "wx": 4.8,
+    "src": ""
+   }
+  ]
+ },
+ "070|night": {
+  "idx": 70,
+  "name": "莽山",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/070_night_0.jpg",
+    "w": 1080,
+    "h": 811,
+    "title": "",
+    "l": 126.7,
+    "wx": -47.2,
+    "src": ""
+   }
+  ]
+ },
+ "070|sunset": {
+  "idx": 70,
+  "name": "莽山",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/070_sunset_0.jpg",
+    "w": 1600,
+    "h": 900,
+    "title": "",
+    "l": 89.5,
+    "wx": 25.4,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/070_sunset_1.jpg",
+    "w": 1200,
+    "h": 900,
+    "title": "",
+    "l": 120.2,
+    "wx": 34.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/070_sunset_2.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": "",
+    "l": 94.9,
+    "wx": -57.3,
+    "src": ""
+   }
+  ]
+ },
+ "071|night": {
+  "idx": 71,
+  "name": "飞天山",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/071_night_0.jpg",
+    "w": 3456,
+    "h": 2160,
+    "title": "",
+    "l": 114.1,
+    "wx": -0.4,
+    "src": ""
+   }
+  ]
+ },
+ "071|sunset": {
+  "idx": 71,
+  "name": "飞天山",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/071_sunset_0.jpg",
+    "w": 3456,
+    "h": 2160,
+    "title": "",
+    "l": 114.1,
+    "wx": -0.4,
+    "src": ""
+   }
+  ]
+ },
+ "072|night": {
+  "idx": 72,
+  "name": "仰天湖草原",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/072_night_0.jpg",
+    "w": 1155,
+    "h": 800,
+    "title": "",
+    "l": 136.4,
+    "wx": -48.2,
+    "src": ""
+   }
+  ]
+ },
+ "072|sunset": {
+  "idx": 72,
+  "name": "仰天湖草原",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/072_sunset_0.jpg",
+    "w": 3923,
+    "h": 2615,
+    "title": "",
+    "l": 159.9,
+    "wx": -34.5,
+    "src": ""
+   }
+  ]
+ },
+ "073|night": {
+  "idx": 73,
+  "name": "板梁古村",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/073_night_0.jpg",
+    "w": 1280,
+    "h": 797,
+    "title": "",
+    "l": 113.2,
+    "wx": 3.1,
+    "src": ""
+   }
+  ]
+ },
+ "073|sunset": {
+  "idx": 73,
+  "name": "板梁古村",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/073_sunset_0.jpg",
+    "w": 1200,
+    "h": 799,
+    "title": "",
+    "l": 67.4,
+    "wx": -21.8,
+    "src": ""
+   }
+  ]
+ },
+ "074|night": {
+  "idx": 74,
+  "name": "苏仙岭",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/074_night_0.jpg",
+    "w": 1080,
+    "h": 633,
+    "title": "",
+    "l": 111.4,
+    "wx": -34.3,
+    "src": ""
+   }
+  ]
+ },
+ "074|sunset": {
+  "idx": 74,
+  "name": "苏仙岭",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/074_sunset_0.jpg",
+    "w": 1080,
+    "h": 607,
+    "title": "",
+    "l": 97.7,
+    "wx": -61.8,
+    "src": ""
+   }
+  ]
+ },
+ "075|night": {
+  "idx": 75,
+  "name": "便江",
+  "city": "郴州",
+  "slot": "night",
+  "cands": [
+   {
+    "path": "scripts/_light/075_night_0.jpg",
+    "w": 1067,
+    "h": 800,
+    "title": "",
+    "l": 32.8,
+    "wx": 4.3,
+    "src": ""
+   },
+   {
+    "path": "scripts/_light/075_night_1.jpg",
+    "w": 2000,
+    "h": 1051,
+    "title": "",
+    "l": 118.5,
+    "wx": -47.2,
+    "src": ""
+   }
+  ]
+ },
+ "075|sunset": {
+  "idx": 75,
+  "name": "便江",
+  "city": "郴州",
+  "slot": "sunset",
+  "cands": [
+   {
+    "path": "scripts/_light/075_sunset_0.jpg",
+    "w": 2000,
+    "h": 1051,
+    "title": "",
+    "l": 118.5,
+    "wx": -47.2,
+    "src": ""
+   }
+  ]
+ }
+}

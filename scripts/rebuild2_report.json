@@ -1,0 +1,461 @@
+[
+ {
+  "name": "虎跳峡·高路",
+  "mode": "trace-偏短",
+  "target": 22.0,
+  "len": 5.2,
+  "ratio": 0.24,
+  "n": 22,
+  "water": "0/8"
+ },
+ {
+  "name": "太白山·南北穿越",
+  "mode": "trace-偏短",
+  "target": 42.0,
+  "len": 12.5,
+  "ratio": 0.3,
+  "n": 35,
+  "water": "1/12"
+ },
+ {
+  "name": "华山·五峰连穿",
+  "mode": "trace-偏短",
+  "target": 15.0,
+  "len": 5.1,
+  "ratio": 0.34,
+  "n": 128,
+  "water": "0/43"
+ },
+ {
+  "name": "黄山·天都峰环线",
+  "mode": "trace-偏短",
+  "target": 18.0,
+  "len": 7.9,
+  "ratio": 0.44,
+  "n": 245,
+  "water": "0/82"
+ },
+ {
+  "name": "武功山·金顶景区环线",
+  "mode": "trace",
+  "target": 9.5,
+  "len": 9.6,
+  "ratio": 1.01,
+  "n": 164,
+  "water": "0/55"
+ },
+ {
+  "name": "武功山·龙山村反穿",
+  "mode": "trace",
+  "target": 24.5,
+  "len": 19.5,
+  "ratio": 0.8,
+  "n": 219,
+  "water": "1/73"
+ },
+ {
+  "name": "武功山·金顶穿越",
+  "mode": "trace",
+  "target": 26.0,
+  "len": 15.9,
+  "ratio": 0.61,
+  "n": 241,
+  "water": "0/81"
+ },
+ {
+  "name": "云台山（安化）",
+  "mode": "trace-偏短",
+  "target": 12.0,
+  "len": 3.0,
+  "ratio": 0.25,
+  "n": 13,
+  "water": "0/5"
+ },
+ {
+  "name": "黑麋峰",
+  "mode": "trace-偏短",
+  "target": 8.5,
+  "len": 2.1,
+  "ratio": 0.25,
+  "n": 16,
+  "water": "1/6"
+ },
+ {
+  "name": "石牛寨",
+  "mode": "trace-偏短",
+  "target": 7.5,
+  "len": 1.5,
+  "ratio": 0.2,
+  "n": 9,
+  "water": "0/3"
+ },
+ {
+  "name": "幕阜山",
+  "mode": "trace-偏短",
+  "target": 14.0,
+  "len": 2.4,
+  "ratio": 0.17,
+  "n": 21,
+  "water": "0/7"
+ },
+ {
+  "name": "大熊山",
+  "mode": "trace-偏短",
+  "target": 16.0,
+  "len": 1.5,
+  "ratio": 0.09,
+  "n": 14,
+  "water": "0/5"
+ },
+ {
+  "name": "舜皇山",
+  "mode": "trace-偏短",
+  "target": 15.0,
+  "len": 4.7,
+  "ratio": 0.31,
+  "n": 21,
+  "water": "0/7"
+ },
+ {
+  "name": "苏宝顶",
+  "mode": "trace-偏短",
+  "target": 24.0,
+  "len": 4.6,
+  "ratio": 0.19,
+  "n": 9,
+  "water": "0/3"
+ },
+ {
+  "name": "阳明山·万寿寺",
+  "mode": "trace-偏短",
+  "target": 10.5,
+  "len": 3.0,
+  "ratio": 0.29,
+  "n": 14,
+  "water": "0/5"
+ },
+ {
+  "name": "壶瓶山",
+  "mode": "trace-偏短",
+  "target": 20.0,
+  "len": 4.9,
+  "ratio": 0.24,
+  "n": 11,
+  "water": "0/4"
+ },
+ {
+  "name": "八大公山",
+  "mode": "trace-偏长",
+  "target": 21.0,
+  "len": 38.2,
+  "ratio": 1.82,
+  "n": 35,
+  "water": "0/12"
+ },
+ {
+  "name": "酃峰·神农谷",
+  "mode": "trace-偏短",
+  "target": 22.0,
+  "len": 9.4,
+  "ratio": 0.43,
+  "n": 11,
+  "water": "0/4"
+ },
+ {
+  "name": "韭菜岭",
+  "mode": "trace-偏短",
+  "target": 26.0,
+  "len": 8.7,
+  "ratio": 0.34,
+  "n": 19,
+  "water": "0/7"
+ },
+ {
+  "name": "大围山·七星岭",
+  "mode": "trace",
+  "target": 14.8,
+  "len": 12.3,
+  "ratio": 0.83,
+  "n": 227,
+  "water": "0/76"
+ },
+ {
+  "name": "崀山·八角寨—辣椒峰",
+  "mode": "trace",
+  "target": 15.0,
+  "len": 10.9,
+  "ratio": 0.73,
+  "n": 107,
+  "water": "2/36"
+ },
+ {
+  "name": "高椅岭丹霞环线",
+  "mode": "trace-偏短",
+  "target": 6.2,
+  "len": 2.2,
+  "ratio": 0.35,
+  "n": 17,
+  "water": "0/6"
+ },
+ {
+  "name": "莽山·五指峰",
+  "mode": "trace",
+  "target": 13.5,
+  "len": 10.0,
+  "ratio": 0.74,
+  "n": 50,
+  "water": "2/17"
+ },
+ {
+  "name": "天门山·天门洞天梯",
+  "mode": "trace",
+  "target": 9.8,
+  "len": 10.2,
+  "ratio": 1.04,
+  "n": 284,
+  "water": "0/95"
+ },
+ {
+  "name": "张家界·天子山—十里画廊",
+  "mode": "trace-偏长",
+  "target": 16.0,
+  "len": 28.4,
+  "ratio": 1.78,
+  "n": 456,
+  "water": "2/152"
+ },
+ {
+  "name": "张家界·金鞭溪—袁家界",
+  "mode": "trace",
+  "target": 14.5,
+  "len": 11.9,
+  "ratio": 0.82,
+  "n": 209,
+  "water": "4/70"
+ },
+ {
+  "name": "衡山·水帘洞—祝融峰",
+  "mode": "trace",
+  "target": 13.2,
+  "len": 8.7,
+  "ratio": 0.66,
+  "n": 167,
+  "water": "0/56"
+ },
+ {
+  "name": "衡山·曾国藩古道",
+  "mode": "trace",
+  "target": 16.5,
+  "len": 13.2,
+  "ratio": 0.8,
+  "n": 87,
+  "water": "0/29"
+ },
+ {
+  "name": "衡山·经典登顶线",
+  "mode": "trace",
+  "target": 12.8,
+  "len": 8.2,
+  "ratio": 0.64,
+  "n": 144,
+  "water": "0/48"
+ },
+ {
+  "name": "岳麓山·桃花岭穿越",
+  "mode": "trace",
+  "target": 12.6,
+  "len": 8.3,
+  "ratio": 0.66,
+  "n": 204,
+  "water": "1/68"
+ },
+ {
+  "name": "观音山·王山寺",
+  "mode": "trace-偏短",
+  "target": 8.0,
+  "len": 1.7,
+  "ratio": 0.21,
+  "n": 32,
+  "water": "0/11"
+ },
+ {
+  "name": "万时山",
+  "mode": "trace-偏短",
+  "target": 16.5,
+  "len": 7.2,
+  "ratio": 0.44,
+  "n": 27,
+  "water": "1/9"
+ },
+ {
+  "name": "南岭·石坑崆",
+  "mode": "trace-偏短",
+  "target": 24.0,
+  "len": 6.3,
+  "ratio": 0.26,
+  "n": 45,
+  "water": "0/15"
+ },
+ {
+  "name": "通天蜡烛",
+  "mode": "trace-偏短",
+  "target": 9.4,
+  "len": 1.5,
+  "ratio": 0.16,
+  "n": 9,
+  "water": "0/3"
+ },
+ {
+  "name": "八排山",
+  "mode": "trace-偏短",
+  "target": 22.0,
+  "len": 6.5,
+  "ratio": 0.3,
+  "n": 14,
+  "water": "0/5"
+ },
+ {
+  "name": "云髻山",
+  "mode": "trace-偏短",
+  "target": 12.6,
+  "len": 5.3,
+  "ratio": 0.42,
+  "n": 23,
+  "water": "0/8"
+ },
+ {
+  "name": "天堂顶",
+  "mode": "trace",
+  "target": 14.5,
+  "len": 12.2,
+  "ratio": 0.84,
+  "n": 167,
+  "water": "1/56"
+ },
+ {
+  "name": "广东大峡谷",
+  "mode": "trace-偏短",
+  "target": 7.6,
+  "len": 4.0,
+  "ratio": 0.53,
+  "n": 13,
+  "water": "0/5"
+ },
+ {
+  "name": "丹霞山·长老峰",
+  "mode": "trace-偏短",
+  "target": 9.8,
+  "len": 3.6,
+  "ratio": 0.36,
+  "n": 106,
+  "water": "1/36"
+ },
+ {
+  "name": "英西峰林走廊",
+  "mode": "trace-偏短",
+  "target": 18.0,
+  "len": 8.0,
+  "ratio": 0.44,
+  "n": 32,
+  "water": "0/11"
+ },
+ {
+  "name": "排牙山",
+  "mode": "trace",
+  "target": 11.2,
+  "len": 10.7,
+  "ratio": 0.96,
+  "n": 61,
+  "water": "0/21"
+ },
+ {
+  "name": "马峦山瀑布群",
+  "mode": "trace",
+  "target": 12.0,
+  "len": 16.9,
+  "ratio": 1.41,
+  "n": 237,
+  "water": "0/79"
+ },
+ {
+  "name": "梧桐山·泰山涧",
+  "mode": "trace-偏短",
+  "target": 10.8,
+  "len": 5.3,
+  "ratio": 0.49,
+  "n": 124,
+  "water": "0/42"
+ },
+ {
+  "name": "七娘山",
+  "mode": "trace-偏短",
+  "target": 9.6,
+  "len": 4.5,
+  "ratio": 0.47,
+  "n": 21,
+  "water": "0/7"
+ },
+ {
+  "name": "大鹿港海岸线",
+  "mode": "keep",
+  "target": 11.5,
+  "len": 13.1
+ },
+ {
+  "name": "东西冲海岸线",
+  "mode": "keep",
+  "target": 10.2,
+  "len": 5.6
+ },
+ {
+  "name": "黑排角海岸线",
+  "mode": "keep",
+  "target": 8.4,
+  "len": 14.9
+ },
+ {
+  "name": "罗浮山·飞云顶",
+  "mode": "trace-偏短",
+  "target": 14.2,
+  "len": 4.6,
+  "ratio": 0.32,
+  "n": 23,
+  "water": "0/8"
+ },
+ {
+  "name": "白云嶂·银瓶嘴双峰",
+  "mode": "trace",
+  "target": 12.8,
+  "len": 10.4,
+  "ratio": 0.81,
+  "n": 36,
+  "water": "0/12"
+ },
+ {
+  "name": "大南山",
+  "mode": "trace",
+  "target": 15.6,
+  "len": 9.7,
+  "ratio": 0.62,
+  "n": 29,
+  "water": "0/10"
+ },
+ {
+  "name": "船底顶·联山B线",
+  "mode": "trace",
+  "target": 26.0,
+  "len": 27.7,
+  "ratio": 1.06,
+  "n": 38,
+  "water": "0/13"
+ },
+ {
+  "name": "船底顶·罗新线",
+  "mode": "trace",
+  "target": 30.5,
+  "len": 22.8,
+  "ratio": 0.75,
+  "n": 56,
+  "water": "0/19"
+ }
+]

@@ -1,0 +1,27 @@
+{
+ "gal-s76.jpg": {
+  "name": "便江",
+  "names": [
+   "便江"
+  ],
+  "word": "便江风景区 郴州",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s76_0.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "郴州永兴:双桥水库成网红打卡点",
+    "score": 25.6,
+    "src": "https://img-cloud.voc.com.cn/40/2021/02/18/d40379586967ec5abeae3e1d75a31cae0b9b173f1613631447432.jpg?watermark/1/image/aHR0cDovL2ltZy1jbG91ZC52b2MuY29tLmNuLzQwLzIwMjAvMDIvMDIvZmUyZDI2NDgxMDk3MmY4YWUyMTk3M2I1MWQ2Y2U4NTEyNmM4NTVhODE1ODA2MzkxOTc1ODAucG5n/dissolve/100/gravity/SouthEast/dx/0/dy/0/ws/0.2/wst/0"
+   },
+   {
+    "path": "scripts/_hd/gal-s76_1.jpg",
+    "w": 1200,
+    "h": 674,
+    "title": "鬼斧神工的大自然-湖南郴州高椅岭",
+    "score": 18.4,
+    "src": "https://photo.tuchong.com/1863916/f/139198860.jpg"
+   }
+  ]
+ }
+}

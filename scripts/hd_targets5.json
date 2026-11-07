@@ -1,0 +1,272 @@
+[
+ {
+  "file": "gal-r05.jpg",
+  "kind": "route",
+  "name": "南岭·石坑崆",
+  "city": ""
+ },
+ {
+  "file": "gal-r14.jpg",
+  "kind": "route",
+  "name": "通天蜡烛",
+  "city": ""
+ },
+ {
+  "file": "gal-r15.jpg",
+  "kind": "route",
+  "name": "观音山·王山寺",
+  "city": ""
+ },
+ {
+  "file": "gal-r21.jpg",
+  "kind": "route",
+  "name": "舜皇山",
+  "city": ""
+ },
+ {
+  "file": "gal-r28.jpg",
+  "kind": "route",
+  "name": "云台山（安化）",
+  "city": ""
+ },
+ {
+  "file": "gal-s01.jpg",
+  "kind": "spot",
+  "name": "漓江·杨堤至兴坪",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s03.jpg",
+  "kind": "spot",
+  "name": "遇龙河竹筏",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s04.jpg",
+  "kind": "spot",
+  "name": "相公山观景台",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s05.jpg",
+  "kind": "spot",
+  "name": "十里画廊骑行",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s07.jpg",
+  "kind": "spot",
+  "name": "银子岩",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s08.jpg",
+  "kind": "spot",
+  "name": "兴坪古镇",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s11.jpg",
+  "kind": "spot",
+  "name": "全州天湖",
+  "city": "桂林"
+ },
+ {
+  "file": "gal-s14.jpg",
+  "kind": "spot",
+  "name": "沙面岛",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s15.jpg",
+  "kind": "spot",
+  "name": "永庆坊",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s17.jpg",
+  "kind": "spot",
+  "name": "从化溪头村",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s19.jpg",
+  "kind": "spot",
+  "name": "石门国家森林公园",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s21.jpg",
+  "kind": "spot",
+  "name": "海珠湖",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s22.jpg",
+  "kind": "spot",
+  "name": "莲花山",
+  "city": "广州"
+ },
+ {
+  "file": "gal-s25.jpg",
+  "kind": "spot",
+  "name": "杨梅坑",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s26.jpg",
+  "kind": "spot",
+  "name": "深圳湾公园",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s27.jpg",
+  "kind": "spot",
+  "name": "大鹏所城",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s28.jpg",
+  "kind": "spot",
+  "name": "人才公园",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s30.jpg",
+  "kind": "spot",
+  "name": "仙湖植物园",
+  "city": "深圳"
+ },
+ {
+  "file": "gal-s36.jpg",
+  "kind": "spot",
+  "name": "橘子洲",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s37.jpg",
+  "kind": "spot",
+  "name": "太平老街",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s38.jpg",
+  "kind": "spot",
+  "name": "大围山",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s41.jpg",
+  "kind": "spot",
+  "name": "铜官窑古镇",
+  "city": "长沙"
+ },
+ {
+  "file": "gal-s44.jpg",
+  "kind": "spot",
+  "name": "芙蓉镇",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s45.jpg",
+  "kind": "spot",
+  "name": "德夯大峡谷",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s46.jpg",
+  "kind": "spot",
+  "name": "矮寨大桥",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s47.jpg",
+  "kind": "spot",
+  "name": "红石林",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s48.jpg",
+  "kind": "spot",
+  "name": "边城茶峒",
+  "city": "湘西"
+ },
+ {
+  "file": "gal-s52.jpg",
+  "kind": "spot",
+  "name": "张家界国家森林公园",
+  "city": "张家界"
+ },
+ {
+  "file": "gal-s53.jpg",
+  "kind": "spot",
+  "name": "天门山",
+  "city": "张家界"
+ },
+ {
+  "file": "gal-s58.jpg",
+  "kind": "spot",
+  "name": "黄龙洞",
+  "city": "张家界"
+ },
+ {
+  "file": "gal-s60.jpg",
+  "kind": "spot",
+  "name": "七星山",
+  "city": "张家界"
+ },
+ {
+  "file": "gal-s61.jpg",
+  "kind": "spot",
+  "name": "双月湾",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s62.jpg",
+  "kind": "spot",
+  "name": "罗浮山",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s63.jpg",
+  "kind": "spot",
+  "name": "黑排角",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s67.jpg",
+  "kind": "spot",
+  "name": "大亚湾",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s68.jpg",
+  "kind": "spot",
+  "name": "象头山",
+  "city": "惠州"
+ },
+ {
+  "file": "gal-s69.jpg",
+  "kind": "spot",
+  "name": "东江湖·小东江",
+  "city": "郴州"
+ },
+ {
+  "file": "gal-s70.jpg",
+  "kind": "spot",
+  "name": "高椅岭",
+  "city": "郴州"
+ },
+ {
+  "file": "gal-s71.jpg",
+  "kind": "spot",
+  "name": "莽山",
+  "city": "郴州"
+ },
+ {
+  "file": "gal-s72.jpg",
+  "kind": "spot",
+  "name": "飞天山",
+  "city": "郴州"
+ }
+]

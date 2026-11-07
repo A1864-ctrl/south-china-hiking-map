@@ -1,0 +1,101 @@
+{
+ "gal-s16.jpg": {
+  "name": "陈家祠",
+  "names": [
+   "陈家祠"
+  ],
+  "word": "广州陈家祠 建筑",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s16_0.jpg",
+    "w": 5184,
+    "h": 3456,
+    "title": "广州陈家祠",
+    "score": 92.0,
+    "src": "https://uploadfile.bizhizu.cn/up/b9/e6/b1/b9e6b15b9e7384bddbd358fb8871535f.jpg.source.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s16_1.jpg",
+    "w": 1500,
+    "h": 1000,
+    "title": "广州市陈家祠堂建筑灰塑与陶塑",
+    "score": 67.0,
+    "src": "https://hellorfimg.zcool.cn/provider_image/large/hi2251097839.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s16_2.jpg",
+    "w": 1500,
+    "h": 1000,
+    "title": "广州市陈家祠堂建筑灰塑与陶塑",
+    "score": 67.0,
+    "src": "https://hellorfimg.zcool.cn/provider_image/large/hi2251097660.jpg"
+   }
+  ]
+ },
+ "gal-s73.jpg": {
+  "name": "仰天湖草原",
+  "names": [
+   "仰天湖草原"
+  ],
+  "word": "仰天湖大草原 郴州",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s73_0.jpg",
+    "w": 5464,
+    "h": 3640,
+    "title": "郴州仰天湖大草原:守一方绿草,引一座“金山”",
+    "score": 92.0,
+    "src": "https://x0.ifengimg.com/ucms/2023_36/CE92B6D7FC9DF7847ADABBE2863B9F11763A4E9C_size1129_w5464_h3640.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s73_1.jpg",
+    "w": 1500,
+    "h": 1001,
+    "title": "湖南郴州仰天湖大草原露营营地风光_站酷海洛_正版图片_视频_字体_音",
+    "score": 67.0,
+    "src": "https://hellorfimg.zcool.cn/provider_image/large/hi2243190491.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s73_2.jpg",
+    "w": 1707,
+    "h": 1280,
+    "title": "郴州仰天湖大草原 91最佳旅游时间 仰天湖相对市区气温要",
+    "score": 65.7,
+    "src": "https://b0.bdstatic.com/6d724bae804118ecb8d9a6ea15c4515a.jpg@h_1280"
+   },
+   {
+    "path": "scripts/_hd/gal-s73_3.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "郴州的大草原仰天湖",
+    "score": 65.6,
+    "src": "http://i0.hdslb.com/bfs/archive/7597571d52154931de5d184b44e8008486d32152.jpg"
+   },
+   {
+    "path": "scripts/_hd/gal-s73_4.jpg",
+    "w": 1969,
+    "h": 1080,
+    "title": "自驾郴州仰天湖大草原,10.1-10.2露营",
+    "score": 65.2,
+    "src": "https://p0.meituan.net/shaitu/5f32c8ce4747a3b5f0bc1bd0935155311327569.jpg"
+   }
+  ]
+ },
+ "gal-s76.jpg": {
+  "name": "便江",
+  "names": [
+   "便江"
+  ],
+  "word": "永兴 便江 风光",
+  "cands": [
+   {
+    "path": "scripts/_hd/gal-s76_0.jpg",
+    "w": 1920,
+    "h": 1080,
+    "title": "郴州永兴:双桥水库成网红打卡点",
+    "score": 65.6,
+    "src": "https://img-cloud.voc.com.cn/40/2021/02/18/d40379586967ec5abeae3e1d75a31cae0b9b173f1613631447432.jpg?watermark/1/image/aHR0cDovL2ltZy1jbG91ZC52b2MuY29tLmNuLzQwLzIwMjAvMDIvMDIvZmUyZDI2NDgxMDk3MmY4YWUyMTk3M2I1MWQ2Y2U4NTEyNmM4NTVhODE1ODA2MzkxOTc1ODAucG5n/dissolve/100/gravity/SouthEast/dx/0/dy/0/ws/0.2/wst/0"
+   }
+  ]
+ }
+}

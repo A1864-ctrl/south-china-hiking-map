@@ -1,0 +1,19 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 开发缓存与调试产物
+shots/
+scripts/_*
+.cdp_tmp*
+.cpd_tmp*
+
+# 历史快照（另行桌面打包保存）
+archive-1021/
+
+# 平台标记文件
+*.genie
+
+# 系统文件
+Thumbs.db
+.DS_Store
