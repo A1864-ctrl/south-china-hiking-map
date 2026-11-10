@@ -1,0 +1,334 @@
+{
+ "hill01": {
+  "hill": "船底顶",
+  "files": [
+   "船底顶-01.jpg",
+   "船底顶-03.jpg",
+   "船底顶-04.jpg",
+   "船底顶-05.jpg",
+   "船底顶-06.jpg",
+   "船底顶-07.jpg"
+  ],
+  "dir": "photos/geo/hill01"
+ },
+ "hill02": {
+  "hill": "大南山",
+  "files": [
+   "大南山-01.jpg",
+   "大南山-02.jpg",
+   "大南山-03.jpg",
+   "大南山-04.jpg",
+   "大南山-05.jpg",
+   "大南山-06.jpg"
+  ],
+  "dir": "photos/geo/hill02"
+ },
+ "hill03": {
+  "hill": "英西峰林走廊",
+  "files": [
+   "英西峰林-02.jpg",
+   "英西峰林-03.jpg",
+   "英西峰林-04.jpg",
+   "英西峰林-05.jpg",
+   "英西峰林-06.jpg"
+  ],
+  "dir": "photos/geo/hill03"
+ },
+ "hill04": {
+  "hill": "丹霞山",
+  "files": [
+   "丹霞山-01.jpg",
+   "丹霞山-02.jpg",
+   "丹霞山-03.jpg",
+   "丹霞山-04.jpg",
+   "丹霞山-05.jpg",
+   "丹霞山-06.jpg"
+  ],
+  "dir": "photos/geo/hill04"
+ },
+ "hill05": {
+  "hill": "广东大峡谷",
+  "files": [
+   "广东大峡谷-01.jpg",
+   "广东大峡谷-02.jpg",
+   "广东大峡谷-04.jpg",
+   "广东大峡谷-05.jpg",
+   "广东大峡谷-06.jpg"
+  ],
+  "dir": "photos/geo/hill05"
+ },
+ "hill06": {
+  "hill": "云髻山",
+  "files": [
+   "云髻山-02.jpg",
+   "云髻山-03.jpg",
+   "云髻山-04.jpg",
+   "云髻山-05.jpg",
+   "云髻山-06.jpg"
+  ],
+  "dir": "photos/geo/hill06"
+ },
+ "hill07": {
+  "hill": "八排山",
+  "files": [
+   "八排山-01.jpg",
+   "八排山-02.jpg",
+   "八排山-03.jpg",
+   "八排山-04.jpg",
+   "八排山-05.jpg",
+   "八排山-06.jpg"
+  ],
+  "dir": "photos/geo/hill07"
+ },
+ "hill08": {
+  "hill": "万时山",
+  "files": [
+   "万时山-01.jpg",
+   "万时山-02.jpg",
+   "万时山-03.jpg",
+   "万时山-04.jpg",
+   "万时山-05.jpg"
+  ],
+  "dir": "photos/geo/hill08"
+ },
+ "hill09": {
+  "hill": "观音山",
+  "files": [
+   "观音山-01.jpg",
+   "观音山-02.jpg",
+   "观音山-03.jpg",
+   "观音山-04.jpg",
+   "观音山-05.jpg",
+   "观音山-06.jpg"
+  ],
+  "dir": "photos/geo/hill09"
+ },
+ "hill10": {
+  "hill": "衡山",
+  "files": [
+   "衡山-04.jpg",
+   "衡山-05.jpg",
+   "衡山-06.jpg",
+   "衡山-07.jpg",
+   "衡山-08.jpg"
+  ],
+  "dir": "photos/geo/hill10"
+ },
+ "hill11": {
+  "hill": "韭菜岭",
+  "files": [
+   "韭菜岭-01.jpg",
+   "韭菜岭-02.jpg",
+   "韭菜岭-03.jpg",
+   "韭菜岭-04.jpg",
+   "韭菜岭-05.jpg",
+   "韭菜岭-06.jpg"
+  ],
+  "dir": "photos/geo/hill11"
+ },
+ "hill12": {
+  "hill": "酃峰",
+  "files": [
+   "酃峰-01.jpg",
+   "酃峰-02.jpg",
+   "酃峰-03.jpg",
+   "酃峰-04.jpg",
+   "酃峰-05.jpg",
+   "酃峰-06.jpg"
+  ],
+  "dir": "photos/geo/hill12"
+ },
+ "hill13": {
+  "hill": "壶瓶山",
+  "files": [
+   "壶瓶山-01.jpg",
+   "壶瓶山-02.jpg",
+   "壶瓶山-03.jpg",
+   "壶瓶山-04.jpg",
+   "壶瓶山-06.jpg"
+  ],
+  "dir": "photos/geo/hill13"
+ },
+ "hill14": {
+  "hill": "阳明山",
+  "files": [
+   "阳明山-01.jpg",
+   "阳明山-02.jpg",
+   "阳明山-03.jpg",
+   "阳明山-04.jpg",
+   "阳明山-05.jpg",
+   "阳明山-06.jpg"
+  ],
+  "dir": "photos/geo/hill14"
+ },
+ "hill15": {
+  "hill": "苏宝顶",
+  "files": [
+   "苏宝顶-01.jpg",
+   "苏宝顶-02.jpg",
+   "苏宝顶-03.jpg",
+   "苏宝顶-04.jpg",
+   "苏宝顶-06.jpg"
+  ],
+  "dir": "photos/geo/hill15"
+ },
+ "hill16": {
+  "hill": "舜皇山",
+  "files": [
+   "舜皇山-01.jpg",
+   "舜皇山-02.jpg",
+   "舜皇山-04.jpg",
+   "舜皇山-05.jpg",
+   "舜皇山-06.jpg"
+  ],
+  "dir": "photos/geo/hill16"
+ },
+ "hill17": {
+  "hill": "大熊山",
+  "files": [
+   "大熊山-01.jpg",
+   "大熊山-02.jpg",
+   "大熊山-03.jpg",
+   "大熊山-04.jpg",
+   "大熊山-05.jpg",
+   "大熊山-06.jpg"
+  ],
+  "dir": "photos/geo/hill17"
+ },
+ "hill18": {
+  "hill": "幕阜山",
+  "files": [
+   "幕阜山-01.jpg",
+   "幕阜山-02.jpg",
+   "幕阜山-03.jpg",
+   "幕阜山-04.jpg",
+   "幕阜山-05.jpg",
+   "幕阜山-06.jpg"
+  ],
+  "dir": "photos/geo/hill18"
+ },
+ "hill19": {
+  "hill": "石牛寨",
+  "files": [
+   "石牛寨-01.jpg",
+   "石牛寨-02.jpg",
+   "石牛寨-03.jpg",
+   "石牛寨-04.jpg",
+   "石牛寨-05.jpg",
+   "石牛寨-06.jpg"
+  ],
+  "dir": "photos/geo/hill19"
+ },
+ "hill20": {
+  "hill": "云台山（安化）",
+  "files": [
+   "云台山-01.jpg",
+   "云台山-02.jpg",
+   "云台山-04.jpg",
+   "云台山-05.jpg",
+   "云台山-06.jpg"
+  ],
+  "dir": "photos/geo/hill20"
+ },
+ "hill21": {
+  "hill": "黄山",
+  "files": [
+   "黄山-01.jpg",
+   "黄山-02.jpg",
+   "黄山-03.jpg",
+   "黄山-04.jpg",
+   "黄山-05.jpg",
+   "黄山-06.jpg"
+  ],
+  "dir": "photos/geo/hill21"
+ },
+ "hill22": {
+  "hill": "华山",
+  "files": [
+   "华山-01.jpg",
+   "华山-02.jpg",
+   "华山-03.jpg",
+   "华山-04.jpg",
+   "华山-05.jpg",
+   "华山-06.jpg"
+  ],
+  "dir": "photos/geo/hill22"
+ },
+ "hill23": {
+  "hill": "太白山",
+  "files": [
+   "太白山-01.jpg",
+   "太白山-02.jpg",
+   "太白山-03.jpg",
+   "太白山-04.jpg",
+   "太白山-05.jpg",
+   "太白山-06.jpg"
+  ],
+  "dir": "photos/geo/hill23"
+ },
+ "hill24": {
+  "hill": "虎跳峡",
+  "files": [
+   "虎跳峡-02.jpg",
+   "虎跳峡-03.jpg",
+   "虎跳峡-06.jpg",
+   "虎跳峡-07.jpg",
+   "虎跳峡-08.jpg",
+   "虎跳峡-09.jpg"
+  ],
+  "dir": "photos/geo/hill24"
+ },
+ "hill25": {
+  "hill": "雨崩神瀑",
+  "files": [
+   "雨崩-01.jpg",
+   "雨崩-02.jpg",
+   "雨崩-03.jpg",
+   "雨崩-04.jpg",
+   "雨崩-05.jpg",
+   "雨崩-06.jpg"
+  ],
+  "dir": "photos/geo/hill25"
+ },
+ "wugongshan": {
+  "hill": "武功山",
+  "dir": "photos/geo/wugongshan",
+  "files": [
+   "wg-01.jpg",
+   "wg-02.jpg",
+   "wg-03.jpg",
+   "wg-04.jpg",
+   "wg-05.jpg",
+   "wg-06.jpg",
+   "wg-07.jpg",
+   "wg-08.jpg"
+  ]
+ },
+ "hill26": {
+  "hill": "莽山",
+  "dir": "photos/geo/hill26",
+  "files": [
+   "莽山-01.jpg",
+   "莽山-02.jpg",
+   "莽山-03.jpg"
+  ]
+ },
+ "hill27": {
+  "hill": "崀山",
+  "dir": "photos/geo/hill27",
+  "files": [
+   "崀山-01.jpg",
+   "崀山-02.jpg",
+   "崀山-03.jpg"
+  ]
+ },
+ "hill28": {
+  "hill": "大围山",
+  "dir": "photos/geo/hill28",
+  "files": [
+   "大围山-01.jpg",
+   "大围山-02.jpg",
+   "大围山-03.jpg"
+  ]
+ }
+}
